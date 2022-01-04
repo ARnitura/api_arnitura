@@ -13,14 +13,14 @@ import 'package:ar_flutter_plugin/models/ar_anchor.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer';
 
-class ObjectGesturesWidget extends StatefulWidget {
-  ObjectGesturesWidget({Key? key}) : super(key: key);
+class ArWidget extends StatefulWidget {
+  ArWidget({Key? key}) : super(key: key);
 
   @override
-  _ObjectGesturesWidgetState createState() => _ObjectGesturesWidgetState();
+  _ArWidgetState createState() => _ArWidgetState();
 }
 
-class _ObjectGesturesWidgetState extends State<ObjectGesturesWidget> {
+class _ArWidgetState extends State<ArWidget> {
   late ARSessionManager arSessionManager;
   late ARObjectManager arObjectManager;
   late ARAnchorManager arAnchorManager;
