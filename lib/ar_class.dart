@@ -11,7 +11,7 @@ import 'package:ar_flutter_plugin/managers/ar_object_manager.dart';
 import 'package:ar_flutter_plugin/managers/ar_anchor_manager.dart';
 import 'package:ar_flutter_plugin/models/ar_anchor.dart';
 import 'package:flutter/material.dart';
-
+import 'dart:developer';
 
 class ObjectGesturesWidget extends StatefulWidget {
   ObjectGesturesWidget({Key? key}) : super(key: key);
@@ -25,39 +25,39 @@ class _ObjectGesturesWidgetState extends State<ObjectGesturesWidget> {
   late ARObjectManager arObjectManager;
   late ARAnchorManager arAnchorManager;
 
-  List<ARNode> nodes = [];
-  List<ARAnchor> anchors = [];
+  var nodes = [];
+  var anchors = [];
 
   @override
   void dispose() {
     super.dispose();
     arSessionManager.dispose();
-  }
+  } // Метод при выходе из приложения
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Object Transformation Gestures'),
+          title: const Text('AR-экран'),
         ),
         body: Container(
             child: Stack(children: [
-              ARView(
-                onARViewCreated: onARViewCreated,
-                planeDetectionConfig: PlaneDetectionConfig.vertical,
-              ),
-              Align(
-                alignment: FractionalOffset.bottomCenter,
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton(
-                          onPressed: onRemoveEverything,
-                          child: Text("Remove Everything")),
-                    ]),
-              )
-            ])));
-  }
+          ARView(
+            onARViewCreated: onARViewCreated,
+            planeDetectionConfig: PlaneDetectionConfig.horizontalAndVertical,
+          ),
+          Align(
+            alignment: FractionalOffset.bottomCenter,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                      onPressed: onRemoveEverything,
+                      child: const Text("Удалить модели")),
+                ]),
+          )
+        ])));
+  } // Виджет с частью дизайна
 
   void onARViewCreated(
       ARSessionManager arSessionManager,
@@ -67,17 +67,17 @@ class _ObjectGesturesWidgetState extends State<ObjectGesturesWidget> {
     this.arSessionManager = arSessionManager;
     this.arObjectManager = arObjectManager;
     this.arAnchorManager = arAnchorManager;
-
+    // Определение переменных Сессии
     this.arSessionManager.onInitialize(
-      showFeaturePoints: false,
-      showPlanes: true,
-      customPlaneTexturePath: "Images/triangle.png",
-      showWorldOrigin: true,
-      handlePans: true,
-      handleRotation: true,
-    );
+          showFeaturePoints: false,
+          showPlanes: true,
+          customPlaneTexturePath: "Images/triangle.png",
+          showWorldOrigin: true,
+          handlePans: true,
+          handleRotation: true,
+        );
     this.arObjectManager.onInitialize();
-
+    // Инициализация
     this.arSessionManager.onPlaneOrPointTap = onPlaneOrPointTapped;
     this.arObjectManager.onPanStart = onPanStarted;
     this.arObjectManager.onPanChange = onPanChanged;
@@ -85,14 +85,16 @@ class _ObjectGesturesWidgetState extends State<ObjectGesturesWidget> {
     this.arObjectManager.onRotationStart = onRotationStarted;
     this.arObjectManager.onRotationChange = onRotationChanged;
     this.arObjectManager.onRotationEnd = onRotationEnded;
+    // Назначение методов
   }
 
   Future<void> onRemoveEverything() async {
-    /*nodes.forEach((node) {
-      this.arObjectManager.removeNode(node);
-    });*/
+    for (var node in nodes) {
+      arObjectManager.removeNode(node);
+    }
     for (var anchor in anchors) {
       arAnchorManager.removeAnchor(anchor);
+      log('delete');
     }
     anchors = [];
   }
@@ -100,38 +102,35 @@ class _ObjectGesturesWidgetState extends State<ObjectGesturesWidget> {
   Future<void> onPlaneOrPointTapped(
       List<ARHitTestResult> hitTestResults) async {
     var singleHitTestResult = hitTestResults.firstWhere(
-            (hitTestResult) => hitTestResult.type == ARHitTestResultType.plane);
-    if (singleHitTestResult != null) {
-      var newAnchor =
-      ARPlaneAnchor(transformation: singleHitTestResult.worldTransform);
-      ARNode newNode;
-      await this.arAnchorManager.addAnchor(newAnchor).then((value) async {
-        newNode = ARNode(
-            type: NodeType.webGLB,
-            uri:
-            "https://apikreslo.herokuapp.com/",
-            scale: Vector3(1, 1, 1),
-            position: Vector3(0.0, 0.0, 0.0),
-            rotation: Vector4(1.0, 0.0, 0.0, 0.0));
-        await arObjectManager
-            .addNode(newNode, planeAnchor: newAnchor)
-            .then((value) => {nodes.add(newNode)});
-      });
-    }
+        (hitTestResult) => hitTestResult.type == ARHitTestResultType.plane);
+    var newAnchor =
+        ARPlaneAnchor(transformation: singleHitTestResult.worldTransform);
+    ARNode newNode;
+    await arAnchorManager.addAnchor(newAnchor).then((value) async {
+      newNode = ARNode(
+          type: NodeType.webGLB,
+          uri: "https://apikreslo.herokuapp.com/",
+          scale: Vector3(1, 1, 1),
+          position: Vector3(0.0, 0.0, 0.0),
+          rotation: Vector4(1.0, 0.0, 0.0, 0.0));
+      await arObjectManager
+          .addNode(newNode, planeAnchor: newAnchor)
+          .then((value) => {nodes.add(newNode)});
+    });
   }
 
   onPanStarted(String nodeName) {
-    print("Started panning node " + nodeName);
+    log("Started panning node " + nodeName);
   }
 
   onPanChanged(String nodeName) {
-    print("Continued panning node " + nodeName);
+    log("Continued panning node " + nodeName);
   }
 
   onPanEnded(String nodeName, Matrix4 newTransform) {
-    print("Ended panning node " + nodeName);
-    final pannedNode =
-    this.nodes.firstWhere((element) => element.name == nodeName);
+    log("Ended panning node " + nodeName);
+    // final pannedNode =
+    //     this.nodes.firstWhere((element) => element.name == nodeName); // Отредоктированная нода
 
     /*
     * Uncomment the following command if you want to keep the transformations of the Flutter representations of the nodes up to date
@@ -141,7 +140,7 @@ class _ObjectGesturesWidgetState extends State<ObjectGesturesWidget> {
   }
 
   onRotationStarted(String nodeName) {
-    print("Started rotating node " + nodeName);
+    log("Started rotating node " + nodeName);
   }
 
   onRotationChanged(String nodeName) {
@@ -149,9 +148,9 @@ class _ObjectGesturesWidgetState extends State<ObjectGesturesWidget> {
   }
 
   onRotationEnded(String nodeName, Matrix4 newTransform) {
-    print("Ended rotating node " + nodeName);
-    final rotatedNode =
-    this.nodes.firstWhere((element) => element.name == nodeName);
+    log("Ended rotating node " + nodeName);
+    // final rotatedNode =
+    //     this.nodes.firstWhere((element) => element.name == nodeName); // Повернутая нода
 
     /*
     * Uncomment the following command if you want to keep the transformations of the Flutter representations of the nodes up to date
