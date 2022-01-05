@@ -5,7 +5,6 @@ import 'package:loading/loading.dart';
 import 'dart:async';
 import 'ar_class.dart';
 
-
 class FScreen extends StatefulWidget {
   const FScreen({Key? key}) : super(key: key);
 
@@ -17,9 +16,10 @@ class _FScreenState extends State<FScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds:2),(){
+    Timer(const Duration(seconds: 2), () {
       setState(() {
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ArWidget()));
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => ArWidget()));
       });
     });
   } // Пока пользователь видит экран загрузки мы загружаем все что нужно
