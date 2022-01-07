@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return send_file('files/pufik.glb')
+    return send_file('files/model.glb')
 
 
 if __name__ == '__main__':
