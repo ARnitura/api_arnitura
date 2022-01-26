@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="add icon">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bd_objects.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/furniture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/furniture_series.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/manufacturer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/material.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/sort_furniture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/type_furniture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unpack/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/__all_models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/db_session.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/furniture.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.main" />
       </list>
