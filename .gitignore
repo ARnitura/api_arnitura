@@ -1,0 +1,1390 @@
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/App.framework/App
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/.filecache
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/app.dill
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/debug_ios_bundle_flutter_assets.stamp
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/debug_universal_framework.stamp
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/debug_unpack_ios.stamp
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/flutter_assets.d
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/gen_dart_plugin_registrant.stamp
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/gen_localizations.stamp
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/kernel_snapshot.d
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/kernel_snapshot.stamp
+/.dart_tool/flutter_build/05272dc9e6ac1a6f637c35c6e5d1f2b2/outputs.json
+/.dart_tool/flutter_build/ab6190fcb80c2ef9eb198ccc911ffab4/app.dill
+/.dart_tool/flutter_build/ab6190fcb80c2ef9eb198ccc911ffab4/gen_dart_plugin_registrant.stamp
+/.dart_tool/flutter_build/ab6190fcb80c2ef9eb198ccc911ffab4/gen_localizations.stamp
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/App.framework/App
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/.filecache
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/app.dill
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/debug_ios_bundle_flutter_assets.stamp
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/debug_universal_framework.stamp
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/debug_unpack_ios.stamp
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/flutter_assets.d
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/gen_dart_plugin_registrant.stamp
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/gen_localizations.stamp
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/kernel_snapshot.d
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/kernel_snapshot.stamp
+/.dart_tool/flutter_build/b53dca605febda9d344e38b911a682d8/outputs.json
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/App.framework/App
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/arm64/App.framework/App
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/arm64/snapshot_assembly.o
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/arm64/snapshot_assembly.S
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/.filecache
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/aot_assembly_release.stamp
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/app.dill
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/flutter_assets.d
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/gen_dart_plugin_registrant.stamp
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/gen_localizations.stamp
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/kernel_snapshot.d
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/kernel_snapshot.stamp
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/outputs.json
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/release_ios_bundle_flutter_assets.stamp
+/.dart_tool/flutter_build/e34f6bf7f68ce1361e96ecbe0e13c4d9/release_unpack_ios.stamp
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/App.framework/App
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/.filecache
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/app.dill
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/debug_ios_bundle_flutter_assets.stamp
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/debug_universal_framework.stamp
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/debug_unpack_ios.stamp
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/flutter_assets.d
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/gen_dart_plugin_registrant.stamp
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/gen_localizations.stamp
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/kernel_snapshot.d
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/kernel_snapshot.stamp
+/.dart_tool/flutter_build/febc83b87c3685a858500d172dd34784/outputs.json
+/.dart_tool/pub/incremental/flutter_launcher_icons/main.dart.incremental.dill
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/libraries/Flutter_Plugins.xml
+/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_01_2022,_16_17_[Default_Changelist]/shelved.patch
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/App
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/App1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/App2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/ar_flutter_plugin
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator1.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator1.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator2.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator2.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator3.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator3.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator4.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator4.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator5.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator5.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator6.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator6.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator7.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator7.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator8.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm64-apple-ios-simulator9.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm641.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm641.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm642.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm642.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm643.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm643.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm644.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm644.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm645.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm645.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm646.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm646.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm647.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm647.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm648.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/arm649.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Assets.car
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Assets1.car
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CodeDirectory
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CodeDirectory1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CodeDirectory2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CodeRequirements-1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CodeRequirements-11
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CodeRequirements-12
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Cryptor
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Cryptor1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Cryptor2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CryptorECC
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CryptorECC1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CryptorECC2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CryptorRSA
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CryptorRSA1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/CryptorRSA2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FBLPromises
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FBLPromises1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FBLPromises2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseABTesting
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseABTesting1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseABTesting2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseCore
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseCore1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseCore2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseCoreDiagnostics
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseCoreDiagnostics1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseCoreDiagnostics2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseInstallations
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseInstallations1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseInstallations2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseRemoteConfig
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseRemoteConfig1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/FirebaseRemoteConfig2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/geolocator_apple
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/geolocator_apple1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/geolocator_apple2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GLTFSceneKit
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GLTFSceneKit1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GLTFSceneKit2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GoogleDataTransport
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GoogleDataTransport1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GoogleDataTransport2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GoogleToolboxForMac
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GoogleToolboxForMac1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GoogleToolboxForMac2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GoogleUtilities
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GoogleUtilities1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GoogleUtilities2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GTMSessionFetcher
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GTMSessionFetcher1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/GTMSessionFetcher2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator1.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator1.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator2.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator2.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator3.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator3.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator4.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i386-apple-ios-simulator4.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i3861.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i3861.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i3862.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i3862.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i3863.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i3863.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i3864.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/i3864.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Info.plist
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Info1.plist
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/kernel_blob.bin
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/kernel_blob1.bin
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/kernel_blob2.bin
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/KituraContracts
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/KituraContracts1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/KituraContracts2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/LoggerAPI
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/LoggerAPI1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/LoggerAPI2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Logging
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Logging1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Logging2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/nanopb
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/nanopb1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/nanopb2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/package_info_plus
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/package_info_plus1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/package_info_plus2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/permission_handler
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Pods_Runner
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Runner
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Runner1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Sentry
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Sentry1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/Sentry2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/sentry_flutter
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/sentry_flutter1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/sentry_flutter2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/shelved.patch
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/SwiftJWT
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/SwiftJWT1
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/SwiftJWT2
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64.swiftdoc
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator.swiftdoc
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator1.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator1.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator2.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator2.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator3.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator3.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator4.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator4.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator5.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator5.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator6.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator6.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator7.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator7.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator8.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator8.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator9.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_64-apple-ios-simulator10.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_641.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_641.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_642.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_642.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_643.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_643.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_644.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_644.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_645.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_645.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_646.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_646.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_647.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_647.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_648.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_648.swiftsourceinfo
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_649.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022,_23_32_[Changes]/x86_6410.swiftmodule
+/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_01_2022__16_17__Default_Changelist_.xml
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022__23_32__Changes_.xml
+/.idea/dataSources.xml
+/.idea/KRESLO.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+/.idea/
+/android/.gradle/6.7/executionHistory/executionHistory.bin
+/android/.gradle/6.7/executionHistory/executionHistory.lock
+/android/.gradle/6.7/fileChanges/last-build.bin
+/android/.gradle/6.7/fileHashes/fileHashes.bin
+/android/.gradle/6.7/fileHashes/fileHashes.lock
+/android/.gradle/6.7/fileHashes/resourceHashesCache.bin
+/android/.gradle/6.7/javaCompile/classAnalysis.bin
+/android/.gradle/6.7/javaCompile/jarAnalysis.bin
+/android/.gradle/6.7/javaCompile/javaCompile.lock
+/android/.gradle/6.7/javaCompile/taskHistory.bin
+/android/.gradle/6.7/gc.properties
+/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+/android/.gradle/buildOutputCleanup/cache.properties
+/android/.gradle/buildOutputCleanup/outputFiles.bin
+/android/.gradle/checksums/checksums.lock
+/android/.gradle/checksums/sha1-checksums.bin
+/android/.gradle/configuration-cache/gc.properties
+/android/.gradle/vcs-1/gc.properties
+/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+/android/gradle/wrapper/gradle-wrapper.jar
+/android/gradlew
+/android/gradlew.bat
+/android/local.properties
+/ios/.symlinks/plugins/ar_flutter_plugin/
+/ios/.symlinks/plugins/geolocator_apple/
+/ios/.symlinks/plugins/package_info_plus/
+/ios/.symlinks/plugins/permission_handler/
+/ios/.symlinks/plugins/sentry_flutter/
+/ios/Flutter/Flutter.podspec
+/ios/Flutter/flutter_export_environment.sh
+/ios/Flutter/Generated.xcconfig
+/ios/Pods/ARCore/Base/Frameworks/ARCoreBase.framework/Modules/module.modulemap
+/ios/Pods/ARCore/Base/Frameworks/ARCoreBase.framework/ARCoreBase
+/ios/Pods/ARCore/Base/Sources/ARCore.h
+/ios/Pods/ARCore/Base/Sources/module.modulemap
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Headers/ARCoreCloudAnchors.h
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Headers/GARAnchor.h
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Headers/GARCloudAnchorState.h
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Headers/GARFeatureMapQuality.h
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Headers/GARFrame.h
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Headers/GARFramePair.h
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Headers/GARSession.h
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Headers/GARSessionDelegate.h
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Headers/GARSessionError.h
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/Modules/module.modulemap
+/ios/Pods/ARCore/CloudAnchors/Frameworks/ARCoreCloudAnchors.framework/ARCoreCloudAnchors
+/ios/Pods/ARCore/CloudAnchors/Resources/ARCoreResources/Resources
+/ios/Pods/ARCore/LICENSE
+/ios/Pods/ARCore/README.md
+/ios/Pods/BlueCryptor/Sources/Cryptor/Crypto.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/Cryptor.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/Digest.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/HMAC.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/KeyDerivation.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/Random.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/SSLPointerTricks.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/Status.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/StreamCryptor.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/Updatable.swift
+/ios/Pods/BlueCryptor/Sources/Cryptor/Utilities.swift
+/ios/Pods/BlueCryptor/LICENSE
+/ios/Pods/BlueCryptor/README.md
+/ios/Pods/BlueECC/Sources/CryptorECC/ASN1.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/Data+Extensions.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/ECDecryptable.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/ECEncryptable.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/ECError.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/ECPrivateKey.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/ECPublicKey.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/ECSignable.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/ECSignature.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/EllipticCurve.swift
+/ios/Pods/BlueECC/Sources/CryptorECC/SSLPointerTricks.swift
+/ios/Pods/BlueECC/LICENSE.txt
+/ios/Pods/BlueECC/README.md
+/ios/Pods/BlueRSA/Sources/CryptorRSA/CryptorRSA.swift
+/ios/Pods/BlueRSA/Sources/CryptorRSA/CryptorRSAConstants.swift
+/ios/Pods/BlueRSA/Sources/CryptorRSA/CryptorRSADigest.swift
+/ios/Pods/BlueRSA/Sources/CryptorRSA/CryptorRSAErrors.swift
+/ios/Pods/BlueRSA/Sources/CryptorRSA/CryptorRSAKey.swift
+/ios/Pods/BlueRSA/Sources/CryptorRSA/CryptorRSAUtilities.swift
+/ios/Pods/BlueRSA/Sources/CryptorRSA/Data+Extensions.swift
+/ios/Pods/BlueRSA/Sources/CryptorRSA/SSLPointerTricks.swift
+/ios/Pods/BlueRSA/LICENSE
+/ios/Pods/BlueRSA/README.md
+/ios/Pods/Firebase/CoreOnly/Sources/Firebase.h
+/ios/Pods/Firebase/CoreOnly/Sources/module.modulemap
+/ios/Pods/Firebase/LICENSE
+/ios/Pods/Firebase/README.md
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/Private/ABTExperimentPayload.h
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/Private/FirebaseABTestingInternal.h
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/Public/FirebaseABTesting/FirebaseABTesting.h
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/Public/FirebaseABTesting/FIRExperimentController.h
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/Public/FirebaseABTesting/FIRLifecycleEvents.h
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/ABTConditionalUserPropertyController.h
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/ABTConditionalUserPropertyController.m
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/ABTConstants.h
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/ABTExperimentPayload.m
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/FIRExperimentController.m
+/ios/Pods/FirebaseABTesting/FirebaseABTesting/Sources/FIRLifecycleEvents.m
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIRAppInternal.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIRComponent.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIRComponentContainer.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIRComponentType.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIRCoreDiagnosticsConnector.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIRDependency.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FirebaseCoreInternal.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIRHeartbeatInfo.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIRLibrary.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIRLogger.h
+/ios/Pods/FirebaseABTesting/FirebaseCore/Sources/Private/FIROptionsInternal.h
+/ios/Pods/FirebaseABTesting/Interop/Analytics/Public/FIRAnalyticsInterop.h
+/ios/Pods/FirebaseABTesting/Interop/Analytics/Public/FIRAnalyticsInteropListener.h
+/ios/Pods/FirebaseABTesting/Interop/Analytics/Public/FIRInteropEventNames.h
+/ios/Pods/FirebaseABTesting/Interop/Analytics/Public/FIRInteropParameterNames.h
+/ios/Pods/FirebaseABTesting/LICENSE
+/ios/Pods/FirebaseABTesting/README.md
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIRAppInternal.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIRComponent.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIRComponentContainer.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIRComponentType.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIRCoreDiagnosticsConnector.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIRDependency.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FirebaseCoreInternal.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIRHeartbeatInfo.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIRLibrary.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIRLogger.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Private/FIROptionsInternal.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRConfiguration.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FirebaseCore.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRLoggerLevel.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIROptions.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRVersion.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRAnalyticsConfiguration.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRAnalyticsConfiguration.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRApp.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRAppAssociationRegistration.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRAppAssociationRegistration.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRBundleUtil.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRBundleUtil.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRComponent.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRComponentContainer.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRComponentContainerInternal.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRComponentType.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRConfiguration.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRConfigurationInternal.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRCoreDiagnosticsConnector.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRDependency.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRDiagnosticsData.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRDiagnosticsData.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRFirebaseUserAgent.h
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRFirebaseUserAgent.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRHeartbeatInfo.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRLogger.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIROptions.m
+/ios/Pods/FirebaseCore/FirebaseCore/Sources/FIRVersion.m
+/ios/Pods/FirebaseCore/Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsData.h
+/ios/Pods/FirebaseCore/Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsInterop.h
+/ios/Pods/FirebaseCore/LICENSE
+/ios/Pods/FirebaseCore/README.md
+/ios/Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/Protogen/nanopb/firebasecore.nanopb.c
+/ios/Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/Protogen/nanopb/firebasecore.nanopb.h
+/ios/Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/Public/FIRCoreDiagnostics.h
+/ios/Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/FIRCoreDiagnostics.m
+/ios/Pods/FirebaseCoreDiagnostics/Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsData.h
+/ios/Pods/FirebaseCoreDiagnostics/Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsInterop.h
+/ios/Pods/FirebaseCoreDiagnostics/LICENSE
+/ios/Pods/FirebaseCoreDiagnostics/README.md
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRAppInternal.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRComponent.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRComponentContainer.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRComponentType.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRCoreDiagnosticsConnector.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRDependency.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FirebaseCoreInternal.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRHeartbeatInfo.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRLibrary.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRLogger.h
+/ios/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIROptionsInternal.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Errors/FIRInstallationsErrorUtil.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Errors/FIRInstallationsErrorUtil.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Errors/FIRInstallationsHTTPError.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Errors/FIRInstallationsHTTPError.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/IIDMigration/FIRInstallationsIIDStore.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/IIDMigration/FIRInstallationsIIDStore.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/IIDMigration/FIRInstallationsIIDTokenStore.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/IIDMigration/FIRInstallationsIIDTokenStore.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsAPIService.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsAPIService.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsItem+RegisterInstallationAPI.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsItem+RegisterInstallationAPI.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRCurrentDateProvider.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRCurrentDateProvider.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsBackoffController.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsBackoffController.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsIDController.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsIDController.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsSingleOperationPromiseCache.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsSingleOperationPromiseCache.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsStatus.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStore.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStore.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredAuthToken.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredAuthToken.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredItem.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredItem.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Private/FirebaseInstallationsInternal.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FirebaseInstallations.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallations.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsAuthTokenResult.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsErrors.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallations.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsAuthTokenResult.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsAuthTokenResultInternal.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsItem.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsItem.m
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsLogger.h
+/ios/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsLogger.m
+/ios/Pods/FirebaseInstallations/LICENSE
+/ios/Pods/FirebaseInstallations/README.md
+/ios/Pods/FirebaseRemoteConfig/FirebaseABTesting/Sources/Private/ABTExperimentPayload.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseABTesting/Sources/Private/FirebaseABTestingInternal.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIRAppInternal.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIRComponent.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIRComponentContainer.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIRComponentType.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIRCoreDiagnosticsConnector.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIRDependency.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FirebaseCoreInternal.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIRHeartbeatInfo.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIRLibrary.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIRLogger.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseCore/Sources/Private/FIROptionsInternal.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseInstallations/Source/Library/Private/FirebaseInstallationsInternal.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/Private/FIRRemoteConfig_Private.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/Private/RCNConfigFetch.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/Private/RCNConfigSettings.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/Public/FirebaseRemoteConfig/FirebaseRemoteConfig.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/Public/FirebaseRemoteConfig/FIRRemoteConfig.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/FIRConfigValue.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/FIRRemoteConfig.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/FIRRemoteConfigComponent.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/FIRRemoteConfigComponent.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigConstants.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigContent.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigContent.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigDBManager.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigDBManager.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigDefines.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigExperiment.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigExperiment.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigFetch.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigSettings.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConfigValue_Internal.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNConstants3P.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNDevice.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNDevice.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNPersonalization.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNPersonalization.m
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNUserDefaultsManager.h
+/ios/Pods/FirebaseRemoteConfig/FirebaseRemoteConfig/Sources/RCNUserDefaultsManager.m
+/ios/Pods/FirebaseRemoteConfig/Interop/Analytics/Public/FIRAnalyticsInterop.h
+/ios/Pods/FirebaseRemoteConfig/Interop/Analytics/Public/FIRAnalyticsInteropListener.h
+/ios/Pods/FirebaseRemoteConfig/Interop/Analytics/Public/FIRInteropEventNames.h
+/ios/Pods/FirebaseRemoteConfig/Interop/Analytics/Public/FIRInteropParameterNames.h
+/ios/Pods/FirebaseRemoteConfig/LICENSE
+/ios/Pods/FirebaseRemoteConfig/README.md
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/extensions/KHR_materials_common/GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness.shader
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/extensions/ExtensionList.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFAccessor.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFAccessorSparse.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFAccessorSparseIndices.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFAccessorSparseValues.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFAnimation.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFAnimationChannel.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFAnimationChannelTarget.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFAnimationSampler.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFAsset.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFBuffer.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFBufferView.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFCamera.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFCameraOrthographic.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFCameraPerspective.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFExtension.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFExtras.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFExtrasTargetNames.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFGlTF.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFGlTFChildOfRootProperty.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFGlTFid.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFGlTFProperty.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFImage.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFMaterial.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFMaterialNormalTextureInfo.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFMaterialOcclusionTextureInfo.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFMaterialPbrMetallicRoughness.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFMesh.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFMeshPrimitive.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFNode.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFSampler.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFScene.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFSkin.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFTexture.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/schema/GLTFTextureInfo.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/GLTFErrors.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/GLTFFunctions.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/GLTFSceneSource.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/GLTFShaderModifierFragment_alphaCutoff.shader
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/GLTFShaderModifierSurface.shader
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/GLTFShaderModifierSurface_alphaModeBlend.shader
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/GLTFShaderModifierSurface_doubleSidedWorkaround.shader
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/GLTFTypes.swift
+/ios/Pods/GLTFSceneKit/Sources/GLTFSceneKit/GLTFUnarchiver.swift
+/ios/Pods/GLTFSceneKit/LICENSE
+/ios/Pods/GLTFSceneKit/README.md
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/Private/GDTCCTCompressionHelper.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/Private/GDTCCTNanopbHelpers.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/Private/GDTCCTUploader.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/Private/GDTCCTUploadOperation.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/Public/GDTCOREvent+GDTCCTSupport.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/GDTCCTCompressionHelper.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/GDTCCTNanopbHelpers.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/GDTCCTUploader.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/GDTCCTUploadOperation.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCCTLibrary/GDTCOREvent+GDTCCTSupport.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Internal/GDTCORAssert.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Internal/GDTCORDirectorySizeTracker.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Internal/GDTCORLifecycle.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Internal/GDTCORPlatform.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Internal/GDTCORReachability.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Internal/GDTCORRegistrar.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Internal/GDTCORStorageEventSelector.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Internal/GDTCORStorageProtocol.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Internal/GDTCORUploader.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCOREndpoints_Private.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCOREvent_Private.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORFlatFileStorage+Promises.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORFlatFileStorage.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORReachability_Private.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORRegistrar_Private.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORTransformer.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORTransformer_Private.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORTransport_Private.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORUploadBatch.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORUploadCoordinator.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORClock.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORConsoleLogger.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREndpoints.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREvent.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREventDataObject.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCOREventTransformer.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORTargets.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORTransport.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GoogleDataTransport.h
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORAssert.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORClock.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORConsoleLogger.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORDirectorySizeTracker.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCOREndpoints.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCOREvent.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORFlatFileStorage+Promises.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORFlatFileStorage.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORLifecycle.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORPlatform.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORReachability.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORRegistrar.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORStorageEventSelector.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORTransformer.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORTransport.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORUploadBatch.m
+/ios/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORUploadCoordinator.m
+/ios/Pods/GoogleDataTransport/LICENSE
+/ios/Pods/GoogleDataTransport/README.md
+/ios/Pods/GoogleToolboxForMac/Foundation/GTMLogger.h
+/ios/Pods/GoogleToolboxForMac/Foundation/GTMLogger.m
+/ios/Pods/GoogleToolboxForMac/Foundation/GTMNSData+zlib.h
+/ios/Pods/GoogleToolboxForMac/Foundation/GTMNSData+zlib.m
+/ios/Pods/GoogleToolboxForMac/GTMDefines.h
+/ios/Pods/GoogleToolboxForMac/LICENSE
+/ios/Pods/GoogleToolboxForMac/README.md
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULAppEnvironmentUtil.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorable.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorage.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorageUserDefaults.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainStorage.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainUtils.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULSecureCoding.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/GULURLSessionDataResponse.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/Public/GoogleUtilities/NSURLSession+GULPromises.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/SecureStorage/GULKeychainStorage.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/SecureStorage/GULKeychainUtils.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/URLSessionPromiseWrapper/GULURLSessionDataResponse.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/URLSessionPromiseWrapper/NSURLSession+GULPromises.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/GULHeartbeatDateStorage.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/GULHeartbeatDateStorageUserDefaults.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/Environment/GULSecureCoding.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities/GULLogger.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GoogleUtilities/GULLoggerLevel.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/Logger/GULLogger.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/NSData+zlib/Public/GoogleUtilities/GULNSData+zlib.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/NSData+zlib/GULNSData+zlib.m
+/ios/Pods/GoogleUtilities/GoogleUtilities/UserDefaults/Public/GoogleUtilities/GULUserDefaults.h
+/ios/Pods/GoogleUtilities/GoogleUtilities/UserDefaults/GULUserDefaults.m
+/ios/Pods/GoogleUtilities/LICENSE
+/ios/Pods/GoogleUtilities/README.md
+/ios/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h
+/ios/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.m
+/ios/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h
+/ios/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.m
+/ios/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h
+/ios/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.m
+/ios/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h
+/ios/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.m
+/ios/Pods/GTMSessionFetcher/LICENSE
+/ios/Pods/GTMSessionFetcher/README.md
+/ios/Pods/Headers/Private/ARCore/ARCore.h
+/ios/Pods/Headers/Private/Firebase/Firebase.h
+/ios/Pods/Headers/Public/ARCore/ARCore.h
+/ios/Pods/Headers/Public/Firebase/Firebase.h
+/ios/Pods/KituraContracts/Sources/KituraContracts/CodableQuery/Coder.swift
+/ios/Pods/KituraContracts/Sources/KituraContracts/CodableQuery/Extensions.swift
+/ios/Pods/KituraContracts/Sources/KituraContracts/CodableQuery/QueryDecoder.swift
+/ios/Pods/KituraContracts/Sources/KituraContracts/CodableQuery/QueryEncoder.swift
+/ios/Pods/KituraContracts/Sources/KituraContracts/BodyDecoder.swift
+/ios/Pods/KituraContracts/Sources/KituraContracts/BodyEncoder.swift
+/ios/Pods/KituraContracts/Sources/KituraContracts/BodyFormat.swift
+/ios/Pods/KituraContracts/Sources/KituraContracts/ClosureAliases.swift
+/ios/Pods/KituraContracts/Sources/KituraContracts/Contracts.swift
+/ios/Pods/KituraContracts/LICENSE
+/ios/Pods/KituraContracts/README.md
+/ios/Pods/Local Podspecs/ar_flutter_plugin.podspec.json
+/ios/Pods/Local Podspecs/Flutter.podspec.json
+/ios/Pods/Local Podspecs/geolocator_apple.podspec.json
+/ios/Pods/Local Podspecs/package_info_plus.podspec.json
+/ios/Pods/Local Podspecs/permission_handler.podspec.json
+/ios/Pods/Local Podspecs/sentry_flutter.podspec.json
+/ios/Pods/LoggerAPI/Sources/LoggerAPI/Logger.swift
+/ios/Pods/LoggerAPI/LICENSE.txt
+/ios/Pods/LoggerAPI/README.md
+/ios/Pods/Logging/Sources/Logging/Locks.swift
+/ios/Pods/Logging/Sources/Logging/Logging.swift
+/ios/Pods/Logging/Sources/Logging/LogHandler.swift
+/ios/Pods/Logging/LICENSE.txt
+/ios/Pods/Logging/README.md
+/ios/Pods/nanopb/LICENSE.txt
+/ios/Pods/nanopb/pb.h
+/ios/Pods/nanopb/pb_common.c
+/ios/Pods/nanopb/pb_common.h
+/ios/Pods/nanopb/pb_decode.c
+/ios/Pods/nanopb/pb_decode.h
+/ios/Pods/nanopb/pb_encode.c
+/ios/Pods/nanopb/pb_encode.h
+/ios/Pods/nanopb/README.md
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/ar_flutter_plugin.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/ARCore.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/ARCore-ARCoreResources.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/BlueCryptor.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/BlueECC.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/BlueRSA.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/Firebase.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/FirebaseABTesting.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/FirebaseCore.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/FirebaseCoreDiagnostics.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/FirebaseInstallations.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/FirebaseRemoteConfig.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/Flutter.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/geolocator_apple.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/GLTFSceneKit.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/GoogleDataTransport.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/GoogleToolboxForMac.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/GoogleUtilities.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/GTMSessionFetcher.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/KituraContracts.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/LoggerAPI.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/Logging.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/nanopb.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/package_info_plus.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/permission_handler.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/Pods-Runner.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/PromisesObjC.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/Sentry.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/sentry_flutter.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/SwiftJWT.xcscheme
+/ios/Pods/Pods.xcodeproj/xcuserdata/vadimmazurek.xcuserdatad/xcschemes/xcschememanagement.plist
+/ios/Pods/Pods.xcodeproj/project.pbxproj
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+All.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Always.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Any.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Async.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Await.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Catch.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Delay.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Do.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Race.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Recover.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Reduce.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Retry.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Testing.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Then.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Timeout.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Validate.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise+Wrap.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromise.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromiseError.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromisePrivate.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/include/FBLPromises.h
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+All.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Always.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Any.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Async.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Await.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Catch.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Delay.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Do.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Race.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Recover.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Reduce.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Retry.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Testing.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Then.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Timeout.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Validate.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise+Wrap.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromise.m
+/ios/Pods/PromisesObjC/Sources/FBLPromises/FBLPromiseError.m
+/ios/Pods/PromisesObjC/LICENSE
+/ios/Pods/PromisesObjC/README.md
+/ios/Pods/Sentry/Sources/Sentry/include/NSArray+SentrySanitize.h
+/ios/Pods/Sentry/Sources/Sentry/include/NSData+Sentry.h
+/ios/Pods/Sentry/Sources/Sentry/include/NSData+SentryCompression.h
+/ios/Pods/Sentry/Sources/Sentry/include/NSDate+SentryExtras.h
+/ios/Pods/Sentry/Sources/Sentry/include/NSDictionary+SentrySanitize.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryAppStartTracker.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryAppStartTrackingIntegration.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryAppState.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryAppStateManager.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryAsynchronousOperation.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryAutoBreadcrumbTrackingIntegration.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryAutoSessionTrackingIntegration.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryBreadcrumbTracker.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryClient+Private.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryConcurrentRateLimitsDictionary.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashAdapter.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashBinaryImageProvider.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashDefaultBinaryImageProvider.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashDefaultMachineContextWrapper.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashInstallationReporter.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashIntegration.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashIsAppImage.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashMachineContextWrapper.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashReportConverter.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashReportSink.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashScopeObserver.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCrashStackEntryMapper.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCurrentDate.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryCurrentDateProvider.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryDateUtil.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryDefaultCurrentDateProvider.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryDefaultRateLimits.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryDispatchQueueWrapper.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryDisplayLinkWrapper.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryDisplayLinkWrapper.m
+/ios/Pods/Sentry/Sources/Sentry/include/SentryEnvelopeRateLimit.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryFileContents.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryFileManager.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryFrameRemover.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryFramesTracker.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryFramesTrackingIntegration.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryGlobalEventProcessor.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryHexAddressFormatter.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryHttpDateParser.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryHttpTransport.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryHub+Private.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryInAppLogic.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryInstallation.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryInternalNotificationNames.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryLevelMapper.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryLog.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryLogOutput.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryMeta.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryMigrateSessionInit.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryNetworkTracker.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryNetworkTrackingIntegration.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryNSURLRequest.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryNSURLSessionTaskSearch.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryOptions+Private.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryOutOfMemoryLogic.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryOutOfMemoryTracker.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryOutOfMemoryTrackingIntegration.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryPerformanceTracker.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryPerformanceTrackingIntegration.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryQueueableRequestManager.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryRandom.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryRateLimitCategory.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryRateLimitCategoryMapper.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryRateLimitParser.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryRateLimits.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryRequestManager.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryRequestOperation.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryRetryAfterHeaderParser.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryScope+Private.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryScopeObserver.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryScopeSyncC.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentrySDK+Private.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentrySerialization.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentrySession+Private.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentrySessionCrashedHandler.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentrySessionTracker.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentrySpan.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryStacktraceBuilder.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentrySwizzle.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentrySysctl.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentrySystemEventsBreadcrumbs.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryThreadInspector.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryTracer.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryTracesSampler.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryTraceState.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryTransaction+Private.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryTransaction.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryTransport.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryTransportFactory.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryUIViewControllerPerformanceTracker.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryUIViewControllerSanitizer.h
+/ios/Pods/Sentry/Sources/Sentry/include/SentryUIViewControllerSwizziling.h
+/ios/Pods/Sentry/Sources/Sentry/include/UIViewController+Sentry.h
+/ios/Pods/Sentry/Sources/Sentry/Public/PrivateSentrySDKOnly.h
+/ios/Pods/Sentry/Sources/Sentry/Public/Sentry.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryAppStartMeasurement.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryAttachment.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryBreadcrumb.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryClient.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryCrashExceptionApplication.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryDebugImageProvider.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryDebugMeta.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryDefines.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryDsn.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryEnvelope.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryEnvelopeItemType.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryError.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryEvent.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryException.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryFrame.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryHub.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryId.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryIntegrationProtocol.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryMechanism.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryMechanismMeta.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryMessage.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryNSError.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryOptions.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySampleDecision.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySamplingContext.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryScope.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryScreenFrames.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySDK.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySdkInfo.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySerializable.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySession.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySpanContext.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySpanId.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySpanProtocol.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentrySpanStatus.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryStacktrace.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryThread.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryTraceHeader.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryTransactionContext.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryUser.h
+/ios/Pods/Sentry/Sources/Sentry/Public/SentryUserFeedback.h
+/ios/Pods/Sentry/Sources/Sentry/NSArray+SentrySanitize.m
+/ios/Pods/Sentry/Sources/Sentry/NSData+Sentry.m
+/ios/Pods/Sentry/Sources/Sentry/NSData+SentryCompression.m
+/ios/Pods/Sentry/Sources/Sentry/NSDate+SentryExtras.m
+/ios/Pods/Sentry/Sources/Sentry/NSDictionary+SentrySanitize.m
+/ios/Pods/Sentry/Sources/Sentry/SentryAppStartMeasurement.m
+/ios/Pods/Sentry/Sources/Sentry/SentryAppStartTracker.m
+/ios/Pods/Sentry/Sources/Sentry/SentryAppStartTrackingIntegration.m
+/ios/Pods/Sentry/Sources/Sentry/SentryAppState.m
+/ios/Pods/Sentry/Sources/Sentry/SentryAppStateManager.m
+/ios/Pods/Sentry/Sources/Sentry/SentryAsynchronousOperation.m
+/ios/Pods/Sentry/Sources/Sentry/SentryAttachment.m
+/ios/Pods/Sentry/Sources/Sentry/SentryAutoBreadcrumbTrackingIntegration.m
+/ios/Pods/Sentry/Sources/Sentry/SentryAutoSessionTrackingIntegration.m
+/ios/Pods/Sentry/Sources/Sentry/SentryBreadcrumb.m
+/ios/Pods/Sentry/Sources/Sentry/SentryBreadcrumbTracker.m
+/ios/Pods/Sentry/Sources/Sentry/SentryClient.m
+/ios/Pods/Sentry/Sources/Sentry/SentryConcurrentRateLimitsDictionary.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashAdapter.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashDefaultBinaryImageProvider.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashDefaultMachineContextWrapper.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashExceptionApplication.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashInstallationReporter.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashIntegration.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashReportConverter.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashReportSink.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashScopeObserver.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCrashStackEntryMapper.m
+/ios/Pods/Sentry/Sources/Sentry/SentryCurrentDate.m
+/ios/Pods/Sentry/Sources/Sentry/SentryDateUtil.m
+/ios/Pods/Sentry/Sources/Sentry/SentryDebugImageProvider.m
+/ios/Pods/Sentry/Sources/Sentry/SentryDebugMeta.m
+/ios/Pods/Sentry/Sources/Sentry/SentryDefaultCurrentDateProvider.m
+/ios/Pods/Sentry/Sources/Sentry/SentryDefaultObjCRuntimeWrapper.h
+/ios/Pods/Sentry/Sources/Sentry/SentryDefaultObjCRuntimeWrapper.m
+/ios/Pods/Sentry/Sources/Sentry/SentryDefaultRateLimits.m
+/ios/Pods/Sentry/Sources/Sentry/SentryDispatchQueueWrapper.m
+/ios/Pods/Sentry/Sources/Sentry/SentryDsn.m
+/ios/Pods/Sentry/Sources/Sentry/SentryEnvelope.m
+/ios/Pods/Sentry/Sources/Sentry/SentryEnvelopeRateLimit.m
+/ios/Pods/Sentry/Sources/Sentry/SentryError.m
+/ios/Pods/Sentry/Sources/Sentry/SentryEvent.m
+/ios/Pods/Sentry/Sources/Sentry/SentryException.m
+/ios/Pods/Sentry/Sources/Sentry/SentryFileContents.m
+/ios/Pods/Sentry/Sources/Sentry/SentryFileManager.m
+/ios/Pods/Sentry/Sources/Sentry/SentryFrame.m
+/ios/Pods/Sentry/Sources/Sentry/SentryFrameRemover.m
+/ios/Pods/Sentry/Sources/Sentry/SentryFramesTracker.m
+/ios/Pods/Sentry/Sources/Sentry/SentryFramesTrackingIntegration.m
+/ios/Pods/Sentry/Sources/Sentry/SentryGlobalEventProcessor.m
+/ios/Pods/Sentry/Sources/Sentry/SentryHttpDateParser.m
+/ios/Pods/Sentry/Sources/Sentry/SentryHttpTransport.m
+/ios/Pods/Sentry/Sources/Sentry/SentryHub.m
+/ios/Pods/Sentry/Sources/Sentry/SentryHybridSKdsOnly.m
+/ios/Pods/Sentry/Sources/Sentry/SentryId.m
+/ios/Pods/Sentry/Sources/Sentry/SentryInAppLogic.m
+/ios/Pods/Sentry/Sources/Sentry/SentryInstallation.m
+/ios/Pods/Sentry/Sources/Sentry/SentryLevelMapper.m
+/ios/Pods/Sentry/Sources/Sentry/SentryLog.m
+/ios/Pods/Sentry/Sources/Sentry/SentryLogOutput.m
+/ios/Pods/Sentry/Sources/Sentry/SentryMechanism.m
+/ios/Pods/Sentry/Sources/Sentry/SentryMechanismMeta.m
+/ios/Pods/Sentry/Sources/Sentry/SentryMessage.m
+/ios/Pods/Sentry/Sources/Sentry/SentryMeta.m
+/ios/Pods/Sentry/Sources/Sentry/SentryMigrateSessionInit.m
+/ios/Pods/Sentry/Sources/Sentry/SentryNetworkTracker.m
+/ios/Pods/Sentry/Sources/Sentry/SentryNetworkTrackingIntegration.m
+/ios/Pods/Sentry/Sources/Sentry/SentryNoOpSpan.h
+/ios/Pods/Sentry/Sources/Sentry/SentryNoOpSpan.m
+/ios/Pods/Sentry/Sources/Sentry/SentryNSError.m
+/ios/Pods/Sentry/Sources/Sentry/SentryNSURLRequest.m
+/ios/Pods/Sentry/Sources/Sentry/SentryNSURLSessionTaskSearch.m
+/ios/Pods/Sentry/Sources/Sentry/SentryObjCRuntimeWrapper.h
+/ios/Pods/Sentry/Sources/Sentry/SentryOptions.m
+/ios/Pods/Sentry/Sources/Sentry/SentryOutOfMemoryLogic.m
+/ios/Pods/Sentry/Sources/Sentry/SentryOutOfMemoryTracker.m
+/ios/Pods/Sentry/Sources/Sentry/SentryOutOfMemoryTrackingIntegration.m
+/ios/Pods/Sentry/Sources/Sentry/SentryPerformanceTracker.m
+/ios/Pods/Sentry/Sources/Sentry/SentryPerformanceTrackingIntegration.m
+/ios/Pods/Sentry/Sources/Sentry/SentryQueueableRequestManager.m
+/ios/Pods/Sentry/Sources/Sentry/SentryRandom.m
+/ios/Pods/Sentry/Sources/Sentry/SentryRateLimitCategoryMapper.m
+/ios/Pods/Sentry/Sources/Sentry/SentryRateLimitParser.m
+/ios/Pods/Sentry/Sources/Sentry/SentryRequestOperation.m
+/ios/Pods/Sentry/Sources/Sentry/SentryRetryAfterHeaderParser.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySamplingContext.m
+/ios/Pods/Sentry/Sources/Sentry/SentryScope.m
+/ios/Pods/Sentry/Sources/Sentry/SentryScopeSyncC.c
+/ios/Pods/Sentry/Sources/Sentry/SentryScreenFrames.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySDK.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySdkInfo.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySerialization.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySession.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySessionCrashedHandler.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySessionTracker.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySpan.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySpanContext.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySpanId.m
+/ios/Pods/Sentry/Sources/Sentry/SentryStacktrace.m
+/ios/Pods/Sentry/Sources/Sentry/SentryStacktraceBuilder.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySubClassFinder.h
+/ios/Pods/Sentry/Sources/Sentry/SentrySubClassFinder.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySwizzle.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySysctl.m
+/ios/Pods/Sentry/Sources/Sentry/SentrySystemEventsBreadcrumbs.m
+/ios/Pods/Sentry/Sources/Sentry/SentryThread.m
+/ios/Pods/Sentry/Sources/Sentry/SentryThreadInspector.m
+/ios/Pods/Sentry/Sources/Sentry/SentryTraceHeader.m
+/ios/Pods/Sentry/Sources/Sentry/SentryTracer.m
+/ios/Pods/Sentry/Sources/Sentry/SentryTracesSampler.m
+/ios/Pods/Sentry/Sources/Sentry/SentryTraceState.m
+/ios/Pods/Sentry/Sources/Sentry/SentryTransaction.m
+/ios/Pods/Sentry/Sources/Sentry/SentryTransactionContext.m
+/ios/Pods/Sentry/Sources/Sentry/SentryTransportFactory.m
+/ios/Pods/Sentry/Sources/Sentry/SentryUIViewControllerPerformanceTracker.m
+/ios/Pods/Sentry/Sources/Sentry/SentryUIViewControllerSanitizer.m
+/ios/Pods/Sentry/Sources/Sentry/SentryUIViewControllerSwizziling.m
+/ios/Pods/Sentry/Sources/Sentry/SentryUser.m
+/ios/Pods/Sentry/Sources/Sentry/SentryUserFeedback.m
+/ios/Pods/Sentry/Sources/Sentry/UIViewController+Sentry.m
+/ios/Pods/Sentry/Sources/SentryCrash/Installations/SentryCrashInstallation+Private.h
+/ios/Pods/Sentry/Sources/SentryCrash/Installations/SentryCrashInstallation.h
+/ios/Pods/Sentry/Sources/SentryCrash/Installations/SentryCrashInstallation.m
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_AppState.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_AppState.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_CPPException.cpp
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_CPPException.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_Deadlock.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_Deadlock.m
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_MachException.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_MachException.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_NSException.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_NSException.m
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_Signal.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_Signal.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_System.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_System.m
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_User.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_User.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_Zombie.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_Zombie.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitorContext.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitorType.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitorType.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/fishhook.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/fishhook.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/NSError+SentrySimpleConstructor.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/NSError+SentrySimpleConstructor.m
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashCPU.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashCPU.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashCPU_Apple.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashCPU_arm.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashCPU_arm64.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashCPU_x86_32.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashCPU_x86_64.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashDate.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashDate.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashDebug.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashDebug.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashDynamicLinker.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashDynamicLinker.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashFileUtils.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashFileUtils.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashID.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashID.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashJSONCodec.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashJSONCodec.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashJSONCodecObjC.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashJSONCodecObjC.m
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashLogger.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashLogger.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashMach.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashMach.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashMachineContext.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashMachineContext.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashMachineContext_Apple.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashMemory.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashMemory.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashObjC.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashObjC.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashObjCApple.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashSignalInfo.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashSignalInfo.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashStackCursor.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashStackCursor.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashStackCursor_Backtrace.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashStackCursor_Backtrace.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashStackCursor_MachineContext.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashStackCursor_MachineContext.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashStackCursor_SelfThread.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashStackCursor_SelfThread.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashString.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashString.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashSymbolicator.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashSymbolicator.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashSysCtl.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashSysCtl.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashThread.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashThread.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashUUIDConversion.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashUUIDConversion.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryHook.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/Tools/SentryHook.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrash.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrash.m
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashC.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashC.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashCachedData.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashCachedData.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashDoctor.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashDoctor.m
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashReport.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashReport.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashReportFields.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashReportFixer.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashReportFixer.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashReportStore.c
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashReportStore.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashReportVersion.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashReportWriter.h
+/ios/Pods/Sentry/Sources/SentryCrash/Recording/SentryCrashSystemCapabilities.h
+/ios/Pods/Sentry/Sources/SentryCrash/Reporting/Filters/Tools/Container+SentryDeepSearch.h
+/ios/Pods/Sentry/Sources/SentryCrash/Reporting/Filters/Tools/Container+SentryDeepSearch.m
+/ios/Pods/Sentry/Sources/SentryCrash/Reporting/Filters/Tools/SentryCrashVarArgs.h
+/ios/Pods/Sentry/Sources/SentryCrash/Reporting/Filters/SentryCrashReportFilter.h
+/ios/Pods/Sentry/Sources/SentryCrash/Reporting/Filters/SentryCrashReportFilterBasic.h
+/ios/Pods/Sentry/Sources/SentryCrash/Reporting/Filters/SentryCrashReportFilterBasic.m
+/ios/Pods/Sentry/Sources/SentryCrash/Reporting/Tools/SentryCrashCString.h
+/ios/Pods/Sentry/Sources/SentryCrash/Reporting/Tools/SentryCrashCString.m
+/ios/Pods/Sentry/LICENSE.md
+/ios/Pods/Sentry/README.md
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/ClaimsExamples/ClaimsMicroProfile.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/ClaimsExamples/ClaimsOpenID.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/ClaimsExamples/ClaimsStandardJWT.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/BlueECDSA.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/BlueHMAC.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/BlueRSA.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/Claims.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/Data+Base64URLEncoded.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/Header.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/JWT.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/JWTDecoder.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/JWTEncoder.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/JWTError.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/JWTSigner.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/JWTVerifier.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/NoneAlgorithm.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/RSAKeyType.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/SignerAlgorithm.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/ValidateClaimsResult.swift
+/ios/Pods/SwiftJWT/Sources/SwiftJWT/VerifierAlgorithm.swift
+/ios/Pods/SwiftJWT/LICENSE
+/ios/Pods/SwiftJWT/README.md
+/ios/Pods/Target Support Files/ar_flutter_plugin/ar_flutter_plugin.debug.xcconfig
+/ios/Pods/Target Support Files/ar_flutter_plugin/ar_flutter_plugin.modulemap
+/ios/Pods/Target Support Files/ar_flutter_plugin/ar_flutter_plugin.release.xcconfig
+/ios/Pods/Target Support Files/ar_flutter_plugin/ar_flutter_plugin-dummy.m
+/ios/Pods/Target Support Files/ar_flutter_plugin/ar_flutter_plugin-Info.plist
+/ios/Pods/Target Support Files/ar_flutter_plugin/ar_flutter_plugin-prefix.pch
+/ios/Pods/Target Support Files/ar_flutter_plugin/ar_flutter_plugin-umbrella.h
+/ios/Pods/Target Support Files/ARCore/ARCore.debug.xcconfig
+/ios/Pods/Target Support Files/ARCore/ARCore.release.xcconfig
+/ios/Pods/Target Support Files/ARCore/ResourceBundle-ARCoreResources-ARCore-Info.plist
+/ios/Pods/Target Support Files/BlueCryptor/BlueCryptor.debug.xcconfig
+/ios/Pods/Target Support Files/BlueCryptor/BlueCryptor.modulemap
+/ios/Pods/Target Support Files/BlueCryptor/BlueCryptor.release.xcconfig
+/ios/Pods/Target Support Files/BlueCryptor/BlueCryptor-dummy.m
+/ios/Pods/Target Support Files/BlueCryptor/BlueCryptor-Info.plist
+/ios/Pods/Target Support Files/BlueCryptor/BlueCryptor-prefix.pch
+/ios/Pods/Target Support Files/BlueCryptor/BlueCryptor-umbrella.h
+/ios/Pods/Target Support Files/BlueECC/BlueECC.debug.xcconfig
+/ios/Pods/Target Support Files/BlueECC/BlueECC.modulemap
+/ios/Pods/Target Support Files/BlueECC/BlueECC.release.xcconfig
+/ios/Pods/Target Support Files/BlueECC/BlueECC-dummy.m
+/ios/Pods/Target Support Files/BlueECC/BlueECC-Info.plist
+/ios/Pods/Target Support Files/BlueECC/BlueECC-prefix.pch
+/ios/Pods/Target Support Files/BlueECC/BlueECC-umbrella.h
+/ios/Pods/Target Support Files/BlueRSA/BlueRSA.debug.xcconfig
+/ios/Pods/Target Support Files/BlueRSA/BlueRSA.modulemap
+/ios/Pods/Target Support Files/BlueRSA/BlueRSA.release.xcconfig
+/ios/Pods/Target Support Files/BlueRSA/BlueRSA-dummy.m
+/ios/Pods/Target Support Files/BlueRSA/BlueRSA-Info.plist
+/ios/Pods/Target Support Files/BlueRSA/BlueRSA-prefix.pch
+/ios/Pods/Target Support Files/BlueRSA/BlueRSA-umbrella.h
+/ios/Pods/Target Support Files/Firebase/Firebase.debug.xcconfig
+/ios/Pods/Target Support Files/Firebase/Firebase.release.xcconfig
+/ios/Pods/Target Support Files/FirebaseABTesting/FirebaseABTesting.debug.xcconfig
+/ios/Pods/Target Support Files/FirebaseABTesting/FirebaseABTesting.modulemap
+/ios/Pods/Target Support Files/FirebaseABTesting/FirebaseABTesting.release.xcconfig
+/ios/Pods/Target Support Files/FirebaseABTesting/FirebaseABTesting-dummy.m
+/ios/Pods/Target Support Files/FirebaseABTesting/FirebaseABTesting-Info.plist
+/ios/Pods/Target Support Files/FirebaseABTesting/FirebaseABTesting-umbrella.h
+/ios/Pods/Target Support Files/FirebaseCore/FirebaseCore.debug.xcconfig
+/ios/Pods/Target Support Files/FirebaseCore/FirebaseCore.modulemap
+/ios/Pods/Target Support Files/FirebaseCore/FirebaseCore.release.xcconfig
+/ios/Pods/Target Support Files/FirebaseCore/FirebaseCore-dummy.m
+/ios/Pods/Target Support Files/FirebaseCore/FirebaseCore-Info.plist
+/ios/Pods/Target Support Files/FirebaseCore/FirebaseCore-umbrella.h
+/ios/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.debug.xcconfig
+/ios/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.modulemap
+/ios/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.release.xcconfig
+/ios/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics-dummy.m
+/ios/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics-Info.plist
+/ios/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics-umbrella.h
+/ios/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations.debug.xcconfig
+/ios/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations.modulemap
+/ios/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations.release.xcconfig
+/ios/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations-dummy.m
+/ios/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations-Info.plist
+/ios/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations-umbrella.h
+/ios/Pods/Target Support Files/FirebaseRemoteConfig/FirebaseRemoteConfig.debug.xcconfig
+/ios/Pods/Target Support Files/FirebaseRemoteConfig/FirebaseRemoteConfig.modulemap
+/ios/Pods/Target Support Files/FirebaseRemoteConfig/FirebaseRemoteConfig.release.xcconfig
+/ios/Pods/Target Support Files/FirebaseRemoteConfig/FirebaseRemoteConfig-dummy.m
+/ios/Pods/Target Support Files/FirebaseRemoteConfig/FirebaseRemoteConfig-Info.plist
+/ios/Pods/Target Support Files/FirebaseRemoteConfig/FirebaseRemoteConfig-umbrella.h
+/ios/Pods/Target Support Files/Flutter/Flutter.debug.xcconfig
+/ios/Pods/Target Support Files/Flutter/Flutter.release.xcconfig
+/ios/Pods/Target Support Files/geolocator_apple/geolocator_apple.debug.xcconfig
+/ios/Pods/Target Support Files/geolocator_apple/geolocator_apple.modulemap
+/ios/Pods/Target Support Files/geolocator_apple/geolocator_apple.release.xcconfig
+/ios/Pods/Target Support Files/geolocator_apple/geolocator_apple-dummy.m
+/ios/Pods/Target Support Files/geolocator_apple/geolocator_apple-Info.plist
+/ios/Pods/Target Support Files/geolocator_apple/geolocator_apple-prefix.pch
+/ios/Pods/Target Support Files/geolocator_apple/geolocator_apple-umbrella.h
+/ios/Pods/Target Support Files/GLTFSceneKit/GLTFSceneKit.debug.xcconfig
+/ios/Pods/Target Support Files/GLTFSceneKit/GLTFSceneKit.modulemap
+/ios/Pods/Target Support Files/GLTFSceneKit/GLTFSceneKit.release.xcconfig
+/ios/Pods/Target Support Files/GLTFSceneKit/GLTFSceneKit-dummy.m
+/ios/Pods/Target Support Files/GLTFSceneKit/GLTFSceneKit-Info.plist
+/ios/Pods/Target Support Files/GLTFSceneKit/GLTFSceneKit-prefix.pch
+/ios/Pods/Target Support Files/GLTFSceneKit/GLTFSceneKit-umbrella.h
+/ios/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.debug.xcconfig
+/ios/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.modulemap
+/ios/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.release.xcconfig
+/ios/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport-dummy.m
+/ios/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport-Info.plist
+/ios/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport-umbrella.h
+/ios/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.debug.xcconfig
+/ios/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap
+/ios/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.release.xcconfig
+/ios/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-dummy.m
+/ios/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-Info.plist
+/ios/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch
+/ios/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-umbrella.h
+/ios/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.debug.xcconfig
+/ios/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.modulemap
+/ios/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.release.xcconfig
+/ios/Pods/Target Support Files/GoogleUtilities/GoogleUtilities-dummy.m
+/ios/Pods/Target Support Files/GoogleUtilities/GoogleUtilities-Info.plist
+/ios/Pods/Target Support Files/GoogleUtilities/GoogleUtilities-umbrella.h
+/ios/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.debug.xcconfig
+/ios/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap
+/ios/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.release.xcconfig
+/ios/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-dummy.m
+/ios/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-Info.plist
+/ios/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch
+/ios/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h
+/ios/Pods/Target Support Files/KituraContracts/KituraContracts.debug.xcconfig
+/ios/Pods/Target Support Files/KituraContracts/KituraContracts.modulemap
+/ios/Pods/Target Support Files/KituraContracts/KituraContracts.release.xcconfig
+/ios/Pods/Target Support Files/KituraContracts/KituraContracts-dummy.m
+/ios/Pods/Target Support Files/KituraContracts/KituraContracts-Info.plist
+/ios/Pods/Target Support Files/KituraContracts/KituraContracts-prefix.pch
+/ios/Pods/Target Support Files/KituraContracts/KituraContracts-umbrella.h
+/ios/Pods/Target Support Files/LoggerAPI/LoggerAPI.debug.xcconfig
+/ios/Pods/Target Support Files/LoggerAPI/LoggerAPI.modulemap
+/ios/Pods/Target Support Files/LoggerAPI/LoggerAPI.release.xcconfig
+/ios/Pods/Target Support Files/LoggerAPI/LoggerAPI-dummy.m
+/ios/Pods/Target Support Files/LoggerAPI/LoggerAPI-Info.plist
+/ios/Pods/Target Support Files/LoggerAPI/LoggerAPI-prefix.pch
+/ios/Pods/Target Support Files/LoggerAPI/LoggerAPI-umbrella.h
+/ios/Pods/Target Support Files/Logging/Logging.debug.xcconfig
+/ios/Pods/Target Support Files/Logging/Logging.modulemap
+/ios/Pods/Target Support Files/Logging/Logging.release.xcconfig
+/ios/Pods/Target Support Files/Logging/Logging-dummy.m
+/ios/Pods/Target Support Files/Logging/Logging-Info.plist
+/ios/Pods/Target Support Files/Logging/Logging-prefix.pch
+/ios/Pods/Target Support Files/Logging/Logging-umbrella.h
+/ios/Pods/Target Support Files/nanopb/nanopb.debug.xcconfig
+/ios/Pods/Target Support Files/nanopb/nanopb.modulemap
+/ios/Pods/Target Support Files/nanopb/nanopb.release.xcconfig
+/ios/Pods/Target Support Files/nanopb/nanopb-dummy.m
+/ios/Pods/Target Support Files/nanopb/nanopb-Info.plist
+/ios/Pods/Target Support Files/nanopb/nanopb-prefix.pch
+/ios/Pods/Target Support Files/nanopb/nanopb-umbrella.h
+/ios/Pods/Target Support Files/package_info_plus/package_info_plus.debug.xcconfig
+/ios/Pods/Target Support Files/package_info_plus/package_info_plus.modulemap
+/ios/Pods/Target Support Files/package_info_plus/package_info_plus.release.xcconfig
+/ios/Pods/Target Support Files/package_info_plus/package_info_plus-dummy.m
+/ios/Pods/Target Support Files/package_info_plus/package_info_plus-Info.plist
+/ios/Pods/Target Support Files/package_info_plus/package_info_plus-prefix.pch
+/ios/Pods/Target Support Files/package_info_plus/package_info_plus-umbrella.h
+/ios/Pods/Target Support Files/permission_handler/permission_handler.debug.xcconfig
+/ios/Pods/Target Support Files/permission_handler/permission_handler.modulemap
+/ios/Pods/Target Support Files/permission_handler/permission_handler.release.xcconfig
+/ios/Pods/Target Support Files/permission_handler/permission_handler-dummy.m
+/ios/Pods/Target Support Files/permission_handler/permission_handler-Info.plist
+/ios/Pods/Target Support Files/permission_handler/permission_handler-prefix.pch
+/ios/Pods/Target Support Files/permission_handler/permission_handler-umbrella.h
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.modulemap
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.markdown
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.plist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-dummy.m
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Debug-input-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Debug-output-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Profile-input-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Profile-output-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Release-input-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Release-output-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-Info.plist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-resources.sh
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-resources-Debug-input-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-resources-Debug-output-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-resources-Profile-input-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-resources-Profile-output-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-resources-Release-input-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-resources-Release-output-files.xcfilelist
+/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-umbrella.h
+/ios/Pods/Target Support Files/PromisesObjC/PromisesObjC.debug.xcconfig
+/ios/Pods/Target Support Files/PromisesObjC/PromisesObjC.modulemap
+/ios/Pods/Target Support Files/PromisesObjC/PromisesObjC.release.xcconfig
+/ios/Pods/Target Support Files/PromisesObjC/PromisesObjC-dummy.m
+/ios/Pods/Target Support Files/PromisesObjC/PromisesObjC-Info.plist
+/ios/Pods/Target Support Files/PromisesObjC/PromisesObjC-umbrella.h
+/ios/Pods/Target Support Files/Sentry/Sentry.debug.xcconfig
+/ios/Pods/Target Support Files/Sentry/Sentry.modulemap
+/ios/Pods/Target Support Files/Sentry/Sentry.release.xcconfig
+/ios/Pods/Target Support Files/Sentry/Sentry-dummy.m
+/ios/Pods/Target Support Files/Sentry/Sentry-Info.plist
+/ios/Pods/Target Support Files/Sentry/Sentry-prefix.pch
+/ios/Pods/Target Support Files/Sentry/Sentry-umbrella.h
+/ios/Pods/Target Support Files/sentry_flutter/sentry_flutter.debug.xcconfig
+/ios/Pods/Target Support Files/sentry_flutter/sentry_flutter.modulemap
+/ios/Pods/Target Support Files/sentry_flutter/sentry_flutter.release.xcconfig
+/ios/Pods/Target Support Files/sentry_flutter/sentry_flutter-dummy.m
+/ios/Pods/Target Support Files/sentry_flutter/sentry_flutter-Info.plist
+/ios/Pods/Target Support Files/sentry_flutter/sentry_flutter-prefix.pch
+/ios/Pods/Target Support Files/sentry_flutter/sentry_flutter-umbrella.h
+/ios/Pods/Target Support Files/SwiftJWT/SwiftJWT.debug.xcconfig
+/ios/Pods/Target Support Files/SwiftJWT/SwiftJWT.modulemap
+/ios/Pods/Target Support Files/SwiftJWT/SwiftJWT.release.xcconfig
+/ios/Pods/Target Support Files/SwiftJWT/SwiftJWT-dummy.m
+/ios/Pods/Target Support Files/SwiftJWT/SwiftJWT-Info.plist
+/ios/Pods/Target Support Files/SwiftJWT/SwiftJWT-prefix.pch
+/ios/Pods/Target Support Files/SwiftJWT/SwiftJWT-umbrella.h
+/ios/Pods/Manifest.lock
+/ios/Runner/GeneratedPluginRegistrant.h
+/ios/Runner/GeneratedPluginRegistrant.m
+/ios/Runner.xcworkspace/xcuserdata/vadimmazurek.xcuserdatad/UserInterfaceState.xcuserstate
+/.idea/shelf/
+/ios/.symlinks/plugins/
+/build/ios/
