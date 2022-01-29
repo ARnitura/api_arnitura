@@ -12,7 +12,8 @@ def main():
     return send_file('files/model.glb')
 
 
-@application.route('/api/get_manufacturer', methods=['GET', 'POST'])  # Получение сущности производителя
+@application.route('/api/get_manufacturer',
+                   methods=['GET', 'POST'])  # Получение сущности производителя
 def get_manufacturer():
     if request.method == 'POST':
         form = db_sess.query(Manufacturer).filter(Manufacturer.id == request.form['id']).one()
@@ -25,11 +26,33 @@ def get_manufacturer():
                        site=form.site)
 
 
-@application.route('/api/get_count_like', methods=['GET', 'POST'])  # Получение лайков по айди записи
+@application.route('/api/get_count_like',
+                   methods=['GET', 'POST'])  # Получение лайков по айди записи
 def get_count_like():
     if request.method == 'POST':
         form = db_sess.query(Post).filter(Post.id == request.form['id']).one()
         return jsonify(count_likes=form.like_count)
+
+
+@application.route('/api/download_app')  # Получение лайков по айди записи
+def get_count_like():
+    return '''<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Redirect</title>
+<script type="text/javascript"> // <![CDATA[
+//iPhone Version:
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+    window.location = "https://ВАША_ССЫЛКА_НА СТРАНИЦУ_В_APP_STORE";
+}
+//Android Version:
+if(navigator.userAgent.match(/android/i)) {
+    window.location = "https://ВАША_ССЫЛКА_НА СТРАНИЦУ_В_GOOGLE_PLAY";
+}
+</script>
+</body>
+</html>'''
 
 
 if __name__ == '__main__':
