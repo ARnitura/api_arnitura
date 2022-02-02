@@ -34,7 +34,7 @@
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/sentry_flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/sentry_flutter/.dart_tool" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

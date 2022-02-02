@@ -35,7 +35,7 @@ def get_count_like():
 
 
 @application.route('/api/download_app')  # Получение лайков по айди записи
-def get_count_like():
+def download_app():
     return '''<!DOCTYPE HTML>
 <html>
 <head>
@@ -44,11 +44,11 @@ def get_count_like():
 <script type="text/javascript"> // <![CDATA[
 //iPhone Version:
 if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-    window.location = "https://ВАША_ССЫЛКА_НА СТРАНИЦУ_В_APP_STORE";
+    window.location = "https://apps.apple.com/ru/app/kreslo/id1558098345";
 }
 //Android Version:
 if(navigator.userAgent.match(/android/i)) {
-    window.location = "https://ВАША_ССЫЛКА_НА СТРАНИЦУ_В_GOOGLE_PLAY";
+    window.location = "https://play.google.com/store/apps/details?id=com.ThreeDStudio.Kreslo";
 }
 </script>
 </body>
