@@ -1,10 +1,14 @@
+import json
+
 from flask import Flask, send_file, request, jsonify
 
 from data import db_session
 from data.manufacturer import Manufacturer
 from data.post import Post
+from data.type_furniture import Type
 
 application = Flask(__name__)
+application.config['JSON_AS_ASCII'] = False
 
 
 @application.route('/')
@@ -55,7 +59,65 @@ if(navigator.userAgent.match(/android/i)) {
 </html>'''
 
 
+@application.route('/api/get_list_furniture',
+                   methods=['GET', 'POST'])  # Метод получения списка состоящего из айди категорий фурнитуры
+def get_list():
+    if request.method == 'POST':
+        list_furniture = {}
+        form = db_sess.query(Type).all()
+        for i in range(len(form)):
+            list_furniture[str(i)] = ({'id': form[i].id, 'sort': form[i].type})
+        print(list_furniture)
+        return json.dumps(list_furniture)
+
+
+@application.route('/api/get_sort_furniture', methods=['GET',
+                                                       'POST'])  # Метод получения списка состоящего из айди определенной фурнитуры учитывая фильтр цены
+def get_filter_list():
+    if request.method == 'POST':
+        list_furniture = {}
+        form = db_sess.query(Post).filter(Post.type_id == request.form.get('id'),
+                                          Post.price >= float(request.form.get('filter_from')),
+                                          Post.price <= float(request.form.get('filter_to'))).all()
+        for i in range(len(form)):
+            list_furniture[str(i)] = ({'id': form[i].id, 'list_furniture': form[i].list_furniture,
+                                       'photo': form[i].photo, 'post_name': form[i].post_name,
+                                       'price': form[i].price})
+        print(list_furniture)
+        return json.dumps(list_furniture)
+
+
+@application.route('/api/get_product_3_furniture', methods=['GET',
+                                                            'POST'])
+# Метод получения списка состоящего из айди каждого продукта с учетом фильтра цены
+def get_product_list():
+    if request.method == 'POST':
+        count = 1
+        list_furniture = {}
+        form = db_sess.query(Type).all()  # Получаем все типы товаров
+        for i in form:  # По каждому типу берем 3 продукта
+            product = db_sess.query(Post).filter(Post.type_id == i.id,
+                                              Post.price >= float(request.form.get('filter_from')),
+                                              Post.price <= float(request.form.get('filter_to'))).all()
+            list_furniture[count] = {}
+            len_list = 3
+            # Получаем все товары по айди с учетом фильтров
+            if len(product) <= 3:
+                len_list = len(product)
+            for j in range(len_list):  # Закидываем первые 3 товара каждого типа в список и возвращаем его
+                if len(product) == 0:
+                    list_furniture[count][j] = {}
+                    break
+                list_furniture[count][j] = {'id': product[j].id, 'list_furniture': product[j].list_furniture,
+                                                   'photo': product[j].photo, 'post_name': product[j].post_name,
+                                                   'price': product[j].price}
+            count += 1
+
+        print(list_furniture)
+        return json.dumps(list_furniture)
+
+
 if __name__ == '__main__':
     db_session.global_init('db/furniture.db')
     db_sess = db_session.create_session()
-    application.run(host='0.0.0.0', port=5001, debug=True)
+    application.run(host='0.0.0.0', port=5001)
