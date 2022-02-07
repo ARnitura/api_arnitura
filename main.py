@@ -10,6 +10,9 @@ from data.type_furniture import Type
 application = Flask(__name__)
 application.config['JSON_AS_ASCII'] = False
 
+db_session.global_init('db/furniture.db')
+db_sess = db_session.create_session()
+
 
 @application.route('/')
 def main():
@@ -118,6 +121,4 @@ def get_product_list():
 
 
 if __name__ == '__main__':
-    db_session.global_init('db/furniture.db')
-    db_sess = db_session.create_session()
     application.run(host='0.0.0.0', port=5001)
