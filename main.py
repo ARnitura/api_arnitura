@@ -1,7 +1,8 @@
 import json
 import sentry_sdk
 from flask import Flask, send_file, request, jsonify
-
+import logging
+import sys
 from data import db_session
 from data.manufacturer import Manufacturer
 from data.post import Post
@@ -118,6 +119,14 @@ def get_product_list():
 
 
 if __name__ == '__main__':
+    root = logging.getLogger()
+    root.setLevel(logging.DEBUG)
+
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    root.addHandler(handler)
     sentry_sdk.init(
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
         traces_sample_rate=1.0
