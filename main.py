@@ -1,5 +1,4 @@
 import json
-import sys
 import sentry_sdk
 from flask import Flask, send_file, request, jsonify
 

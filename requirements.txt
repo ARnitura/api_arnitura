@@ -10,3 +10,4 @@ Werkzeug==2.0.2
 zipp==3.6.0
 requests==2.21.0
 SQLAlchemy==1.4.31
+sentry_sdk
