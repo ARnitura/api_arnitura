@@ -1,5 +1,6 @@
 import json
-
+import sys
+import logging
 from flask import Flask, send_file, request, jsonify
 
 from data import db_session
@@ -100,8 +101,8 @@ def get_product_list():
         form = db_sess.query(Type).all()  # Получаем все типы товаров
         for i in form:  # По каждому типу берем 3 продукта
             product = db_sess.query(Post).filter(Post.type_id == i.id,
-                                              Post.price >= float(request.form.get('filter_from')),
-                                              Post.price <= float(request.form.get('filter_to'))).all()
+                                                 Post.price >= float(request.form.get('filter_from')),
+                                                 Post.price <= float(request.form.get('filter_to'))).all()
             list_furniture[count] = {}
             len_list = 3
             # Получаем все товары по айди с учетом фильтров
@@ -112,13 +113,21 @@ def get_product_list():
                     list_furniture[count][j] = {}
                     break
                 list_furniture[count][j] = {'id': product[j].id, 'list_furniture': product[j].list_furniture,
-                                                   'photo': product[j].photo, 'post_name': product[j].post_name,
-                                                   'price': product[j].price}
+                                            'photo': product[j].photo, 'post_name': product[j].post_name,
+                                            'price': product[j].price}
             count += 1
-
-        print(list_furniture)
         return json.dumps(list_furniture)
 
 
 if __name__ == '__main__':
+
+    root = logging.getLogger()
+    root.setLevel(logging.DEBUG)
+    file_handler = logging.FileHandler(filename='tmp.log')
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    root.addHandler(handler)
+    root.addHandler(file_handler)
     application.run(host='0.0.0.0', port=5001)
