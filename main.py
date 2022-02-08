@@ -19,8 +19,7 @@ def main():
     return send_file('files/model.glb')
 
 
-@application.route('/api/get_manufacturer',
-                   methods=['GET', 'POST'])  # Получение сущности производителя
+@application.route('/api/get_manufacturer', methods=['GET', 'POST'])  # Получение сущности производителя
 def get_manufacturer():
     if request.method == 'POST':
         form = db_sess.query(Manufacturer).filter(Manufacturer.id == request.form['id']).one()
