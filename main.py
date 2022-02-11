@@ -1,5 +1,6 @@
 import json
 import sentry_sdk
+import sqlalchemy.exc
 from flask import Flask, send_file, request, jsonify
 import logging
 import sys
@@ -12,7 +13,7 @@ application = Flask(__name__)
 application.config['JSON_AS_ASCII'] = False
 
 db_session.global_init('db/furniture.db')
-db_sess = db_session.create_session()
+
 
 
 @application.route('/')
@@ -23,7 +24,9 @@ def main():
 @application.route('/api/get_manufacturer', methods=['GET', 'POST'])  # Получение сущности производителя
 def get_manufacturer():
     if request.method == 'POST':
-        form = db_sess.query(Manufacturer).filter(Manufacturer.id == request.form['id']).one()
+        db_sess = db_session.create_session()
+        form = db_sess.query(Manufacturer).filter(Manufacturer.id == int(request.form.get('id'))).one()
+        db_sess.close()
         return jsonify(avatar_photo=form.avatar_photo,
                        name=form.name,
                        count=form.count,
@@ -37,11 +40,13 @@ def get_manufacturer():
                    methods=['GET', 'POST'])  # Получение лайков по айди записи
 def get_count_like():
     if request.method == 'POST':
+        db_sess = db_session.create_session()
         form = db_sess.query(Post).filter(Post.id == request.form['id']).one()
+        db_sess.close()
         return jsonify(count_likes=form.like_count)
 
 
-@application.route('/api/download_app')  # Получение лайков по айди записи
+@application.route('/api/download_app')
 def download_app():
     return '''<!DOCTYPE HTML>
 <html>
@@ -67,7 +72,9 @@ if(navigator.userAgent.match(/android/i)) {
 def get_list():
     if request.method == 'POST':
         list_furniture = {}
+        db_sess = db_session.create_session()
         form = db_sess.query(Type).all()
+        db_sess.close()
         for i in range(len(form)):
             list_furniture[str(i)] = ({'id': form[i].id, 'sort': form[i].type})
         print(list_furniture)
@@ -79,9 +86,11 @@ def get_list():
 def get_filter_list():
     if request.method == 'POST':
         list_furniture = {}
+        db_sess = db_session.create_session()
         form = db_sess.query(Post).filter(Post.type_id == request.form.get('id'),
                                           Post.price >= float(request.form.get('filter_from')),
                                           Post.price <= float(request.form.get('filter_to'))).all()
+        db_sess.close()
         for i in range(len(form)):
             list_furniture[str(i)] = ({'id': form[i].id, 'list_furniture': form[i].list_furniture,
                                        'photo': form[i].photo, 'post_name': form[i].post_name,
@@ -97,11 +106,15 @@ def get_product_list():
     if request.method == 'POST':
         count = 1
         list_furniture = {}
+        db_sess = db_session.create_session()
         form = db_sess.query(Type).all()  # Получаем все типы товаров
+        db_sess.close()
         for i in form:  # По каждому типу берем 3 продукта
+            db_sess = db_session.create_session()
             product = db_sess.query(Post).filter(Post.type_id == i.id,
                                                  Post.price >= float(request.form.get('filter_from')),
                                                  Post.price <= float(request.form.get('filter_to'))).all()
+            db_sess.close()
             list_furniture[count] = {}
             len_list = 3
             # Получаем все товары по айди с учетом фильтров
@@ -118,15 +131,39 @@ def get_product_list():
         return json.dumps(list_furniture)
 
 
-if __name__ == '__main__':
-    root = logging.getLogger()
-    root.setLevel(logging.DEBUG)
+@application.route('/api/get_posts',
+                   methods=['GET', 'POST'])  # Метод получения списка состоящего из айди категорий фурнитуры
+def get_posts():
+    global db_sess
+    try:
+        if request.method == 'POST':
+            list_post = {}
+            db_sess = db_session.create_session()
+            form = db_sess.query(Post).all()
+            db_sess.close()
+            for i in range(len(form)):
+                list_post[str(i)] = ({"id": form[i].id,
+                                      "type_id": form[i].type_id,
+                                      "manufacturer_id": form[i].manufacturer_id,
+                                      "list_furniture": form[i].list_furniture,
+                                      "photo": form[i].photo,
+                                      "post_name": form[i].post_name,
+                                      "like_count": form[i].like_count,
+                                      "favourites_count": form[i].favourites_count,
+                                      "description": form[i].description,
+                                      # size: form[i].id,
+                                      "width": form[i].width,
+                                      "length": form[i].length,
+                                      "height": form[i].height,
+                                      "price": form[i].price})
+            print(list_post)
+            return json.dumps(list_post)
+    except sqlalchemy.exc.PendingRollbackError:
+        db_sess.close()
+        db_sess = db_session.create_session()
 
-    handler = logging.StreamHandler(sys.stdout)
-    handler.setLevel(logging.DEBUG)
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    handler.setFormatter(formatter)
-    root.addHandler(handler)
+
+if __name__ == '__main__':
     sentry_sdk.init(
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
         traces_sample_rate=1.0

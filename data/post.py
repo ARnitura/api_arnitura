@@ -7,6 +7,7 @@ class Post(SqlAlchemyBase):
 
     id = Column(Integer, primary_key=True)
     type_id = Column(Integer)
+    manufacturer_id = Column(Integer)
     list_furniture = Column(String(250), nullable=False)
     photo = Column(String(250), nullable=False)
     post_name = Column(String(250), nullable=False)
