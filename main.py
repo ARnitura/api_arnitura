@@ -189,6 +189,20 @@ def get_list_photos():
         return json.dumps(list_furniture)
 
 
+@application.route('/api/get_list_photos_post',
+                   methods=['GET', 'POST'])  # Метод получения cписка названий фото товаров производителя в посте
+def get_list_photos_post():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        form = db_sess.query(Post).filter(Post.id == request.form.get('id')).all()
+        db_sess.close()
+        list_furniture = {}
+        for i in range(len(form)):
+            list_furniture[str(i)] = ({'id': form[i].id, 'list_furniture': form[i].list_furniture,
+                                       'photo': form[i].photo})
+        return json.dumps(list_furniture)
+
+
 if __name__ == '__main__':
     sentry_sdk.init(
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
