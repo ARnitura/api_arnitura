@@ -2,8 +2,7 @@ import json
 import sentry_sdk
 import sqlalchemy.exc
 from flask import Flask, send_file, request, jsonify
-import logging
-import sys
+from urllib.parse import urlparse, parse_qs
 from data import db_session
 from data.manufacturer import Manufacturer
 from data.post import Post
@@ -13,7 +12,6 @@ application = Flask(__name__)
 application.config['JSON_AS_ASCII'] = False
 
 db_session.global_init('db/furniture.db')
-
 
 
 @application.route('/')
@@ -27,13 +25,13 @@ def get_manufacturer():
         db_sess = db_session.create_session()
         form = db_sess.query(Manufacturer).filter(Manufacturer.id == int(request.form.get('id'))).one()
         db_sess.close()
-        return jsonify(avatar_photo=form.avatar_photo,
-                       name=form.name,
-                       count=form.count,
-                       address=form.address,
-                       mail=form.mail,
-                       phone_number=form.phone_number,
-                       site=form.site)
+        return json.dumps({"avatar_photo": form.avatar_photo,
+                           "name": form.name,
+                           "count": form.count,
+                           "address": form.address,
+                           "mail": form.mail,
+                           "phone_number": form.phone_number,
+                           "site": form.site})
 
 
 @application.route('/api/get_count_like',
@@ -132,7 +130,7 @@ def get_product_list():
 
 
 @application.route('/api/get_posts',
-                   methods=['GET', 'POST'])  # Метод получения списка состоящего из айди категорий фурнитуры
+                   methods=['GET', 'POST'])  # Метод получения списка категорий фурнитуры
 def get_posts():
     global db_sess
     try:
@@ -163,9 +161,38 @@ def get_posts():
         db_sess = db_session.create_session()
 
 
+@application.route('/api/get_photo_avatar',
+                   methods=['GET'])  # Метод получения автарки производителя
+def get_photo_avatar():
+    data = parse_qs(urlparse(request.url).query)
+    return send_file('image/' + data.get('id')[0] + '/' + data.get('photo_name')[0] + '.png')
+
+
+@application.route('/api/get_photos',
+                   methods=['GET'])  # Метод получения фото товаров производителя
+def get_photos():
+    data = parse_qs(urlparse(request.url).query)
+    return send_file('image/' + data.get('id')[0] + '/photos/' + data.get('photo_name')[0] + '.jpg')
+
+
+@application.route('/api/get_list_photos',
+                   methods=['GET', 'POST'])  # Метод получения cписка названий фото товаров производителя
+def get_list_photos():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        form = db_sess.query(Post).filter(Post.manufacturer_id == request.form.get('id')).all()
+        db_sess.close()
+        list_furniture = {}
+        for i in range(len(form)):
+            list_furniture[str(i)] = ({'id': form[i].id, 'list_furniture': form[i].list_furniture,
+                                       'photo': form[i].photo})
+        return json.dumps(list_furniture)
+
+
 if __name__ == '__main__':
     sentry_sdk.init(
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
         traces_sample_rate=1.0
     )
     application.run(host='0.0.0.0', port=5001)
+
