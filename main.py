@@ -7,10 +7,13 @@ from urllib.parse import urlparse, parse_qs
 from data import db_session
 from data.manufacturer import Manufacturer
 from data.post import Post
+from data.furniture import Furniture
+from data.series import Series
 from data.type_furniture import Type
 
 application = Flask(__name__)
 application.config['JSON_AS_ASCII'] = False
+from dadata import Dadata
 
 db_session.global_init('db/furniture.db')
 
@@ -110,21 +113,24 @@ def get_product_list():
         db_sess.close()
         for i in form:  # По каждому типу берем 3 продукта
             db_sess = db_session.create_session()
-            product = db_sess.query(Post).filter(Post.type_id == i.id,
-                                                 Post.price >= float(request.form.get('filter_from')),
-                                                 Post.price <= float(request.form.get('filter_to'))).all()
+            product = db_sess.query(Furniture).filter(Furniture.type_furniture == i.id,
+                                                      Furniture.price >= float(request.form.get('filter_from')),
+                                                      Furniture.price <= float(
+                                                          request.form.get('filter_to'))).all()
+            # Получаем объекты мебели с учетом цены
             db_sess.close()
             list_furniture[count] = {}
             len_list = 3
             # Получаем все товары по айди с учетом фильтров
             if len(product) <= 3:
                 len_list = len(product)
-            for j in range(len_list):  # Закидываем первые 3 товара каждого типа в список и возвращаем его
+            for j in range(len_list):
+                # Закидываем первые 3 товара каждого типа в список и возвращаем его
                 if len(product) == 0:
                     list_furniture[count][j] = {}
                     break
-                list_furniture[count][j] = {'id': product[j].id, 'list_furniture': product[j].list_furniture,
-                                            'photo': product[j].photo, 'post_name': product[j].post_name,
+                list_furniture[count][j] = {'id': product[j].id, 'manufacturer_id': product[j].manufacturer_id,
+                                            'photo': product[j].photo_furniture, 'post_name': product[j].name,
                                             'price': product[j].price}
             count += 1
         return json.dumps(list_furniture)
@@ -141,20 +147,17 @@ def get_posts():
             form = db_sess.query(Post).all()
             db_sess.close()
             for i in range(len(form)):
+                db_sess = db_session.create_session()
+                res = db_sess.query(Furniture).filter(Furniture.id == form[i].id_furniture).first()
+                db_sess.close()
+                count_likes = len(form[i].list_likes.split(', '))
                 list_post[str(i)] = ({"id": form[i].id,
-                                      "type_id": form[i].type_id,
                                       "manufacturer_id": form[i].manufacturer_id,
                                       "list_furniture": form[i].list_furniture,
-                                      "photo": form[i].photo,
-                                      "post_name": form[i].post_name,
-                                      "like_count": form[i].like_count,
-                                      "favourites_count": form[i].favourites_count,
-                                      "description": form[i].description,
-                                      # size: form[i].id,
-                                      "width": form[i].width,
-                                      "length": form[i].length,
-                                      "height": form[i].height,
-                                      "price": form[i].price})
+                                      "photo": res.photo_furniture,
+                                      "like_count": count_likes,
+                                      "description": res.description,
+                                      "price": res.price})
             print(list_post)
             return json.dumps(list_post)
     except sqlalchemy.exc.PendingRollbackError:
@@ -185,8 +188,11 @@ def get_list_photos():
         db_sess.close()
         list_furniture = {}
         for i in range(len(form)):
+            db_sess = db_session.create_session()
+            res = db_sess.query(Furniture).filter(Furniture.id == form[i].id_furniture).first()
+            db_sess.close()
             list_furniture[str(i)] = ({'id': form[i].id, 'list_furniture': form[i].list_furniture,
-                                       'photo': form[i].photo})
+                                       'photo': res.photo_furniture})
         return json.dumps(list_furniture)
 
 
@@ -199,9 +205,34 @@ def get_list_photos_post():
         db_sess.close()
         list_furniture = {}
         for i in range(len(form)):
+            db_sess = db_session.create_session()
+            res = db_sess.query(Furniture).filter(Furniture.id == form[i].id_furniture).first()
+            db_sess.close()
             list_furniture[str(i)] = ({'id': form[i].id, 'list_furniture': form[i].list_furniture,
-                                       'photo': form[i].photo})
+                                       'photo': res.photo_furniture})
         return json.dumps(list_furniture)
+
+
+@application.route('/api/get_info_ip',
+                   methods=['GET', 'POST'])  # Метод получения списка названий фото товаров производителя в посте
+def get_info_ip():
+    if request.method == 'POST':
+        list_info = {}
+        dadata = Dadata("7c6d0539ad0f102c392688afa71c46f629cbc8ea")
+        result = dadata.find_by_id("party", request.form.get('inn'))
+        name = result[0]["value"]  # Наименование
+        if "management" in result[0]["data"]:
+            print("ООО")
+            print(result[0]["data"]["management"]["name"],
+                  result[0]["data"]["management"]["post"])  # Руководитель и должность (большой) (7812014560)
+        else:
+            print("ИП")
+            print(result[0]["data"]["fio"]["surname"], result[0]["data"]["fio"]["name"],
+                  result[0]["data"]["fio"]["patronymic"])  # Руководитель и должность (малый) (644802061247)
+        print(result[0]["data"]["address"]["value"])  # Адресс
+        list_info[0] = ({'name': name, 'manager': '1', 'mark': '1', 'address': 'адрес'})
+        # Имя: name, Менеджер: manager, Торговая марка: mark, Адрес: address
+        return json.dumps(list_info)
 
 
 if __name__ == '__main__':
@@ -209,5 +240,4 @@ if __name__ == '__main__':
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
         traces_sample_rate=1.0
     )
-    application.run(host='0.0.0.0', port=5001)
-
+    application.run(host='0.0.0.0', port=5001, debug=True)

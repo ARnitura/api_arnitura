@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="furniture" uuid="68f9deaa-664f-437a-a59b-b5bc5c5e5a6b">
+    <data-source source="LOCAL" name="furniture_local" uuid="68f9deaa-664f-437a-a59b-b5bc5c5e5a6b">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
@@ -13,27 +13,20 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="SQLite - identifier.sqlite" uuid="7eaef47c-c08c-4a3d-97f4-3d14f40675d4">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="u1566574_default@server20.hosting.reg.ru" uuid="7bf9e09e-04b9-41ca-9513-4d955fa43d09">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://server20.hosting.reg.ru:3306/u1566574_default</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="furniture [2]" uuid="a71bb64a-1479-40dc-b668-7cd91d9c72f0">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="u1566574_furniture@server20.hosting.reg.ru" uuid="db41c924-02c9-47f8-b876-39b00a846763">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/data/furniture.db</jdbc-url>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://server20.hosting.reg.ru:3306/u1566574_furniture</jdbc-url>
+      <vm-options>&quot;-Djdk.tls.disabledAlgorithms=SSLv3, TLSv1.1, RC4, DES, MD5withRSA, DH keySize &lt; 1024, EC keySize &lt; 224, 3DES_EDE_CBC, anon, NULL, include jdk.disabled.namedCurves&quot;</vm-options>
       <working-dir>$ProjectFileDir$</working-dir>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
-        </library>
-      </libraries>
     </data-source>
   </component>
 </project>
