@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="add utf-8">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="edit models db, api methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/__all_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/__all_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/furniture.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/furniture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/furniture_series.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/series.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/db_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/db_session.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/series.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/series.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +167,7 @@
       <workItem from="1644217998474" duration="25279000" />
       <workItem from="1645508289437" duration="14693000" />
       <workItem from="1646286276147" duration="18721000" />
-      <workItem from="1646742076900" duration="19096000" />
+      <workItem from="1646742076900" duration="56193000" />
     </task>
     <task id="LOCAL-00001" summary="added model">
       <created>1641580734508</created>
@@ -312,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645512512590</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="edit models db, api methods">
+      <created>1647082621850</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1647082621850</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,17 +351,33 @@
     <MESSAGE value="add db" />
     <MESSAGE value="add pymysql" />
     <MESSAGE value="add utf-8" />
-    <option name="LAST_COMMIT_MESSAGE" value="add utf-8" />
+    <MESSAGE value="edit models db, api methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit models db, api methods" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>179</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="data.get('id')[0]" language="Python" />
+        <watch expression="request.form.get('id_post')" language="Python" />
+        <watch expression="db_sess.query(Post).filter(Post.id == request.form.get('id_post')).first()" language="Python" />
+        <watch expression="db_sess.query(Series).filter(Series.id == post.id_series).first() " language="Python" />
+        <watch expression="db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).first()" language="Python" />
+        <watch expression="db_sess.query(Material).filter(Material.id == furniture.id_material).first() " language="Python" />
+        <watch expression="json.dumps(post_description)" language="Python" />
+        <watch expression="db_session.create_session()" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kreslo_api$test.coverage" NAME="test Coverage Results" MODIFIED="1647082235667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/kreslo_api$main.coverage" NAME="main Coverage Results" MODIFIED="1647080733070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kreslo_api$test.coverage" NAME="test Coverage Results" MODIFIED="1647443145617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kreslo_api$main.coverage" NAME="main Coverage Results" MODIFIED="1647418464747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

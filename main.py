@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 import sentry_sdk
+from flask_cors import CORS, cross_origin
 import sqlalchemy.exc
 from flask import Flask, send_file, request, jsonify
 from urllib.parse import urlparse, parse_qs
@@ -10,8 +11,12 @@ from data.post import Post
 from data.furniture import Furniture
 from data.series import Series
 from data.type_furniture import Type
+from data.material import Material
+from data.sort_furniture import Sort
 
 application = Flask(__name__)
+cors = CORS(application)
+application.config['CORS_HEADERS'] = 'Access-Control-Allow-Origin'
 application.config['JSON_AS_ASCII'] = False
 from dadata import Dadata
 
@@ -165,6 +170,32 @@ def get_posts():
         db_sess = db_session.create_session()
 
 
+@application.route('/api/get_info_post',
+                   methods=['GET', 'POST'])  # Метод получения списка категорий фурнитуры
+def get_info_post():
+    try:
+        if request.method == 'POST':
+            post_description = {}
+            db_sess = db_session.create_session()
+            post = db_sess.query(Post).filter(Post.id == request.form.get('id_post')).first()  # Пост
+            sort = db_sess.query(Sort).filter(Sort.id == post.id_sort_furniture).first()
+            series = db_sess.query(Series).filter(Series.id == post.id_series).first()  # Серия
+            furniture = db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).first()  # Объект мебели
+            material = db_sess.query(Material).filter(Material.id == furniture.id_material).first()  # Материал
+            db_sess.close()
+            post_description['0'] = ({'series_furniture': series.name, 'description_furniture': furniture.description,
+                                      'name_furniture': furniture.name,
+                                      'material_furniture': material.name, 'sort_furniture': sort.sort,
+                                      'width': furniture.width, 'length': furniture.length,
+                                      'height': furniture.height, 'price_furniture': furniture.price})
+            # Нужно передать: Серия(+), Sort(+), Описание(+), Материал(+), Размеры(ширина/длина/высота), цена
+            print(post_description)
+            return json.dumps(post_description)
+    except sqlalchemy.exc.PendingRollbackError:
+        db_sess.rollback()
+        db_sess.close()
+
+
 @application.route('/api/get_photo_avatar',
                    methods=['GET'])  # Метод получения автарки производителя
 def get_photo_avatar():
@@ -214,7 +245,8 @@ def get_list_photos_post():
 
 
 @application.route('/api/get_info_ip',
-                   methods=['GET', 'POST'])  # Метод получения списка названий фото товаров производителя в посте
+                   methods=['GET', 'POST'])  # Метод получения информации ип или ооо
+@cross_origin()
 def get_info_ip():
     if request.method == 'POST':
         list_info = {}

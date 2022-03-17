@@ -20,7 +20,7 @@ def global_init(db_file):
     conn_str = f'mysql+pymysql://u1566574_u_sqlal:jS4jW8aG8f@31.31.198.122/u1566574_furniture'
     print(f"Подключение к базе данных по адресу {conn_str}")
 
-    engine = sa.create_engine(conn_str, echo=False)
+    engine = sa.create_engine(conn_str, echo=False, connect_args={'connect_timeout': 20})
     __factory = orm.sessionmaker(bind=engine)
 
     from . import __all_models
