@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 import sentry_sdk
+import datetime
 from flask_cors import CORS, cross_origin
 import sqlalchemy.exc
 from flask import Flask, send_file, request, jsonify
@@ -13,6 +14,7 @@ from data.series import Series
 from data.type_furniture import Type
 from data.material import Material
 from data.sort_furniture import Sort
+from data.user import User
 
 application = Flask(__name__)
 cors = CORS(application)
@@ -40,7 +42,18 @@ def get_manufacturer():
                            "address": form.address,
                            "mail": form.mail,
                            "phone_number": form.phone_number,
-                           "site": form.site})
+                           "site": form.site,
+                           })
+
+
+@application.route('/api/get_counts_manufacturer', methods=['GET', 'POST'])  # Получение счетиков производителей
+def get_counts_manufacturer():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        form = db_sess.query(Manufacturer).filter(Manufacturer.id == int(request.form.get('id_manufacturer'))).one()
+        likes_count = form.list_likes
+        db_sess.close()
+        return json.dumps({'likes_count': likes_count})
 
 
 @application.route('/api/get_count_like',
@@ -48,9 +61,33 @@ def get_manufacturer():
 def get_count_like():
     if request.method == 'POST':
         db_sess = db_session.create_session()
-        form = db_sess.query(Post).filter(Post.id == request.form['id']).one()
+        form = db_sess.query(Post).filter(Post.id == request.form['id_post']).one()
         db_sess.close()
-        return jsonify(count_likes=form.like_count)
+        count_likes = len(form.list_likes.split(', '))
+        return json.dumps({'count_likes': count_likes})
+
+
+@application.route('/api/put_like',
+                   methods=['GET', 'POST'])  # Поставить лайк
+def put_like():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        form = db_sess.query(Post).filter(Post.id == request.form['id_post']).one()
+        if request.form['id_user'] not in form.list_likes.split(', '):
+            form.list_likes = form.list_likes + ', ' + request.form['id_user']
+            count_likes = len(form.list_likes.split(', '))
+            db_sess.commit()
+            db_sess.close()
+            return json.dumps({'description': 'success', 'count_likes': count_likes}), 200  # Возвращаем 200 если все хорошо и пользователь ставит лайк
+        else:
+            list_likes = form.list_likes.split(', ')
+            index_to_del = form.list_likes.split(', ').index(request.form['id_user'])
+            list_likes.pop(index_to_del)
+            form.list_likes = ', '.join(list_likes)
+            db_sess.commit()
+            count_likes = len(form.list_likes.split(', '))
+            db_sess.close()
+            return json.dumps({'description': 'cancelled', 'count_likes': count_likes}), 409  # Возвращаем 409 если пользователь уже ставил лайк на эту запись
 
 
 @application.route('/api/download_app')
@@ -228,7 +265,7 @@ def get_list_photos():
 
 
 @application.route('/api/get_list_photos_post',
-                   methods=['GET', 'POST'])  # Метод получения cписка названий фото товаров производителя в посте
+                   methods=['GET', 'POST'])  # Метод получения списка названий фото товаров производителя в посте
 def get_list_photos_post():
     if request.method == 'POST':
         db_sess = db_session.create_session()
@@ -265,6 +302,72 @@ def get_info_ip():
         list_info[0] = ({'name': name, 'manager': '1', 'mark': '1', 'address': 'адрес'})
         # Имя: name, Менеджер: manager, Торговая марка: mark, Адрес: address
         return json.dumps(list_info)
+
+
+@application.route('/api/auth_user',
+                   methods=['GET', 'POST'])
+def auth_user():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        form = db_sess.query(User).filter(User.login == request.form.get('login'), User.password == request.form.get('password')).first()
+        #  Вытягиваем запись авторизируемого пользователя
+        db_sess.close()
+        if form is None:
+            return json.dumps({'error': 'No found user'}), 400
+        else:
+            list_furniture = {}
+            list_furniture[str(0)] = ({
+                'id': form.id,
+                'firstname': form.firstname, 'lastname': form.lastname,
+                'patronymic': form.patronymic, 'avatar': form.avatar,
+                'phone': form.phone, 'mail': form.mail,
+                'address': form.address, 'login': form.login,
+                'list_favourites': form.list_favourites, 'list_orders': form.list_orders})
+            return json.dumps(list_furniture)
+
+
+@application.route('/api/reg_user',
+                   methods=['GET', 'POST'])
+def reg_user():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        date = datetime.datetime.now().date().strftime('%d.%m.%y')
+        time = datetime.datetime.now().time().strftime('%H:%M')
+        new_user = User(firstname=request.form.get('firstname'), lastname=request.form.get('lastname'),
+                        patronymic=request.form.get('patronymic'), login=request.form.get('login'),
+                        password=request.form.get('password'), mail=request.form.get('email'),
+                        phone=request.form.get('phone'), address=request.form.get('address'),
+                        data_reg=date, time_reg=time)
+        db_sess.add(new_user)
+        db_sess.commit()
+        last_id = db_sess.query(User).order_by(User.id)[-1].id
+        #  Регистрируем пользователя и получаем его айди
+        db_sess.close()
+        return json.dumps({'description': 'success', 'id': str(last_id)}), 200
+
+
+@application.route('/api/get_photo_user_avatar',
+                   methods=['GET', 'POST'])
+def get_photo_user_avatar():
+    data = parse_qs(urlparse(request.url).query)
+    db_sess = db_session.create_session()
+    res = db_sess.query(User).filter(User.id == data.get('user_id')[0]).first()
+    db_sess.close()
+    photo_name = res.avatar
+    return send_file('image/users/' + data.get('user_id')[0] + '/' + photo_name + '.png')
+
+
+@application.route('/api/get_state_like',
+                   methods=['GET', 'POST'])
+def get_state_like():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        res = db_sess.query(Post).filter(Post.id == request.form.get('id_post')).first()
+        db_sess.close()
+        if request.form.get('id_user') in res.list_likes.split(', '):
+            return json.dumps({'state': 'on'}), 200
+        else:
+            return json.dumps({'state': 'off'}), 400
 
 
 if __name__ == '__main__':
