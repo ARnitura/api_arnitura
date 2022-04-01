@@ -12,3 +12,5 @@ class Post(SqlAlchemyBase):
     id_series = Column(String)
     id_furniture = Column(String)
     id_sort_furniture = Column(String)
+    data_publication = Column(String)
+    time_publication = Column(String)

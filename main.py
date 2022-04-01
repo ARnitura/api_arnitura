@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 import sentry_sdk
+import pymorphy2
 import datetime
 from flask_cors import CORS, cross_origin
 import sqlalchemy.exc
@@ -17,6 +18,7 @@ from data.sort_furniture import Sort
 from data.user import User
 
 application = Flask(__name__)
+morph = pymorphy2.MorphAnalyzer()
 cors = CORS(application)
 application.config['CORS_HEADERS'] = 'Access-Control-Allow-Origin'
 application.config['JSON_AS_ASCII'] = False
@@ -52,8 +54,12 @@ def get_counts_manufacturer():
         db_sess = db_session.create_session()
         form = db_sess.query(Manufacturer).filter(Manufacturer.id == int(request.form.get('id_manufacturer'))).one()
         likes_count = form.list_likes
+        list_favourites = form.list_favourites
+        list_products = form.list_products
+        list_orders = form.list_orders
         db_sess.close()
-        return json.dumps({'likes_count': likes_count})
+        return json.dumps({'likes_count': likes_count, 'list_favourites': list_favourites,
+                           'list_products': list_products, 'list_orders': list_orders})
 
 
 @application.route('/api/get_count_like',
@@ -78,7 +84,8 @@ def put_like():
             count_likes = len(form.list_likes.split(', '))
             db_sess.commit()
             db_sess.close()
-            return json.dumps({'description': 'success', 'count_likes': count_likes}), 200  # Возвращаем 200 если все хорошо и пользователь ставит лайк
+            return json.dumps({'description': 'success',
+                               'count_likes': count_likes}), 200  # Возвращаем 200 если все хорошо и пользователь ставит лайк
         else:
             list_likes = form.list_likes.split(', ')
             index_to_del = form.list_likes.split(', ').index(request.form['id_user'])
@@ -87,7 +94,8 @@ def put_like():
             db_sess.commit()
             count_likes = len(form.list_likes.split(', '))
             db_sess.close()
-            return json.dumps({'description': 'cancelled', 'count_likes': count_likes}), 409  # Возвращаем 409 если пользователь уже ставил лайк на эту запись
+            return json.dumps({'description': 'cancelled',
+                               'count_likes': count_likes}), 409  # Возвращаем 409 если пользователь уже ставил лайк на эту запись
 
 
 @application.route('/api/download_app')
@@ -209,7 +217,7 @@ def get_posts():
 
 @application.route('/api/get_info_post',
                    methods=['GET', 'POST'])  # Метод получения списка категорий фурнитуры
-def get_info_post():
+def get_info_post():  # TODO: Почистить код обработки времени
     try:
         if request.method == 'POST':
             post_description = {}
@@ -219,14 +227,33 @@ def get_info_post():
             series = db_sess.query(Series).filter(Series.id == post.id_series).first()  # Серия
             furniture = db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).first()  # Объект мебели
             material = db_sess.query(Material).filter(Material.id == furniture.id_material).first()  # Материал
+            data_publication = post.data_publication
+            time_publication = post.time_publication
             db_sess.close()
+            diff = datetime.datetime.today() - datetime.datetime.strptime(data_publication + ' ' + time_publication,
+                                                                          '%d.%m.%y %H:%M')  # Вычитаем даты и получаем разницу в минутах
+            time = diff.seconds + (86400 * diff.days)
+            if time <= 60:  # Секунды
+                seconds = morph.parse('Cекунда')[0]
+                post_time = str(time) + ' ' + seconds.make_agree_with_number(int(str(time)[-1])).word + ' назад'
+            elif 1 <= time // 60 <= 60:  # Минуты
+                minutes = morph.parse('Минута')[0]
+                post_time = str(time // 60) + ' ' + minutes.make_agree_with_number(
+                    int(str(time // 60)[-1])).word + ' назад'
+            elif 1 <= time // 60 // 60 < 24:  # Часы
+                hour = morph.parse('Час')[0]
+                post_time = str(time // 60 // 60) + ' ' + hour.make_agree_with_number(
+                    int(str(time // 60 // 60))).word + ' назад'
+            elif 1 <= time // 60 // 60 // 24:  # Дни
+                hour = morph.parse('День')[0]
+                post_time = str(time // 60 // 60 // 24) + ' ' + hour.make_agree_with_number(
+                    int(str(time // 60 // 60 // 24))).word + ' назад'
             post_description['0'] = ({'series_furniture': series.name, 'description_furniture': furniture.description,
                                       'name_furniture': furniture.name,
                                       'material_furniture': material.name, 'sort_furniture': sort.sort,
                                       'width': furniture.width, 'length': furniture.length,
-                                      'height': furniture.height, 'price_furniture': furniture.price})
-            # Нужно передать: Серия(+), Sort(+), Описание(+), Материал(+), Размеры(ширина/длина/высота), цена
-            print(post_description)
+                                      'height': furniture.height, 'price_furniture': furniture.price, 'post_time': post_time})
+            # Нужно передать: Серия(+), Sort(+), Описание(+), Материал(+), Размеры(ширина/длина/высота)(+), цена(+)
             return json.dumps(post_description)
     except sqlalchemy.exc.PendingRollbackError:
         db_sess.rollback()
@@ -309,7 +336,8 @@ def get_info_ip():
 def auth_user():
     if request.method == 'POST':
         db_sess = db_session.create_session()
-        form = db_sess.query(User).filter(User.login == request.form.get('login'), User.password == request.form.get('password')).first()
+        form = db_sess.query(User).filter(User.login == request.form.get('login'),
+                                          User.password == request.form.get('password')).first()
         #  Вытягиваем запись авторизируемого пользователя
         db_sess.close()
         if form is None:
@@ -368,6 +396,23 @@ def get_state_like():
             return json.dumps({'state': 'on'}), 200
         else:
             return json.dumps({'state': 'off'}), 400
+
+
+@application.route('/api/edit_info_user',
+                   methods=['GET', 'POST'])
+def edit_info_user():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        res = db_sess.query(User).filter(User.id == request.form.get('user_id')).first()
+        if request.form.get('type') == 'number':
+            res.phone = request.form.get('value')
+        elif request.form.get('type') == 'mail':
+            res.mail = request.form.get('value')
+        elif request.form.get('type') == 'address':
+            res.address = request.form.get('value')
+        db_sess.commit()
+        db_sess.close()
+        return json.dumps({'description': 'success'}), 200
 
 
 if __name__ == '__main__':

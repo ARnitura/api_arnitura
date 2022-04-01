@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="add flask-cors">
-      <change afterPath="$PROJECT_DIR$/image/users/1/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="add methods: get counts in manufacturer&#10;put like&#10;auth user&#10;registration user&#10;add directory to users photo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/manufacturer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/manufacturer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +168,7 @@
       <workItem from="1646286276147" duration="18721000" />
       <workItem from="1646742076900" duration="75163000" />
       <workItem from="1647757839229" duration="25877000" />
-      <workItem from="1648035384864" duration="5985000" />
+      <workItem from="1648035384864" duration="29769000" />
     </task>
     <task id="LOCAL-00001" summary="added model">
       <created>1641580734508</created>
@@ -333,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647495284658</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add methods: get counts in manufacturer&#10;put like&#10;auth user&#10;registration user&#10;add directory to users photo">
+      <created>1648043999096</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1648043999096</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,31 +376,27 @@
     <MESSAGE value="edit models db, api methods" />
     <MESSAGE value="edit time to connect bd&#10;set models bd sqlalchemy&#10;add methods api to get info post&#10;edit requirements.txt" />
     <MESSAGE value="add flask-cors" />
-    <option name="LAST_COMMIT_MESSAGE" value="add flask-cors" />
+    <MESSAGE value="add methods: get counts in manufacturer&#10;put like&#10;auth user&#10;registration user&#10;add directory to users photo" />
+    <option name="LAST_COMMIT_MESSAGE" value="add methods: get counts in manufacturer&#10;put like&#10;auth user&#10;registration user&#10;add directory to users photo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>216</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>36</line>
+          <line>38</line>
           <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="morph.parse(str(diff.seconds) + ' Секунд')" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kreslo_api$test.coverage" NAME="test Coverage Results" MODIFIED="1647496236496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/kreslo_api$main.coverage" NAME="main Coverage Results" MODIFIED="1648043543379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kreslo_api$test.coverage" NAME="test Coverage Results" MODIFIED="1648044828079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kreslo_api$main.coverage" NAME="main Coverage Results" MODIFIED="1648789625512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
