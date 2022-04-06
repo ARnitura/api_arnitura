@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="set post model(add data and time)&#10;add pymorphy2&#10;edit get_info_post&#10;add time and data in post model&#10;add edit info from user&#10;edit requirements.txt">
-      <change afterPath="$PROJECT_DIR$/image/textures/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/textures/2.png" afterDir="false" />
+    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="edit get_info_post&#10;add get_photo_texture">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +166,7 @@
       <workItem from="1647757839229" duration="25877000" />
       <workItem from="1648035384864" duration="34740000" />
       <workItem from="1648918140270" duration="80000" />
-      <workItem from="1648976485490" duration="9692000" />
+      <workItem from="1648976485490" duration="10643000" />
     </task>
     <task id="LOCAL-00001" summary="added model">
       <created>1641580734508</created>
@@ -346,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648794008988</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="edit get_info_post&#10;add get_photo_texture">
+      <created>1649248658632</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1649248658633</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +390,8 @@
     <MESSAGE value="add flask-cors" />
     <MESSAGE value="add methods: get counts in manufacturer&#10;put like&#10;auth user&#10;registration user&#10;add directory to users photo" />
     <MESSAGE value="set post model(add data and time)&#10;add pymorphy2&#10;edit get_info_post&#10;add time and data in post model&#10;add edit info from user&#10;edit requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="set post model(add data and time)&#10;add pymorphy2&#10;edit get_info_post&#10;add time and data in post model&#10;add edit info from user&#10;edit requirements.txt" />
+    <MESSAGE value="edit get_info_post&#10;add get_photo_texture" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit get_info_post&#10;add get_photo_texture" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
