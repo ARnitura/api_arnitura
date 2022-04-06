@@ -250,14 +250,23 @@ def get_info_post():  # TODO: Почистить код обработки вр�
                     int(str(time // 60 // 60 // 24))).word + ' назад'
             post_description['0'] = ({'series_furniture': series.name, 'description_furniture': furniture.description,
                                       'name_furniture': furniture.name,
-                                      'material_furniture': material.name, 'sort_furniture': sort.sort,
+                                      'material_furniture': material.name,
+                                      'material_id_furniture': material.id, 'sort_furniture': sort.sort,
                                       'width': furniture.width, 'length': furniture.length,
-                                      'height': furniture.height, 'price_furniture': furniture.price, 'post_time': post_time})
+                                      'height': furniture.height, 'price_furniture': furniture.price,
+                                      'post_time': post_time})
             # Нужно передать: Серия(+), Sort(+), Описание(+), Материал(+), Размеры(ширина/длина/высота)(+), цена(+)
             return json.dumps(post_description)
     except sqlalchemy.exc.PendingRollbackError:
         db_sess.rollback()
         db_sess.close()
+
+
+@application.route('/api/get_photo_texture',
+                   methods=['GET'])  # Метод получения автарки производителя
+def get_photo_texture():
+    data = parse_qs(urlparse(request.url).query)
+    return send_file('image/textures/' + data.get('texture_id')[0] + '.png')
 
 
 @application.route('/api/get_photo_avatar',
