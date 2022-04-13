@@ -16,4 +16,4 @@ class Furniture(SqlAlchemyBase):
     height = Column(String(255))
     model = Column(String(250), nullable=False)
     price = Column(Float(255))
-    id_material = Column(Integer)
+    id_material = Column(String(255))

@@ -226,7 +226,7 @@ def get_info_post():  # TODO: Почистить код обработки вр�
             sort = db_sess.query(Sort).filter(Sort.id == post.id_sort_furniture).first()
             series = db_sess.query(Series).filter(Series.id == post.id_series).first()  # Серия
             furniture = db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).first()  # Объект мебели
-            material = db_sess.query(Material).filter(Material.id == furniture.id_material).first()  # Материал
+            material = furniture.id_material  # Материал
             data_publication = post.data_publication
             time_publication = post.time_publication
             db_sess.close()
@@ -250,8 +250,7 @@ def get_info_post():  # TODO: Почистить код обработки вр�
                     int(str(time // 60 // 60 // 24))).word + ' назад'
             post_description['0'] = ({'series_furniture': series.name, 'description_furniture': furniture.description,
                                       'name_furniture': furniture.name,
-                                      'material_furniture': material.name,
-                                      'material_id_furniture': material.id, 'sort_furniture': sort.sort,
+                                      'material_id_furniture': material, 'sort_furniture': sort.sort,
                                       'width': furniture.width, 'length': furniture.length,
                                       'height': furniture.height, 'price_furniture': furniture.price,
                                       'post_time': post_time})
@@ -266,21 +265,24 @@ def get_info_post():  # TODO: Почистить код обработки вр�
                    methods=['GET'])  # Метод получения автарки производителя
 def get_photo_texture():
     data = parse_qs(urlparse(request.url).query)
-    return send_file('image/textures/' + data.get('texture_id')[0] + '.png')
+    db_sess = db_session.create_session()
+    form = db_sess.query(Post).where(Post.id == data.get('post_id')[0]).first()
+    db_sess.close()
+    return send_file('image/manufacturers/' + str(form.manufacturer_id) + '/models/textures/' + data.get('texture_id')[0] + '.png')
 
 
 @application.route('/api/get_photo_avatar',
                    methods=['GET'])  # Метод получения автарки производителя
 def get_photo_avatar():
     data = parse_qs(urlparse(request.url).query)
-    return send_file('image/' + data.get('id')[0] + '/' + data.get('photo_name')[0] + '.png')
+    return send_file('image/manufacturers/' + data.get('id')[0] + '/' + data.get('photo_name')[0] + '.png')
 
 
 @application.route('/api/get_photos',
                    methods=['GET'])  # Метод получения фото товаров производителя
 def get_photos():
     data = parse_qs(urlparse(request.url).query)
-    return send_file('image/' + data.get('id')[0] + '/photos/' + data.get('photo_name')[0] + '.jpg')
+    return send_file('image/manufacturers/' + data.get('id')[0] + '/photos/' + data.get('photo_name')[0] + '.jpg')
 
 
 @application.route('/api/get_list_photos',
@@ -383,7 +385,7 @@ def reg_user():
         return json.dumps({'description': 'success', 'id': str(last_id)}), 200
 
 
-@application.route('/api/get_photo_user_avatar',
+@application.route('/api/get_photo_user_avatar',  # Получение аватарки пользователя
                    methods=['GET', 'POST'])
 def get_photo_user_avatar():
     data = parse_qs(urlparse(request.url).query)
@@ -413,12 +415,23 @@ def edit_info_user():
     if request.method == 'POST':
         db_sess = db_session.create_session()
         res = db_sess.query(User).filter(User.id == request.form.get('user_id')).first()
-        if request.form.get('type') == 'number':
-            res.phone = request.form.get('value')
-        elif request.form.get('type') == 'mail':
-            res.mail = request.form.get('value')
-        elif request.form.get('type') == 'address':
-            res.address = request.form.get('value')
+        res.phone = request.form.get('number')
+        res.mail = request.form.get('mail')
+        res.address = request.form.get('address')
+        db_sess.commit()
+        db_sess.close()
+        return json.dumps({'description': 'success'}), 200
+
+
+@application.route('/api/edit_fullname_user',
+                   methods=['GET', 'POST'])
+def edit_fullname_user():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        res = db_sess.query(User).filter(User.id == request.form.get('user_id')).first()
+        res.lastname = request.form.get('lastname')
+        res.firstname = request.form.get('firstname')
+        res.patronymic = request.form.get('patronymic')
         db_sess.commit()
         db_sess.close()
         return json.dumps({'description': 'success'}), 200
@@ -429,4 +442,4 @@ if __name__ == '__main__':
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
         traces_sample_rate=1.0
     )
-    application.run(host='0.0.0.0', port=5001, debug=True)
+    application.run(host='0.0.0.0', port=5002, debug=True)
