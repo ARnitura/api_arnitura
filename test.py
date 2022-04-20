@@ -1,17 +1,17 @@
 import requests
 import json
 #
-print(requests.post(url='http://31.31.198.122:5000/api/get_photo_texture', headers={'texture_id': '1'}).text)
-print(requests.post(url='https://arkreslo.ru/api/get_counts_manufacturer', data={'id_manufacturer': '2'}).text)
+print(requests.post(url='http://192.168.212.118:5002/api/get_photo_texture', headers={'texture_id': '3'}).text)
+print(requests.post(url='https://arkreslo.ru/api/get_counts_manufacturer', data={'id_manufacturer': '3'}).text)
 # print(requests.post(url='https://arkreslo.ru/api/get_product_3_furniture', data={'filter_from': '0',
 #                                                                                      'filter_to': '100000',
-#                                                                                      'id': 1}).text)
-#  print(requests.post(url='http://192.168.0.5:5001/api/get_manufacturer', data={'id': 2}).text)  # Тест получения сущности продавца
+#                                                                                      'id': 3}).text)
+#  print(requests.post(url='http://192.168.0.5:5001/api/get_manufacturer', data={'id': 3}).text)  # Тест получения сущности продавца
 #  print(requests.post(url='http://192.168.0.5:5001/api/get_count_like', data={'id': 3}).text)  # Тест на получение лайков записи
 #  print(requests.post(url='https://arkreslo.ru/api/get_list_furniture', data={'id': 3}).text)
 #  print(requests.post(url='http://192.168.166.118:5001/api/get_product_3_furniture', data={'filter_from': '0',
 #                                                                                      'filter_to': '100000',
-#                                                                                      'id': 1}).text)
+#                                                                                      'id': 3}).text)
 # print(requests.get(url='http://192.168.0.5:5001/api/get_photos?id=2&photo_name=image_company').text)
 # print(requests.post(url='https://arkreslo.ru/api/get_info_ip', data={'inn': 7812014560}).json())
 # print(requests.post(url='http://192.168.0.108:5001/api/get_info_post', data={'id_post': 8}).json())

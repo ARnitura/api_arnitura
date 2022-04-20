@@ -189,7 +189,6 @@ def get_product_list():
 @application.route('/api/get_posts',
                    methods=['GET', 'POST'])  # Метод получения списка категорий фурнитуры
 def get_posts():
-    global db_sess
     try:
         if request.method == 'POST':
             list_post = {}
@@ -200,7 +199,10 @@ def get_posts():
                 db_sess = db_session.create_session()
                 res = db_sess.query(Furniture).filter(Furniture.id == form[i].id_furniture).first()
                 db_sess.close()
-                count_likes = len(form[i].list_likes.split(', '))
+                if form[i].list_likes is not None:
+                    count_likes = len(form[i].list_likes.split(', '))
+                else:
+                    count_likes = 0
                 list_post[str(i)] = ({"id": form[i].id,
                                       "manufacturer_id": form[i].manufacturer_id,
                                       "list_furniture": form[i].list_furniture,
@@ -268,7 +270,7 @@ def get_photo_texture():
     db_sess = db_session.create_session()
     form = db_sess.query(Post).where(Post.id == data.get('post_id')[0]).first()
     db_sess.close()
-    return send_file('image/manufacturers/' + str(form.manufacturer_id) + '/models/textures/' + data.get('texture_id')[0] + '.png')
+    return send_file('image/manufacturers/' + str(form.manufacturer_id) + '/models/models/' + data.get('texture_id')[0] + '.png')
 
 
 @application.route('/api/get_photo_avatar',
@@ -337,7 +339,7 @@ def get_info_ip():
             print(result[0]["data"]["fio"]["surname"], result[0]["data"]["fio"]["name"],
                   result[0]["data"]["fio"]["patronymic"])  # Руководитель и должность (малый) (644802061247)
         print(result[0]["data"]["address"]["value"])  # Адресс
-        list_info[0] = ({'name': name, 'manager': '1', 'mark': '1', 'address': 'адрес'})
+        list_info[0] = ({'name': name, 'manager': '3', 'mark': '3', 'address': 'адрес'})
         # Имя: name, Менеджер: manager, Торговая марка: mark, Адрес: address
         return json.dumps(list_info)
 
