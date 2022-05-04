@@ -228,7 +228,9 @@ def get_info_post():  # TODO: Почистить код обработки вр�
             sort = db_sess.query(Sort).filter(Sort.id == post.id_sort_furniture).first()
             series = db_sess.query(Series).filter(Series.id == post.id_series).first()  # Серия
             furniture = db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).first()  # Объект мебели
-            material = furniture.id_material  # Материал
+            model_id = furniture.model  # Айди модели(для импорта в ар)
+            material_id = furniture.id_material  # айди Материал
+            material_name = db_sess.query(Material).filter(Material.id == material_id).first().name  # Название материала
             data_publication = post.data_publication
             time_publication = post.time_publication
             db_sess.close()
@@ -252,10 +254,12 @@ def get_info_post():  # TODO: Почистить код обработки вр�
                     int(str(time // 60 // 60 // 24))).word + ' назад'
             post_description['0'] = ({'series_furniture': series.name, 'description_furniture': furniture.description,
                                       'name_furniture': furniture.name,
-                                      'material_id_furniture': material, 'sort_furniture': sort.sort,
+                                      'material_id_furniture': material_id, 'material_name_furniture': material_name,
+                                      'sort_furniture': sort.sort,
                                       'width': furniture.width, 'length': furniture.length,
                                       'height': furniture.height, 'price_furniture': furniture.price,
-                                      'post_time': post_time})
+                                      'post_time': post_time, 'manufacturer_id': post.manufacturer_id,
+                                      'avatar_furniture': furniture.photo_furniture, 'model_id': model_id})
             # Нужно передать: Серия(+), Sort(+), Описание(+), Материал(+), Размеры(ширина/длина/высота)(+), цена(+)
             return json.dumps(post_description)
     except sqlalchemy.exc.PendingRollbackError:
@@ -437,6 +441,15 @@ def edit_fullname_user():
         db_sess.commit()
         db_sess.close()
         return json.dumps({'description': 'success'}), 200
+
+
+@application.route('/api/download_model',
+                   methods=['GET', 'POST'])
+def download_model():
+    if request.method == 'GET':
+        data = parse_qs(urlparse(request.url).query)
+        path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/' + data.get('model_id')[0] + '.fbx'
+        return send_file(path)
 
 
 if __name__ == '__main__':
