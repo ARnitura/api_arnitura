@@ -452,6 +452,15 @@ def download_model():
         return send_file(path)
 
 
+@application.route('/api/download_texture',
+                   methods=['GET', 'POST'])
+def download_texture():
+    if request.method == 'GET':
+        data = parse_qs(urlparse(request.url).query)
+        path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' + data.get('texture_id')[0] + '/' + data.get('selected_texture')[0] + '.jpeg'
+        return send_file(path)
+
+
 if __name__ == '__main__':
     sentry_sdk.init(
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
