@@ -40,7 +40,6 @@ def get_manufacturer():
         db_sess.close()
         return json.dumps({"avatar_photo": form.avatar_photo,
                            "name": form.name,
-                           "count": form.count,
                            "address": form.address,
                            "mail": form.mail,
                            "phone_number": form.phone_number,
@@ -48,7 +47,7 @@ def get_manufacturer():
                            })
 
 
-@application.route('/api/get_counts_manufacturer', methods=['GET', 'POST'])  # Получение счетиков производителей
+@application.route('/api/get_counts_manufacturer', methods=['GET', 'POST'])  # Получение счетчиков производителей
 def get_counts_manufacturer():
     if request.method == 'POST':
         db_sess = db_session.create_session()
@@ -218,13 +217,14 @@ def get_posts():
 
 
 @application.route('/api/get_info_post',
-                   methods=['GET', 'POST'])  # Метод получения списка категорий фурнитуры
+                   methods=['GET', 'POST'])  # Метод получения информации о посте
 def get_info_post():  # TODO: Почистить код обработки времени
     try:
         if request.method == 'POST':
             post_description = {}
             db_sess = db_session.create_session()
             post = db_sess.query(Post).filter(Post.id == request.form.get('id_post')).first()  # Пост
+            manufacturer_name = db_sess.query(Manufacturer).filter(Manufacturer.id == post.manufacturer_id).first().name
             sort = db_sess.query(Sort).filter(Sort.id == post.id_sort_furniture).first()
             series = db_sess.query(Series).filter(Series.id == post.id_series).first()  # Серия
             furniture = db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).first()  # Объект мебели
@@ -259,8 +259,11 @@ def get_info_post():  # TODO: Почистить код обработки вр�
                                       'width': furniture.width, 'length': furniture.length,
                                       'height': furniture.height, 'price_furniture': furniture.price,
                                       'post_time': post_time, 'manufacturer_id': post.manufacturer_id,
-                                      'avatar_furniture': furniture.photo_furniture, 'model_id': model_id})
-            # Нужно передать: Серия(+), Sort(+), Описание(+), Материал(+), Размеры(ширина/длина/высота)(+), цена(+)
+                                      'avatar_furniture': furniture.photo_furniture, 'model_id': model_id,
+                                      'manufacturer_name': manufacturer_name})
+            # Отдается: Название серии, Описание поста, название мебели, id материалов, название материалов,
+            # название категории, ширина, длина, высота, цена мебели, время создания поста, id производителя,
+            # аватара производителя, id модели мебели
             return json.dumps(post_description)
     except sqlalchemy.exc.PendingRollbackError:
         db_sess.rollback()
@@ -268,7 +271,7 @@ def get_info_post():  # TODO: Почистить код обработки вр�
 
 
 @application.route('/api/get_photo_texture',
-                   methods=['GET'])  # Метод получения автарки производителя
+                   methods=['GET'])  # Метод получения аватарки производителя
 def get_photo_texture():
     data = parse_qs(urlparse(request.url).query)
     db_sess = db_session.create_session()
@@ -292,7 +295,7 @@ def get_photos():
 
 
 @application.route('/api/get_list_photos',
-                   methods=['GET', 'POST'])  # Метод получения cписка названий фото товаров производителя
+                   methods=['GET', 'POST'])  # Метод получения списка названий фото товаров производителя
 def get_list_photos():
     if request.method == 'POST':
         db_sess = db_session.create_session()

@@ -1388,3 +1388,5 @@
 /.idea/shelf/
 /ios/.symlinks/plugins/
 /build/ios/
+/identifier.sqlite
+/data/furniture.db
