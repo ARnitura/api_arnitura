@@ -3,9 +3,10 @@ import json
 import sentry_sdk
 import pymorphy2
 import datetime
+import os
 from flask_cors import CORS, cross_origin
 import sqlalchemy.exc
-from flask import Flask, send_file, request, jsonify
+from flask import Flask, send_file, request
 from urllib.parse import urlparse, parse_qs
 from data import db_session
 from data.manufacturer import Manufacturer
@@ -45,6 +46,14 @@ def get_manufacturer():
                            "phone_number": form.phone_number,
                            "site": form.site,
                            })
+
+
+@application.route('/api/maps_info', methods=['GET', 'POST'])  # Получение информации о количестве карт для материала
+def maps_info():
+    if request.method == 'POST':
+        onlyfiles = [f for f in os.listdir(os.getcwd() + '/image/manufacturers/' + request.form.get('id_manufacturer') +
+                                           '/models/textures/' + request.form.get('id_texture') + '/')]
+        return json.dumps({'maps': ', '.join(onlyfiles)})
 
 
 @application.route('/api/get_counts_manufacturer', methods=['GET', 'POST'])  # Получение счетчиков производителей
@@ -271,17 +280,22 @@ def get_info_post():  # TODO: Почистить код обработки вр�
 
 
 @application.route('/api/get_photo_texture',
-                   methods=['GET'])  # Метод получения аватарки производителя
+                   methods=['GET'])  # Метод получения аватарки материала
 def get_photo_texture():
     data = parse_qs(urlparse(request.url).query)
     db_sess = db_session.create_session()
     form = db_sess.query(Post).where(Post.id == data.get('post_id')[0]).first()
     db_sess.close()
-    return send_file('image/manufacturers/' + str(form.manufacturer_id) + '/models/models/' + data.get('texture_id')[0] + '.png')
+    onlyfiles = [f for f in os.listdir(os.getcwd() + '/image/manufacturers/' + str(form.manufacturer_id) +
+                                       '/models/textures/' + data.get('texture_id')[0] + '/')]
+    for files in onlyfiles:
+        if 'basecolor' in files.lower():
+            return send_file(os.getcwd() + '/image/manufacturers/' + str(form.manufacturer_id) + '/models/textures/' +
+                             data.get('texture_id')[0] + '/' + files)
 
 
 @application.route('/api/get_photo_avatar',
-                   methods=['GET'])  # Метод получения автарки производителя
+                   methods=['GET'])  # Метод получения аватарки производителя
 def get_photo_avatar():
     data = parse_qs(urlparse(request.url).query)
     return send_file('image/manufacturers/' + data.get('id')[0] + '/' + data.get('photo_name')[0] + '.png')
@@ -345,7 +359,7 @@ def get_info_ip():
             print("ИП")
             print(result[0]["data"]["fio"]["surname"], result[0]["data"]["fio"]["name"],
                   result[0]["data"]["fio"]["patronymic"])  # Руководитель и должность (малый) (644802061247)
-        print(result[0]["data"]["address"]["value"])  # Адресс
+        print(result[0]["data"]["address"]["value"])  # Адрес
         list_info[0] = ({'name': name, 'manager': '3', 'mark': '3', 'address': 'адрес'})
         # Имя: name, Менеджер: manager, Торговая марка: mark, Адрес: address
         return json.dumps(list_info)
@@ -460,7 +474,8 @@ def download_model():
 def download_texture():
     if request.method == 'GET':
         data = parse_qs(urlparse(request.url).query)
-        path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' + data.get('texture_id')[0] + '/' + data.get('selected_texture')[0] + '.jpeg'
+        path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' + data.get('texture_id')[0]\
+               + '/' + data.get('selected_texture')[0]
         return send_file(path)
 
 
