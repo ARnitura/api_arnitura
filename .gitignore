@@ -1390,3 +1390,5 @@
 /build/ios/
 /identifier.sqlite
 /data/furniture.db
+/venv/
+.idea

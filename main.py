@@ -30,7 +30,7 @@ db_session.global_init('db/furniture.db')
 
 @application.route('/')
 def main():
-    return send_file('files/model.glb')
+    return 'ARnitura'
 
 
 @application.route('/api/get_manufacturer', methods=['GET', 'POST'])  # Получение сущности производителя
@@ -237,9 +237,11 @@ def get_info_post():  # TODO: Почистить код обработки вр�
             sort = db_sess.query(Sort).filter(Sort.id == post.id_sort_furniture).first()
             series = db_sess.query(Series).filter(Series.id == post.id_series).first()  # Серия
             furniture = db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).first()  # Объект мебели
-            model_id = furniture.model  # Айди модели(для импорта в ар)
-            material_id = furniture.id_material  # айди Материал
-            material_name = db_sess.query(Material).filter(Material.id == material_id).first().name  # Название материала
+            model_id = furniture.model  # id модели(для импорта в ар)
+            material_id = furniture.id_material  # id Материалов
+            material_name = []  # Названия материалов
+            for material in material_id.split(' '):
+                material_name.append(db_sess.query(Material).filter(Material.id == material).first().name)
             data_publication = post.data_publication
             time_publication = post.time_publication
             db_sess.close()
@@ -263,7 +265,7 @@ def get_info_post():  # TODO: Почистить код обработки вр�
                     int(str(time // 60 // 60 // 24))).word + ' назад'
             post_description['0'] = ({'series_furniture': series.name, 'description_furniture': furniture.description,
                                       'name_furniture': furniture.name,
-                                      'material_id_furniture': material_id, 'material_name_furniture': material_name,
+                                      'material_id_furniture': material_id, 'material_name_furniture': ', '.join(material_name),
                                       'sort_furniture': sort.sort,
                                       'width': furniture.width, 'length': furniture.length,
                                       'height': furniture.height, 'price_furniture': furniture.price,
