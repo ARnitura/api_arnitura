@@ -59,15 +59,28 @@ def maps_info():
 @application.route('/api/get_counts_manufacturer', methods=['GET', 'POST'])  # Получение счетчиков производителей
 def get_counts_manufacturer():
     if request.method == 'POST':
+        likes_count = 0
         db_sess = db_session.create_session()
         form = db_sess.query(Manufacturer).filter(Manufacturer.id == int(request.form.get('id_manufacturer'))).one()
-        likes_count = form.list_likes
-        list_favourites = form.list_favourites
-        list_products = form.list_products
-        list_orders = form.list_orders
+        toLikes = db_sess.query(Post).filter(Post.manufacturer_id == int(request.form.get('id_manufacturer'))).all()
+        for post in toLikes:
+            likes_count += len(post.list_likes.split(','))
+        # Количество лайков, чтобы посчитать нужно получить все посты этого производителя и получить кол-во через split()
+        list_favourites = form.list_favourites  # Количество добавленных в избранное, считается когда пользователь добавляет у себя на устройстве в избранное
+        list_products = len(toLikes)  # Количество товаров = количество постов
+        list_orders = form.list_orders  # Количество заказов
         db_sess.close()
         return json.dumps({'likes_count': likes_count, 'list_favourites': list_favourites,
                            'list_products': list_products, 'list_orders': list_orders})
+
+
+@application.route('/api/set_user_avatar', methods=['GET', 'POST'])  # Изменение аватарки пользователя
+def set_user_avatar():
+    if request.method == 'POST':
+        uploaded_file = request.files['file_field']
+        if uploaded_file.filename != '':
+            uploaded_file.save('image/users/' + request.form.get('user_id') + '/' + 'avatar.' + uploaded_file.filename.split('.')[-1])
+        return json.dumps({'status': 200})
 
 
 @application.route('/api/get_count_like',
@@ -368,7 +381,7 @@ def get_info_ip():
 
 
 @application.route('/api/auth_user',
-                   methods=['GET', 'POST'])
+                   methods=['GET', 'POST'])  # Авторизация пользователя
 def auth_user():
     if request.method == 'POST':
         db_sess = db_session.create_session()
@@ -391,7 +404,7 @@ def auth_user():
 
 
 @application.route('/api/reg_user',
-                   methods=['GET', 'POST'])
+                   methods=['GET', 'POST'])  # Регистрация пользователя мобильного приложения
 def reg_user():
     if request.method == 'POST':
         db_sess = db_session.create_session()
@@ -414,15 +427,12 @@ def reg_user():
                    methods=['GET', 'POST'])
 def get_photo_user_avatar():
     data = parse_qs(urlparse(request.url).query)
-    db_sess = db_session.create_session()
-    res = db_sess.query(User).filter(User.id == data.get('user_id')[0]).first()
-    db_sess.close()
-    photo_name = res.avatar
-    return send_file('image/users/' + data.get('user_id')[0] + '/' + photo_name + '.png')
+    photo_name = 'avatar'
+    return send_file('image/users/' + data.get('user_id')[0] + '/' + photo_name + '.jpg')
 
 
 @application.route('/api/get_state_like',
-                   methods=['GET', 'POST'])
+                   methods=['GET', 'POST'])  # Получение состояния лайка на посте
 def get_state_like():
     if request.method == 'POST':
         db_sess = db_session.create_session()
@@ -435,7 +445,7 @@ def get_state_like():
 
 
 @application.route('/api/edit_info_user',
-                   methods=['GET', 'POST'])
+                   methods=['GET', 'POST'])  # Редактирование информации о пользователе
 def edit_info_user():
     if request.method == 'POST':
         db_sess = db_session.create_session()
@@ -449,7 +459,7 @@ def edit_info_user():
 
 
 @application.route('/api/edit_fullname_user',
-                   methods=['GET', 'POST'])
+                   methods=['GET', 'POST'])  # Редактирование имени пользователя
 def edit_fullname_user():
     if request.method == 'POST':
         db_sess = db_session.create_session()
@@ -463,7 +473,7 @@ def edit_fullname_user():
 
 
 @application.route('/api/download_model',
-                   methods=['GET', 'POST'])
+                   methods=['GET', 'POST'])  # Скачивание модели
 def download_model():
     if request.method == 'GET':
         data = parse_qs(urlparse(request.url).query)
@@ -472,13 +482,21 @@ def download_model():
 
 
 @application.route('/api/download_texture',
-                   methods=['GET', 'POST'])
+                   methods=['GET', 'POST'])  # Скачивание текстуры
 def download_texture():
     if request.method == 'GET':
         data = parse_qs(urlparse(request.url).query)
         path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' + data.get('texture_id')[0]\
                + '/' + data.get('selected_texture')[0]
         return send_file(path)
+
+
+# @application.route('/api/new_order', methods=['GET', 'POST'])
+# def new_order():
+#     if request.method == 'POST':
+#
+#         return send_file(path)
+
 
 
 if __name__ == '__main__':

@@ -4,10 +4,36 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="add space">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="delete unpack">
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/3.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/4.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/3/2K-cloth_3_Dif.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/3/2K-cloth_3_Nor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/3/2K-cloth_3_Specular.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/3/2K-leather_17_ambientOcclusion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/3/2K-leather_17_baseColor2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/3/2K-leather_17_normal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/3/2K-leather_17_specular.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/3/metal_basecolor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/3/metal_specular.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/4/2K-leather_17_ambientOcclusion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/4/2K-leather_17_baseColor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/4/2K-leather_17_normal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/4/2K-leather_17_specular.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/4/metal_basecolor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/4/metal_specular.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/5/2K-fabric_60_Specular.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/5/2K-fabric_60_ambientOcclusion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/5/2K-fabric_60_baseColor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/5/2K-fabric_60_normal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/5/Wood_BaseColor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/5/Wood_Normal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/models/textures/5/Wood_Specular.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/photos/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/photos/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/manufacturers/1/photos/6.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/manufacturer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/manufacturer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +81,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="23NgQevzTnhvba1zhDik69l8k33" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -64,7 +93,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlite&#10;mysql" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite&#10;mysql&#10;postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -85,17 +115,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/image/manufacturers/1/photos" />
+      <recent name="$PROJECT_DIR$/image/manufacturers/1/models/textures/1" />
+      <recent name="$PROJECT_DIR$/image/manufacturers/1" />
       <recent name="$PROJECT_DIR$/image/manufacturers/1/models" />
       <recent name="$PROJECT_DIR$/image/manufacturers/5" />
-      <recent name="$PROJECT_DIR$/image/manufacturers/4" />
-      <recent name="$PROJECT_DIR$/image/manufacturers/2/models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/image/manufacturers/1/models/textures/5" />
       <recent name="$PROJECT_DIR$/image/manufacturers/1/models" />
-      <recent name="$PROJECT_DIR$/image/manufacturers/2/models" />
-      <recent name="$PROJECT_DIR$/image/manufacturers/4/photos" />
-      <recent name="$PROJECT_DIR$/image/manufacturers/5/photos" />
+      <recent name="$PROJECT_DIR$/image/manufacturers/1/models/textures" />
+      <recent name="$PROJECT_DIR$/image/manufacturers/1/models/textures/4" />
+      <recent name="$PROJECT_DIR$/image/manufacturers/1/models/textures/3" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -134,7 +165,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,7 +219,24 @@
       <workItem from="1653494431956" duration="632000" />
       <workItem from="1653690168620" duration="2579000" />
       <workItem from="1653987001356" duration="3160000" />
-      <workItem from="1654661736454" duration="2419000" />
+      <workItem from="1654661736454" duration="3735000" />
+      <workItem from="1654848107684" duration="26000" />
+      <workItem from="1654848147815" duration="60000" />
+      <workItem from="1655278482174" duration="36105000" />
+      <workItem from="1655910212040" duration="8094000" />
+      <workItem from="1655978075767" duration="600000" />
+      <workItem from="1656050149566" duration="4170000" />
+      <workItem from="1656680130653" duration="18631000" />
+      <workItem from="1657398597958" duration="7930000" />
+      <workItem from="1657616003289" duration="10412000" />
+      <workItem from="1660056540117" duration="617000" />
+      <workItem from="1661432482736" duration="11377000" />
+      <workItem from="1662094296340" duration="2436000" />
+      <workItem from="1662113391445" duration="7812000" />
+      <workItem from="1662371130759" duration="5687000" />
+      <workItem from="1662740373663" duration="5428000" />
+      <workItem from="1662972933723" duration="1346000" />
+      <workItem from="1663563729775" duration="27107000" />
     </task>
     <task id="LOCAL-00001" summary="added model">
       <created>1641580734508</created>
@@ -407,7 +455,35 @@
       <option name="project" value="LOCAL" />
       <updated>1653083376644</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="set model manufacturer&#10;set get_info_post&#10;add comments">
+      <created>1654671916635</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1654671916635</updated>
+    </task>
+    <task id="LOCAL-00033" summary="edit get photo_texture to return basecolor texture">
+      <created>1657719404254</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1657719404254</updated>
+    </task>
+    <task id="LOCAL-00034" summary="set .gitignore&#10;set '/' method and delete files">
+      <created>1662095334345</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1662095334345</updated>
+    </task>
+    <task id="LOCAL-00035" summary="delete unpack">
+      <created>1662095466585</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1662095466585</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,10 +502,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="edit settings to reg ru" />
-    <MESSAGE value="add config filea" />
-    <MESSAGE value="add screen to manufacturer, support, drawer, 2 state contact" />
-    <MESSAGE value="add icon" />
     <MESSAGE value="edit api methods" />
     <MESSAGE value="edit info to Procfile" />
     <MESSAGE value="set db init" />
@@ -451,18 +523,23 @@
     <MESSAGE value="add file structure" />
     <MESSAGE value="add files(model, texture)&#10;ready to release" />
     <MESSAGE value="add space" />
-    <option name="LAST_COMMIT_MESSAGE" value="add space" />
+    <MESSAGE value="set model manufacturer&#10;set get_info_post&#10;add comments" />
+    <MESSAGE value="edit get photo_texture to return basecolor texture" />
+    <MESSAGE value="set .gitignore&#10;set '/' method and delete files" />
+    <MESSAGE value="delete unpack" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete unpack" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="PythonConfigurationType">
+        <watch expression="request.files['file_field']" language="Python" />
+        <watch expression="request.files" language="Python" />
         <watch expression="request.form" language="Python" />
-        <watch expression="request.form.get('id_post')" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kreslo_api$test.coverage" NAME="test Coverage Results" MODIFIED="1650261576627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/kreslo_api$main.coverage" NAME="main Coverage Results" MODIFIED="1654663886418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kreslo_api$main.coverage" NAME="main Coverage Results" MODIFIED="1663773454906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
