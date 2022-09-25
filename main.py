@@ -1,15 +1,20 @@
 # -*- coding: utf-8 -*-
 import json
+import smtplib
+
 import sentry_sdk
 import pymorphy2
 import datetime
 import os
 from flask_cors import CORS, cross_origin
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 import sqlalchemy.exc
 from flask import Flask, send_file, request
 from urllib.parse import urlparse, parse_qs
 from data import db_session
 from data.manufacturer import Manufacturer
+from data.order import Order
 from data.post import Post
 from data.furniture import Furniture
 from data.series import Series
@@ -491,12 +496,198 @@ def download_texture():
         return send_file(path)
 
 
-# @application.route('/api/new_order', methods=['GET', 'POST'])
-# def new_order():
-#     if request.method == 'POST':
-#
-#         return send_file(path)
+@application.route('/api/new_order', methods=['GET', 'POST'])
+def new_order():
+    if request.method == 'POST':
+        try:
+            firstname = request.form.get('firstname')
+            lastname = request.form.get('lastname')
+            patronymic = request.form.get('patronymic')
+            mail = request.form.get('mail')
+            phone = request.form.get('phone')
+            address = request.form.get('address')
+            json_order = request.form.get('listToBuy')
+            name = f"{lastname} {firstname} {patronymic}"
+            # Данные с формы
 
+            fromaddr = "info@arnitura.ru"  # Отправитель
+            toaddr = request.form.get('mail')  # Адресат
+            mypass = "maqpyn-nyhbaf-3sEfwe"  # Пароль от кабинета отправителя
+
+            msg = MIMEMultipart()
+            msg['From'] = fromaddr
+            msg['To'] = toaddr
+            msg['Subject'] = phone
+
+            html = """<!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <title>Заказ Arnitura</title>
+    </head>
+    <body>
+    <div class="constraint text">
+        Заказ №
+        <label class="holder">
+            <input class="input_radius" disabled type="text">
+        </label>
+    </div>
+    <div class="constraint text">
+        Дата заказа
+        <label class="holder">
+            <input class="input_radius" disabled type="text">
+        </label>
+    </div>
+    <div class="constraint text">
+        Адрес доставки<br/>
+        <label>
+            <input class="indent" disabled type="text"><br/>
+        </label>
+    </div>
+    <div class="constraint text">
+        Контактные данные<br/>
+        <label>
+            <input class="indent" disabled placeholder="ФИО" type="text"><br/>
+            <input class="indent" disabled placeholder="Тел." type="text"><br/>
+            <input class="indent" disabled placeholder="E-mail" type="text">
+        </label>
+    </div>
+    <div class="constraint text" style="margin-top: 50px; text-align: center;">
+        Товары
+    </div>
+    <div style="display: flex; flex-direction: row;">
+        <div class="text" style="display: flex; align-items: center; margin-right: 10px;">1</div>
+        <div style="display: flex; width: 100%; flex-direction: column; border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 7px;">
+            <div class="order_cell">
+                <div class="info_cell text">Тип
+                    <input class="indent" disabled placeholder="" type="text">
+                </div>
+                <div class="info_cell text">Наименование
+                    <input class="indent" disabled placeholder="" type="text">
+                </div>
+                <div class="info_cell text">Цвет
+                    <input class="indent" disabled placeholder="" type="text">
+                </div>
+                <div class="info_cell text">Материал
+                    <input class="indent" disabled placeholder="" type="text">
+                </div>
+            </div>
+            <div class="text" style="margin-right: 10px; margin-bottom:20px; text-align: right">
+                <input class="input_radius" disabled placeholder="" type="text">
+                2000 руб
+            </div>
+        </div>
+    </div>
+    <div class="constraint6">
+        <p class="text">Итого:</p>
+        <button><p class="text_button">Оплатить</p></button>
+    </div>
+    </body>
+    <style>
+    
+        .text {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            color: #000000;
+        }
+    
+        .info_cell {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    
+        .order_cell {
+            padding: 30px;
+            display: flex;
+            flex-direction: row;
+            margin: 0 10px;
+            width: 100%;
+        }
+    
+        .constraint {
+            margin-left: 5%;
+        }
+    
+        .holder {
+            margin-top: 1em;
+            margin-left: 1em;
+        }
+    
+        .input_radius {
+            margin: 3px;
+            width: 80px;
+            height: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 7px;
+        }
+    
+        .indent {
+            width: 277px;
+            height: 15px;
+            margin: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 7px;
+        }
+    
+        .constraint6 {
+            float: right;
+        }
+    
+        .text_button {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            display: contents;
+            color: #FFFFFF;
+        }
+    
+        button {
+            background: rgba(0, 148, 255, 0.75);
+            border-radius: 7px;
+            width: 153px;
+            height: 37px;
+            border: 0;
+        }
+    
+    
+    
+        ::placeholder {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            padding-left: 2%;
+    
+            color: rgba(0, 0, 0, 0.45);
+        }
+    
+    </style>
+    </html>"""
+            msg.attach(MIMEText(html, 'html'))
+            text = msg.as_string()
+            server = smtplib.SMTP_SSL('smtp.mail.ru', 465)
+            server.login(fromaddr, mypass)
+            server.sendmail(fromaddr, toaddr, text)
+
+            db_sess = db_session.create_session()
+            new_order_db = Order(name=name, phone=phone, mail=mail, address=address, json_order=json_order)
+            db_sess.add(new_order_db)
+            db_sess.commit()
+            db_sess.close()
+            return json.dumps({'status': 200})
+        except smtplib.SMTPRecipientsRefused:
+            return json.dumps({'status': 501})
 
 
 if __name__ == '__main__':
