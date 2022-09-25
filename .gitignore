@@ -1390,7 +1390,6 @@
 /build/ios/
 /identifier.sqlite
 /data/furniture.db
-/venv/
-.idea
 /image/manufacturers/*
 /image/users/*
+/image/manufacturers/1/models/4.fbx
