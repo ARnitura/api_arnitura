@@ -1392,3 +1392,5 @@
 /data/furniture.db
 /venv/
 .idea
+/image/manufacturers/*
+/image/users/*
