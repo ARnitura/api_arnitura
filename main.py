@@ -10,7 +10,7 @@ from flask_cors import CORS, cross_origin
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import sqlalchemy.exc
-from flask import Flask, send_file, request
+from flask import Flask, send_file, request, render_template
 from urllib.parse import urlparse, parse_qs
 from data import db_session
 from data.manufacturer import Manufacturer
@@ -77,15 +77,6 @@ def get_counts_manufacturer():
         db_sess.close()
         return json.dumps({'likes_count': likes_count, 'list_favourites': list_favourites,
                            'list_products': list_products, 'list_orders': list_orders})
-
-
-@application.route('/api/set_user_avatar', methods=['GET', 'POST'])  # Изменение аватарки пользователя
-def set_user_avatar():
-    if request.method == 'POST':
-        uploaded_file = request.files['file_field']
-        if uploaded_file.filename != '':
-            uploaded_file.save('image/users/' + request.form.get('user_id') + '/' + 'avatar.' + uploaded_file.filename.split('.')[-1])
-        return json.dumps({'status': 200})
 
 
 @application.route('/api/get_count_like',
@@ -283,7 +274,8 @@ def get_info_post():  # TODO: Почистить код обработки вр�
                     int(str(time // 60 // 60 // 24))).word + ' назад'
             post_description['0'] = ({'series_furniture': series.name, 'description_furniture': furniture.description,
                                       'name_furniture': furniture.name,
-                                      'material_id_furniture': material_id, 'material_name_furniture': ', '.join(material_name),
+                                      'material_id_furniture': material_id,
+                                      'material_name_furniture': ', '.join(material_name),
                                       'sort_furniture': sort.sort,
                                       'width': furniture.width, 'length': furniture.length,
                                       'height': furniture.height, 'price_furniture': furniture.price,
@@ -319,6 +311,25 @@ def get_photo_texture():
 def get_photo_avatar():
     data = parse_qs(urlparse(request.url).query)
     return send_file('image/manufacturers/' + data.get('id')[0] + '/' + data.get('photo_name')[0] + '.png')
+
+
+@application.route('/api/set_user_avatar', methods=['GET', 'POST'])  # Изменение аватарки пользователя
+def set_user_avatar():
+    if request.method == 'POST':
+        if not os.path.isdir(os.getcwd() + '/image/users/' + request.form.get('user_id')):
+            os.makedirs(os.getcwd() + '/image/users/' + request.form.get('user_id'))
+        onlyfiles = [f for f in os.listdir(os.getcwd() + '/image/users/' + request.form.get('user_id') + '/')]
+        for i in onlyfiles:
+            if 'avatar' in i:
+                try:
+                    os.remove(path=os.getcwd() + '/image/users/' + request.form.get('user_id') + '/' + str(i))
+                except FileNotFoundError:
+                    continue
+        uploaded_file = request.files['file_field']
+        if uploaded_file.filename != '':
+            uploaded_file.save(
+                'image/users/' + request.form.get('user_id') + '/' + 'avatar.' + uploaded_file.filename.split('.')[-1])
+        return json.dumps({'status': 200})
 
 
 @application.route('/api/get_photos',
@@ -408,22 +419,21 @@ def auth_user():
             return json.dumps(list_furniture)
 
 
-@application.route('/api/reg_user',
-                   methods=['GET', 'POST'])  # Регистрация пользователя мобильного приложения
-def reg_user():
+@application.route('/api/reg_manufacturer',
+                   methods=['GET', 'POST'])  # Регистрация производителя на сайте
+def reg_manufacturer():
     if request.method == 'POST':
         db_sess = db_session.create_session()
         date = datetime.datetime.now().date().strftime('%d.%m.%y')
         time = datetime.datetime.now().time().strftime('%H:%M')
-        new_user = User(firstname=request.form.get('firstname'), lastname=request.form.get('lastname'),
-                        patronymic=request.form.get('patronymic'), login=request.form.get('login'),
-                        password=request.form.get('password'), mail=request.form.get('email'),
-                        phone=request.form.get('phone'), address=request.form.get('address'),
-                        data_reg=date, time_reg=time)
-        db_sess.add(new_user)
+        new_manufacturer = Manufacturer(inn=request.form.get('inn'), name=request.form.get('name'),
+                                        password=request.form.get('password'),
+                                        address=request.form.get('address'),
+                                        data_reg=date, time_reg=time)
+        db_sess.add(new_manufacturer)
         db_sess.commit()
-        last_id = db_sess.query(User).order_by(User.id)[-1].id
-        #  Регистрируем пользователя и получаем его айди
+        last_id = db_sess.query(Manufacturer).order_by(Manufacturer.id)[-1].id
+        #  Регистрируем производителя и получаем его айди
         db_sess.close()
         return json.dumps({'description': 'success', 'id': str(last_id)}), 200
 
@@ -432,8 +442,12 @@ def reg_user():
                    methods=['GET', 'POST'])
 def get_photo_user_avatar():
     data = parse_qs(urlparse(request.url).query)
-    photo_name = 'avatar'
-    return send_file('image/users/' + data.get('user_id')[0] + '/' + photo_name + '.jpg')
+    onlyfiles = [f for f in os.listdir(os.getcwd() + '/image/users/' + data['user_id'][0] + '/')]
+    for i in onlyfiles:
+        if 'avatar' in i:
+            return send_file('image/users/' + data.get('user_id')[0] + '/' + i)
+    # Сделать доступной аватарки с учетом разрешения
+    return json.dumps({'status': '404'})
 
 
 @application.route('/api/get_state_like',
@@ -491,7 +505,7 @@ def download_model():
 def download_texture():
     if request.method == 'GET':
         data = parse_qs(urlparse(request.url).query)
-        path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' + data.get('texture_id')[0]\
+        path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' + data.get('texture_id')[0] \
                + '/' + data.get('selected_texture')[0]
         return send_file(path)
 
@@ -688,6 +702,13 @@ def new_order():
             return json.dumps({'status': 200})
         except smtplib.SMTPRecipientsRefused:
             return json.dumps({'status': 501})
+
+
+@application.route('/privacypolicy')
+def privacy():
+    with open('templates/document/privacy.txt', 'r') as file:
+        data = file.read()
+    return data
 
 
 if __name__ == '__main__':
