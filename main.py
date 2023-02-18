@@ -32,7 +32,6 @@ from dadata import Dadata
 
 db_session.global_init('db/furniture.db')
 
-
 @application.route('/')
 def main():
     return 'ARnitura'
@@ -716,4 +715,4 @@ if __name__ == '__main__':
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
         traces_sample_rate=1.0
     )
-    application.run(host='0.0.0.0', port=5002, debug=True)
+    application.run(host='0.0.0.0', port=5003, debug=True)
