@@ -8,14 +8,14 @@ SqlAlchemyBase = dec.declarative_base()
 __factory = None
 
 
-def global_init(db_file):
+def global_init():
     global __factory
 
     if __factory:
         return
 
-    if not db_file or not db_file.strip():
-        raise Exception("Необходимо указать файл базы данных.")
+    # if not db_file or not db_file.strip():
+    #     raise Exception("Необходимо указать файл базы данных.")
 
     conn_str = f'mysql+pymysql://u1566574_u_sqlal:jS4jW8aG8f@31.31.198.122/u1566574_furniture'
     print(f"Подключение к базе данных по адресу {conn_str}")

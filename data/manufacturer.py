@@ -20,3 +20,4 @@ class Manufacturer(SqlAlchemyBase):
     list_favourites = Column(Integer, nullable=False, default='0')
     list_products = Column(Integer, nullable=False, default='0')
     list_orders = Column(Integer, nullable=False, default='0')
+    is_admin = Column(Integer, nullable=False, default='0')

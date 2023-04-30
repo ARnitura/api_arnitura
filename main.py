@@ -22,19 +22,34 @@ from data.type_furniture import Type
 from data.material import Material
 from data.sort_furniture import Sort
 from data.user import User
+from os import listdir
+from os.path import isfile, join
 
-application = Flask(__name__)
+application = Flask(__name__, template_folder="templates/web", static_folder="static", static_url_path='')
+print(application.template_folder)
 morph = pymorphy2.MorphAnalyzer()
 cors = CORS(application)
 application.config['CORS_HEADERS'] = 'Access-Control-Allow-Origin'
 application.config['JSON_AS_ASCII'] = False
 from dadata import Dadata
 
-db_session.global_init('db/furniture.db')
+db_session.global_init()
+
+
+def check_dir_manufacturer(id_manufacturer):
+    manufacturerDirIsAlive = os.path.isdir(
+        os.getcwd() + '/image/manufacturers/' + id_manufacturer
+    )
+    if not manufacturerDirIsAlive:
+        os.mkdir(os.getcwd() + '/image/manufacturers/' + id_manufacturer)
+        os.mkdir(os.getcwd() + '/image/manufacturers/' + id_manufacturer + '/models')
+        os.mkdir(os.getcwd() + '/image/manufacturers/' + id_manufacturer + '/photos')
+    return
+
 
 @application.route('/')
 def main():
-    return 'ARnitura'
+    return render_template('index.html')
 
 
 @application.route('/api/get_manufacturer', methods=['GET', 'POST'])  # Получение сущности производителя
@@ -50,6 +65,45 @@ def get_manufacturer():
                            "phone_number": form.phone_number,
                            "site": form.site,
                            })
+
+
+@application.route('/api/new_post', methods=['GET', 'POST'])  # Добавление новых постов в бд
+def new_post():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        # form = db_sess.query(Manufacturer).filter(Manufacturer.id == int()).one()
+        objects = json.loads(request.form.get('data_to_save'))
+        for i in range(len(objects)):
+            check_dir_manufacturer(request.form.get('manufacturer_id'))
+            model_id = [f for f in
+                        listdir(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models')
+                        if isfile(
+                    join(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models', f))]
+            if len(model_id) == 0:
+                model_id = 1
+            else:
+                model_id = str(int(model_id[0].split('.')[0]) + 1)
+            path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/models/' + str(model_id) + '.fbx'
+            out_file = open(path, "wb")
+            out_file.write(bytes(json.loads(objects[i]['vr'])))
+            out_file.close()
+            new_order_db = Furniture(name=objects[i]['name'], description=objects[i]['description'],
+                                     width=objects[i]['width'], length=objects[i]['length'],
+                                     height=objects[i]['height'], price=objects[i]['price'],
+                                     type_furniture=objects[i]['category'], model=str(model_id),
+                                     manufacturer_id=json.loads(request.form.get('manufacturer_id')))
+            db_sess.add(new_order_db)
+            db_sess.commit()
+            date = datetime.datetime.now()
+            series = db_sess.query(Series).filter(Series.name == objects[i]['name_series']).one()
+            new_post_db = Post(list_furniture=new_order_db.id, id_series=series.id, id_furniture=new_order_db.id,
+                               id_sort_furniture=objects[i]['type'], data_publication=date.strftime('%d.%m.%y'),
+                               time_publication=date.strftime('%H:%M'),
+                               manufacturer_id=json.loads(request.form.get('manufacturer_id')))
+            db_sess.add(new_post_db)
+            db_sess.commit()
+        db_sess.close()
+        return json.dumps({"status": 'ok'})
 
 
 @application.route('/api/maps_info', methods=['GET', 'POST'])  # Получение информации о количестве карт для материала
@@ -437,6 +491,86 @@ def reg_manufacturer():
         return json.dumps({'description': 'success', 'id': str(last_id)}), 200
 
 
+@application.route('/api/auth_manufacturer',
+                   methods=['GET', 'POST'])  # Регистрация производителя на сайте
+def auth_manufacturer():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        manufacturer_info = db_sess.query(Manufacturer).filter(
+            (Manufacturer.inn == request.form.get('login')) | (Manufacturer.mail == request.form.get('login')),
+            Manufacturer.password == request.form.get('password')).first()
+        list_category = []
+        for u in db_sess.query(Type).all():
+            list_category.append({'id': u.__dict__['id'], 'type': u.__dict__['type']})
+        list_type = []
+        for u in db_sess.query(Sort).all():
+            list_type.append({'id': u.__dict__['id'], 'sort': u.__dict__['sort']})
+        #  Вытягиваем запись авторизуемого производителя
+        series = db_sess.query(Series).filter(Series.id_manufacturer == manufacturer_info.id).all()
+        list_furniture = {}
+        for ser in series:
+            list_posts = db_sess.query(Post).filter(Post.id_series == ser.id).all()
+            list_furniture[str(ser.id)] = {'name_series': ser.name, 'furniture': []}
+            for post in list_posts:
+                object_furniture = db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).first()
+                list_furniture[str(ser.id)]['furniture'].append(
+                    {'id_post': post.id,
+                     'sort': db_sess.query(Sort).filter(Sort.id == post.id_sort_furniture).first().sort,
+                     'furniture_object': {'id': object_furniture.id, 'model': object_furniture.model,
+                                          'type_furniture': db_sess.query(Type).filter(
+                                              Type.id == object_furniture.type_furniture).first().type,
+                                          'manufacturer_id': object_furniture.manufacturer_id,
+                                          'name': object_furniture.name,
+                                          'photo_furniture': object_furniture.photo_furniture,
+                                          'description': object_furniture.description,
+                                          'width': object_furniture.width,
+                                          'length': object_furniture.length,
+                                          'height': object_furniture.height,
+                                          'price': object_furniture.price,
+                                          'id_material': object_furniture.id_material,
+                                          }})
+        # Передаем информацию обо всех товарах производителя
+        db_sess.close()
+        # {id_series: {name_series: '', category: ''}}
+        if manufacturer_info is None:
+            return json.dumps({'error': 'No found user'}), 400
+        else:
+            manufacturer = {
+                'id': manufacturer_info.id, 'avatar_photo': manufacturer_info.avatar_photo,
+                'name': manufacturer_info.name, 'address': manufacturer_info.address,
+                'mail': manufacturer_info.mail, 'phone': manufacturer_info.phone_number, 'site': manufacturer_info.site,
+                'list_likes': manufacturer_info.list_likes,
+                'list_favourites': manufacturer_info.list_favourites, 'list_products': manufacturer_info.list_products,
+                'list_orders': manufacturer_info.list_orders, 'list_category': json.dumps(list_category),
+                'list_type': json.dumps(list_type),
+                'inn': manufacturer_info.inn,
+                'data_reg': manufacturer_info.data_reg, 'time_reg': manufacturer_info.time_reg,
+                'is_admin': manufacturer_info.is_admin, 'list_furniture': list_furniture}
+            return json.dumps(manufacturer)
+
+
+@application.route('/api/set_password_manufacturer',
+                   methods=['GET', 'POST'])  # Инициализировать смену пароля производителя
+def set_password_manufacturer():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        form = db_sess.query(Manufacturer).filter(
+            (Manufacturer.inn == request.form.get('login')) | (Manufacturer.mail == request.form.get('login')),
+            Manufacturer.password == request.form.get('password')).first()
+        #  Вытягиваем запись авторизуемого производителя
+        db_sess.close()
+        if form is None:
+            return json.dumps({'error': 'No found user'}), 400
+        else:
+            manufacturer = {
+                'id': form.id, 'avatar_photo': form.avatar_photo, 'name': form.name, 'address': form.address,
+                'mail': form.mail, 'phone': form.phone_number, 'site': form.site, 'list_likes': form.list_likes,
+                'list_favourites': form.list_favourites, 'list_products': form.list_products,
+                'list_orders': form.list_orders, 'inn': form.inn, 'data_reg': form.data_reg, 'time_reg': form.time_reg,
+                'is_admin': form.is_admin}
+            return json.dumps(manufacturer)
+
+
 @application.route('/api/get_photo_user_avatar',  # Получение аватарки пользователя
                    methods=['GET', 'POST'])
 def get_photo_user_avatar():
@@ -504,8 +638,8 @@ def download_model():
 def download_texture():
     if request.method == 'GET':
         data = parse_qs(urlparse(request.url).query)
-        path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' + data.get('texture_id')[0] \
-               + '/' + data.get('selected_texture')[0]
+        path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' \
+               + data.get('texture_id')[0] + '/' + data.get('selected_texture')[0]
         return send_file(path)
 
 
