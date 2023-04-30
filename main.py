@@ -10,7 +10,7 @@ from flask_cors import CORS, cross_origin
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import sqlalchemy.exc
-from flask import Flask, send_file, request, render_template
+from flask import Flask, send_file, request, render_template, make_response
 from urllib.parse import urlparse, parse_qs
 from data import db_session
 from data.manufacturer import Manufacturer
@@ -26,7 +26,6 @@ from os import listdir
 from os.path import isfile, join
 
 application = Flask(__name__, template_folder="templates/web", static_folder="static", static_url_path='')
-print(application.template_folder)
 morph = pymorphy2.MorphAnalyzer()
 cors = CORS(application)
 application.config['CORS_HEADERS'] = 'Access-Control-Allow-Origin'
@@ -494,6 +493,8 @@ def reg_manufacturer():
 @application.route('/api/auth_manufacturer',
                    methods=['GET', 'POST'])  # Регистрация производителя на сайте
 def auth_manufacturer():
+    if request.method == "OPTIONS":  # CORS preflight
+        return _build_cors_preflight_response()
     if request.method == 'POST':
         db_sess = db_session.create_session()
         manufacturer_info = db_sess.query(Manufacturer).filter(
@@ -547,6 +548,14 @@ def auth_manufacturer():
                 'data_reg': manufacturer_info.data_reg, 'time_reg': manufacturer_info.time_reg,
                 'is_admin': manufacturer_info.is_admin, 'list_furniture': list_furniture}
             return json.dumps(manufacturer)
+
+
+def _build_cors_preflight_response():
+    response = make_response()
+    response.headers.add('Access-Control-Allow-Credentials', 'true')
+    response.headers.add("Access-Control-Allow-Headers", "*")
+    response.headers.add("Access-Control-Allow-Methods", "*")
+    return response
 
 
 @application.route('/api/set_password_manufacturer',
