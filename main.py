@@ -81,14 +81,40 @@ def new_post():
             if len(model_id) == 0:
                 model_id = 1
             else:
+                model_id = sorted(model_id, reverse=True)
                 model_id = str(int(model_id[0].split('.')[0]) + 1)
-            path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/models/' + str(model_id) + '.fbx'
-            out_file = open(path, "wb")
-            out_file.write(bytes(json.loads(objects[i]['vr'])))
-            out_file.close()
+            vr_path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/models/' + str(model_id) + '.fbx'
+            vr_file = open(vr_path, "wb")
+            vr_file.write(bytes(json.loads(objects[i]['vr'])))
+            vr_file.close()
+            images = json.loads(objects[i]['images'])
+            images_id = []
+            for j in range(len(images)):
+                image_id = [f for f in
+                            listdir(
+                                os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/photos')
+                            if isfile(
+                        join(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/photos',
+                             f))]
+
+                if len(image_id) == 0:
+                    image_id = 1
+                else:
+                    image_id = sorted(image_id, reverse=True)
+                    image_id = str(int(image_id[0].split('.')[0]) + 1)
+
+                image_path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/photos/' + str(
+                    image_id) + '.' + images[j]['ext']
+                image_file = open(image_path, "wb")
+                image_file.write(bytes(images[j]['bytes']))
+                image_file.close()
+
+                images_id.append(image_id + '.' + images[j]['ext'])
+                print(images[j])
             new_order_db = Furniture(name=objects[i]['name'], description=objects[i]['description'],
                                      width=objects[i]['width'], length=objects[i]['length'],
                                      height=objects[i]['height'], price=objects[i]['price'],
+                                     photo_furniture=', '.join(images_id),
                                      type_furniture=objects[i]['category'], model=str(model_id),
                                      manufacturer_id=json.loads(request.form.get('manufacturer_id')))
             db_sess.add(new_order_db)
@@ -96,7 +122,7 @@ def new_post():
             date = datetime.datetime.now()
             series = db_sess.query(Series).filter(Series.name == objects[i]['name_series']).one()
             new_post_db = Post(list_furniture=new_order_db.id, id_series=series.id, id_furniture=new_order_db.id,
-                               id_sort_furniture=objects[i]['type'], data_publication=date.strftime('%d.%m.%y'),
+                               id_sort_furniture=objects[i]['type'], data_publication=date.strftime('%d.%m.%Y'),
                                time_publication=date.strftime('%H:%M'),
                                manufacturer_id=json.loads(request.form.get('manufacturer_id')))
             db_sess.add(new_post_db)
@@ -388,7 +414,7 @@ def set_user_avatar():
                    methods=['GET'])  # Метод получения фото товаров производителя
 def get_photos():
     data = parse_qs(urlparse(request.url).query)
-    return send_file('image/manufacturers/' + data.get('id')[0] + '/photos/' + data.get('photo_name')[0] + '.jpg')
+    return send_file('image/manufacturers/' + data.get('id')[0] + '/photos/' + data.get('photo_name')[0])
 
 
 @application.route('/api/get_list_photos',
@@ -491,7 +517,7 @@ def reg_manufacturer():
 
 
 @application.route('/api/auth_manufacturer',
-                   methods=['GET', 'POST'])  # Регистрация производителя на сайте
+                   methods=['GET', 'POST'])  # Авторизация производителя на сайте
 def auth_manufacturer():
     if request.method == "OPTIONS":  # CORS preflight
         return _build_cors_preflight_response()
@@ -514,6 +540,13 @@ def auth_manufacturer():
             list_furniture[str(ser.id)] = {'name_series': ser.name, 'furniture': []}
             for post in list_posts:
                 object_furniture = db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).first()
+
+                photos_furniture = []
+
+                if object_furniture.photo_furniture is not None:
+                    for photo in object_furniture.photo_furniture.split(', '):
+                        photos_furniture.append(photo)
+
                 list_furniture[str(ser.id)]['furniture'].append(
                     {'id_post': post.id,
                      'sort': db_sess.query(Sort).filter(Sort.id == post.id_sort_furniture).first().sort,
@@ -522,10 +555,12 @@ def auth_manufacturer():
                                               Type.id == object_furniture.type_furniture).first().type,
                                           'manufacturer_id': object_furniture.manufacturer_id,
                                           'name': object_furniture.name,
-                                          'photo_furniture': object_furniture.photo_furniture,
+                                          'photo_furniture': photos_furniture,
                                           'description': object_furniture.description,
                                           'width': object_furniture.width,
                                           'length': object_furniture.length,
+                                          'date': post.data_publication + ' ' + post.time_publication,
+                                          'status_post': post.status_publication,
                                           'height': object_furniture.height,
                                           'price': object_furniture.price,
                                           'id_material': object_furniture.id_material,
