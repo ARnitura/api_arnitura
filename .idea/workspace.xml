@@ -4,49 +4,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="redirect repositories">
-      <change afterPath="$PROJECT_DIR$/static/.last_build_id" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/AssetManifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/FontManifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/NOTICES" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/appbar/appbar_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/appbar/logo_app_bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/fonts/Roboto/Roboto-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/fonts/Roboto/Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/fonts/Roboto/Roboto-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/fonts/Roboto/Roboto-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/fonts/Roboto/Roboto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/fonts/Roboto/Roboto-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/fonts/Roboto/Roboto-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/fonts/Roboto/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/icons/Telegram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/icons/Viber.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/icons/WhatsApp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/assets/icons/vr_add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/fonts/MaterialIcons-Regular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/canvaskit/canvaskit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/canvaskit/canvaskit.wasm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/canvaskit/profiling/canvaskit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/canvaskit/profiling/canvaskit.wasm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/flutter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/flutter_service_worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/icons/Icon-192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/icons/Icon-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/icons/Icon-maskable-192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/icons/Icon-maskable-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/main.dart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/version.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/KRESLO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KRESLO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7e5206e5-d0b5-4bbc-9a91-af1595eff928" name="Default Changelist" comment="новая версия сайта">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/db_session.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/furniture.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/furniture.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/manufacturer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/manufacturer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/material.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/material.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manufacturers/5/models/textures/1/Velour_BaseColor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manufacturers/5/models/textures/1/Velour_Height.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/manufacturers/5/models/textures/1/Velour_NormalMap.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +47,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="api_kreslo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,7 +81,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/image/manufacturers/7/models" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -124,20 +90,20 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/image/manufacturers/1/photos" />
-      <recent name="$PROJECT_DIR$/image/manufacturers/1/models/textures/1" />
-      <recent name="$PROJECT_DIR$/image/manufacturers/1" />
-      <recent name="$PROJECT_DIR$/image/manufacturers/1/models" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/image/manufacturers/7/models" />
+      <recent name="$PROJECT_DIR$/image/manufacturers/7/photos" />
+      <recent name="$PROJECT_DIR$/image/manufacturers/7" />
       <recent name="$PROJECT_DIR$/templates/web" />
       <recent name="$PROJECT_DIR$/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/templates/web" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/image/manufacturers/1/models/textures/5" />
@@ -281,7 +247,23 @@
       <workItem from="1682180839077" duration="9054000" />
       <workItem from="1682314065863" duration="5927000" />
       <workItem from="1682787310580" duration="14405000" />
-      <workItem from="1682846496086" duration="1575000" />
+      <workItem from="1682846496086" duration="4976000" />
+      <workItem from="1682919206766" duration="52000" />
+      <workItem from="1683720770665" duration="5555000" />
+      <workItem from="1683961611191" duration="31090000" />
+      <workItem from="1684183782594" duration="1329000" />
+      <workItem from="1684327094426" duration="19000" />
+      <workItem from="1684923701782" duration="1398000" />
+      <workItem from="1685081188884" duration="627000" />
+      <workItem from="1687157658261" duration="73000" />
+      <workItem from="1687157752907" duration="4947000" />
+      <workItem from="1687357294979" duration="11668000" />
+      <workItem from="1687848132662" duration="2713000" />
+      <workItem from="1687854156599" duration="1532000" />
+      <workItem from="1687857074529" duration="1326000" />
+      <workItem from="1687964106996" duration="1757000" />
+      <workItem from="1688053977494" duration="31174000" />
+      <workItem from="1688467382374" duration="620000" />
     </task>
     <task id="LOCAL-00001" summary="added model">
       <created>1641580734508</created>
@@ -542,7 +524,42 @@
       <option name="project" value="LOCAL" />
       <updated>1676725395236</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="реализован выбор и загрузка модели, собран сайт, реализован выбор категории и типа фурнитуры">
+      <created>1682848149268</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1682848149268</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Деплой нового релиза, сделан алгоритм для выбора url_server в зависимости от того находится приложение в дебаге или нет&#10;Перебрана полностью предыдущая версия ветки которая была создана еще до организации на гит хабе">
+      <created>1682850896433</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1682850896433</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Добавился статус поста&#10;Можно загружать фото поста, исправлены баги с загрузкой модели&#10;Выгружается фото поста">
+      <created>1684182567751</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1684182567752</updated>
+    </task>
+    <task id="LOCAL-00041" summary="новая версия сайта">
+      <created>1684184025846</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1684184025846</updated>
+    </task>
+    <task id="LOCAL-00042" summary="новая версия сайта">
+      <created>1684185030226</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1684185030226</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +570,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="api/api_arnitura" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -561,10 +590,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="set db init" />
-    <MESSAGE value="re" />
-    <MESSAGE value="add loging" />
-    <MESSAGE value="add sentry" />
     <MESSAGE value="edit requirements.txt" />
     <MESSAGE value="add db" />
     <MESSAGE value="add pymysql" />
@@ -586,18 +611,24 @@
     <MESSAGE value="delete unpack" />
     <MESSAGE value="edit set_user_avatar&#10;add auth_user, reg_manufacturer, privacy.txt&#10;edit manufacturer.py model" />
     <MESSAGE value="redirect repositories" />
-    <option name="LAST_COMMIT_MESSAGE" value="redirect repositories" />
+    <MESSAGE value="реализован выбор и загрузка модели, собран сайт, реализован выбор категории и типа фурнитуры" />
+    <MESSAGE value="Деплой нового релиза, сделан алгоритм для выбора url_server в зависимости от того находится приложение в дебаге или нет&#10;Перебрана полностью предыдущая версия ветки которая была создана еще до организации на гит хабе" />
+    <MESSAGE value="Добавился статус поста&#10;Можно загружать фото поста, исправлены баги с загрузкой модели&#10;Выгружается фото поста" />
+    <MESSAGE value="новая версия сайта" />
+    <option name="LAST_COMMIT_MESSAGE" value="новая версия сайта" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="bytes(json.loads(objects[i]['vr']))" language="Python" />
+        <watch expression="data.get('material_id')" language="Python" />
+        <watch expression="data" language="Python" />
+        <watch expression="'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' \                + data.get('material_id')[0] + '/' + data.get('selected_texture')[0]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kreslo_api$test.coverage" NAME="test Coverage Results" MODIFIED="1650261576627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/arnitura_api$main.coverage" NAME="main Coverage Results" MODIFIED="1682847762819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/arnitura_api$main.coverage" NAME="main Coverage Results" MODIFIED="1688414333643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/kreslo_api$main.coverage" NAME="main Coverage Results" MODIFIED="1674661182218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/arnitura_api$_01_.coverage" NAME="Мазурек УП01 ДЗ Coverage Results" MODIFIED="1679922783067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

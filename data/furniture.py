@@ -6,6 +6,7 @@ class Furniture(SqlAlchemyBase):
     __tablename__ = 'furniture'
 
     id = Column(Integer, primary_key=True)
+    articul = Column(String(255), nullable=True)
     manufacturer_id = Column(Integer)
     name = Column(String(255))
     type_furniture = Column(Integer)

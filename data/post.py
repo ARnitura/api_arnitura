@@ -12,6 +12,7 @@ class Post(SqlAlchemyBase):
     id_series = Column(String)
     id_furniture = Column(String)
     id_sort_furniture = Column(String)
-    status_publication = Column(Integer, nullable=False, default=1)
+    status_publication = Column(Integer, nullable=False, default=0)
+    message_status_publication = Column(String(1000))
     data_publication = Column(String)
     time_publication = Column(String)

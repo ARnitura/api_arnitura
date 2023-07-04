@@ -23,7 +23,7 @@ from data.material import Material
 from data.sort_furniture import Sort
 from data.user import User
 from os import listdir
-from os.path import isfile, join
+from os.path import isfile, join, exists
 
 application = Flask(__name__, template_folder="templates/web", static_folder="static", static_url_path='')
 morph = pymorphy2.MorphAnalyzer()
@@ -42,6 +42,7 @@ def check_dir_manufacturer(id_manufacturer):
     if not manufacturerDirIsAlive:
         os.mkdir(os.getcwd() + '/image/manufacturers/' + id_manufacturer)
         os.mkdir(os.getcwd() + '/image/manufacturers/' + id_manufacturer + '/models')
+        os.mkdir(os.getcwd() + '/image/manufacturers/' + id_manufacturer + '/models/textures')
         os.mkdir(os.getcwd() + '/image/manufacturers/' + id_manufacturer + '/photos')
     return
 
@@ -111,10 +112,12 @@ def new_post():
 
                 images_id.append(image_id + '.' + images[j]['ext'])
                 print(images[j])
+            if len(', '.join(images_id)) == 0:
+                images_id = None
             new_order_db = Furniture(name=objects[i]['name'], description=objects[i]['description'],
                                      width=objects[i]['width'], length=objects[i]['length'],
                                      height=objects[i]['height'], price=objects[i]['price'],
-                                     photo_furniture=', '.join(images_id),
+                                     photo_furniture=images_id, articul=objects[i]['model'],
                                      type_furniture=objects[i]['category'], model=str(model_id),
                                      manufacturer_id=json.loads(request.form.get('manufacturer_id')))
             db_sess.add(new_order_db)
@@ -127,6 +130,113 @@ def new_post():
                                manufacturer_id=json.loads(request.form.get('manufacturer_id')))
             db_sess.add(new_post_db)
             db_sess.commit()
+        db_sess.close()
+        return json.dumps({"status": 'ok'})
+
+
+@application.route('/api/del_post', methods=['GET', 'POST'])  # Добавление новых постов в бд
+def del_post():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        # form = db_sess.query(Manufacturer).filter(Manufacturer.id == int()).one()
+        post = db_sess.query(Post).filter(
+            Post.id == request.form.get('id_post')).one()  # Находим пост который нужно удалить
+        furniture = db_sess.query(Furniture).filter(Furniture.id == post.id_furniture).one()
+        os.remove(
+            'image/manufacturers/' + str(furniture.manufacturer_id) + '/models/' + str(
+                furniture.model) + '.fbx')  # Удаление модели
+        if furniture.photo_furniture is not None:
+            for photo_name in furniture.photo_furniture.split(', '):
+                os.remove(
+                    'image/manufacturers/' + str(
+                        furniture.manufacturer_id) + '/photos/' + photo_name)  # Удаление модели
+        # Удаление фото
+        db_sess.delete(post)
+        db_sess.delete(furniture)
+        db_sess.commit()
+        print(str(furniture.manufacturer_id), post.id, furniture.photo_furniture, furniture.model)
+        print('Информация о товаре удалена')
+        db_sess.close()
+        return json.dumps({"status": 'ok'})
+
+
+@application.route('/api/new_material', methods=['GET', 'POST'])  # Добавление новых постов в бд
+def new_material():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        # form = db_sess.query(Manufacturer).filter(Manufacturer.id == int()).one()
+        objects = json.loads(request.form.get('material'))
+        for j in range(len(objects['textures'])):
+            print('1')
+        for i in range(len(objects)):
+            check_dir_manufacturer(request.form.get('manufacturer_id'))
+            model_id = [f for f in
+                        listdir(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models')
+                        if isfile(
+                    join(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models', f))]
+            if len(model_id) == 0:
+                model_id = 1
+            else:
+                model_id = sorted(model_id, reverse=True)
+                model_id = str(int(model_id[0].split('.')[0]) + 1)
+            material_path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/models/' + str(
+                model_id) + '.fbx'
+            vr_file = open(material_path, "wb")
+            vr_file.write(bytes(json.loads(objects[i]['vr'])))
+            vr_file.close()
+            images = json.loads(objects[i]['images'])
+            images_id = []
+            for j in range(len(images)):
+                image_id = [f for f in
+                            listdir(
+                                os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/photos')
+                            if isfile(
+                        join(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/photos',
+                             f))]
+
+                if len(image_id) == 0:
+                    image_id = 1
+                else:
+                    image_id = sorted(image_id, reverse=True)
+                    image_id = str(int(image_id[0].split('.')[0]) + 1)
+
+                image_path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/photos/' + str(
+                    image_id) + '.' + images[j]['ext']
+                image_file = open(image_path, "wb")
+                image_file.write(bytes(images[j]['bytes']))
+                image_file.close()
+
+                images_id.append(image_id + '.' + images[j]['ext'])
+                print(images[j])
+            if len(', '.join(images_id)) == 0:
+                images_id = None
+            new_order_db = Furniture(name=objects[i]['name'], description=objects[i]['description'],
+                                     width=objects[i]['width'], length=objects[i]['length'],
+                                     height=objects[i]['height'], price=objects[i]['price'],
+                                     photo_furniture=images_id, articul=objects[i]['model'],
+                                     type_furniture=objects[i]['category'], model=str(model_id),
+                                     manufacturer_id=json.loads(request.form.get('manufacturer_id')))
+            db_sess.add(new_order_db)
+            db_sess.commit()
+            date = datetime.datetime.now()
+            series = db_sess.query(Series).filter(Series.name == objects[i]['name_series']).one()
+            new_post_db = Post(list_furniture=new_order_db.id, id_series=series.id, id_furniture=new_order_db.id,
+                               id_sort_furniture=objects[i]['type'], data_publication=date.strftime('%d.%m.%Y'),
+                               time_publication=date.strftime('%H:%M'),
+                               manufacturer_id=json.loads(request.form.get('manufacturer_id')))
+            db_sess.add(new_post_db)
+            db_sess.commit()
+        db_sess.close()
+        return json.dumps({"status": 'ok'})
+
+
+@application.route('/api/off_publication', methods=['GET', 'POST'])  # Снять с публикации
+def off_publication():
+    if request.method == 'POST':
+        db_sess = db_session.create_session()
+        post = db_sess.query(Post).filter(Post.id == request.form.get('id_post')).one()
+        post.status_publication = '0'
+        db_sess.commit()
         db_sess.close()
         return json.dumps({"status": 'ok'})
 
@@ -164,7 +274,10 @@ def get_count_like():
         db_sess = db_session.create_session()
         form = db_sess.query(Post).filter(Post.id == request.form['id_post']).one()
         db_sess.close()
-        count_likes = len(form.list_likes.split(', '))
+        if form.list_likes is not None:
+            count_likes = len(form.list_likes.split(', '))
+        else:
+            count_likes = 0
         return json.dumps({'count_likes': count_likes})
 
 
@@ -327,8 +440,11 @@ def get_info_post():  # TODO: Почистить код обработки вр�
             model_id = furniture.model  # id модели(для импорта в ар)
             material_id = furniture.id_material  # id Материалов
             material_name = []  # Названия материалов
-            for material in material_id.split(' '):
-                material_name.append(db_sess.query(Material).filter(Material.id == material).first().name)
+            if material_id is not None:
+                for material in material_id.split(' '):
+                    material_name.append(db_sess.query(Material).filter(Material.id == material).first().name)
+            else:
+                material_name.append('Отсутствует')
             data_publication = post.data_publication
             time_publication = post.time_publication
             db_sess.close()
@@ -414,7 +530,10 @@ def set_user_avatar():
                    methods=['GET'])  # Метод получения фото товаров производителя
 def get_photos():
     data = parse_qs(urlparse(request.url).query)
-    return send_file('image/manufacturers/' + data.get('id')[0] + '/photos/' + data.get('photo_name')[0])
+    if exists('image/manufacturers/' + data.get('id')[0] + '/photos/' + data.get('photo_name')[0]):
+        return send_file('image/manufacturers/' + data.get('id')[0] + '/photos/' + data.get('photo_name')[0])
+    else:
+        return json.dumps({'status': 'null'})
 
 
 @application.route('/api/get_list_photos',
@@ -532,7 +651,7 @@ def auth_manufacturer():
         list_type = []
         for u in db_sess.query(Sort).all():
             list_type.append({'id': u.__dict__['id'], 'sort': u.__dict__['sort']})
-        #  Вытягиваем запись авторизуемого производителя
+        #  Получаем все доступные типы и виды мебели
         series = db_sess.query(Series).filter(Series.id_manufacturer == manufacturer_info.id).all()
         list_furniture = {}
         for ser in series:
@@ -547,6 +666,9 @@ def auth_manufacturer():
                     for photo in object_furniture.photo_furniture.split(', '):
                         photos_furniture.append(photo)
 
+                if object_furniture.articul is None:
+                    object_furniture.articul = 'Отсутствует'
+
                 list_furniture[str(ser.id)]['furniture'].append(
                     {'id_post': post.id,
                      'sort': db_sess.query(Sort).filter(Sort.id == post.id_sort_furniture).first().sort,
@@ -557,6 +679,7 @@ def auth_manufacturer():
                                           'name': object_furniture.name,
                                           'photo_furniture': photos_furniture,
                                           'description': object_furniture.description,
+                                          'articul': object_furniture.articul,
                                           'width': object_furniture.width,
                                           'length': object_furniture.length,
                                           'date': post.data_publication + ' ' + post.time_publication,
@@ -566,8 +689,16 @@ def auth_manufacturer():
                                           'id_material': object_furniture.id_material,
                                           }})
         # Передаем информацию обо всех товарах производителя
+        list_materials = []
+        if manufacturer_info.list_materials is not None:
+            for i in manufacturer_info.list_materials.split(','):
+                material = db_sess.query(Material).filter(Material.id == i).one()
+                textures = [f for f in os.listdir(
+                    os.getcwd() + '/image/manufacturers/' + str(manufacturer_info.id) + '/models/textures/' + str(i))]
+                list_materials.append(
+                    {'id': material.id, 'name': material.name, 'color': material.color, 'textures': textures})
+        # Передаем информацию обо всех материалах производителя
         db_sess.close()
-        # {id_series: {name_series: '', category: ''}}
         if manufacturer_info is None:
             return json.dumps({'error': 'No found user'}), 400
         else:
@@ -578,7 +709,7 @@ def auth_manufacturer():
                 'list_likes': manufacturer_info.list_likes,
                 'list_favourites': manufacturer_info.list_favourites, 'list_products': manufacturer_info.list_products,
                 'list_orders': manufacturer_info.list_orders, 'list_category': json.dumps(list_category),
-                'list_type': json.dumps(list_type),
+                'list_type': json.dumps(list_type), 'list_materials': list_materials,
                 'inn': manufacturer_info.inn,
                 'data_reg': manufacturer_info.data_reg, 'time_reg': manufacturer_info.time_reg,
                 'is_admin': manufacturer_info.is_admin, 'list_furniture': list_furniture}
@@ -684,6 +815,16 @@ def download_texture():
         data = parse_qs(urlparse(request.url).query)
         path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' \
                + data.get('texture_id')[0] + '/' + data.get('selected_texture')[0]
+        return send_file(path)
+
+
+@application.route('/api/get_photo_file_texture',
+                   methods=['GET', 'POST'])  # Скачивание текстуры
+def get_photo_file_texture():
+    if request.method == 'GET':
+        data = parse_qs(urlparse(request.url).query)
+        path = 'image/manufacturers/' + data.get('manufacturer_id')[0] + '/models/textures/' \
+               + data.get('material_id')[0] + '/' + data.get('selected_texture')[0]
         return send_file(path)
 
 
@@ -893,4 +1034,4 @@ if __name__ == '__main__':
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
         traces_sample_rate=1.0
     )
-    application.run(host='0.0.0.0', port=5003, debug=True)
+    application.run(host='0.0.0.0', port=5005, debug=True)
