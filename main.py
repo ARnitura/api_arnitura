@@ -110,7 +110,7 @@ def new_post():
                 image_file.write(bytes(images[j]['bytes']))
                 image_file.close()
 
-                images_id.append(image_id + '.' + images[j]['ext'])
+                images_id.append(str(image_id) + '.' + images[j]['ext'])
                 print(images[j])
             if len(', '.join(images_id)) == 0:
                 images_id = None
@@ -119,6 +119,7 @@ def new_post():
                                      height=objects[i]['height'], price=objects[i]['price'],
                                      photo_furniture=images_id, articul=objects[i]['model'],
                                      type_furniture=objects[i]['category'], model=str(model_id),
+                                     id_material=objects[i]['material'],
                                      manufacturer_id=json.loads(request.form.get('manufacturer_id')))
             db_sess.add(new_order_db)
             db_sess.commit()
@@ -163,69 +164,52 @@ def del_post():
 @application.route('/api/new_material', methods=['GET', 'POST'])  # Добавление новых постов в бд
 def new_material():
     if request.method == 'POST':
-        db_sess = db_session.create_session()
-        # form = db_sess.query(Manufacturer).filter(Manufacturer.id == int()).one()
         objects = json.loads(request.form.get('material'))
-        for j in range(len(objects['textures'])):
-            print('1')
-        for i in range(len(objects)):
-            check_dir_manufacturer(request.form.get('manufacturer_id'))
-            model_id = [f for f in
-                        listdir(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models')
-                        if isfile(
-                    join(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models', f))]
-            if len(model_id) == 0:
-                model_id = 1
-            else:
-                model_id = sorted(model_id, reverse=True)
-                model_id = str(int(model_id[0].split('.')[0]) + 1)
-            material_path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/models/' + str(
-                model_id) + '.fbx'
-            vr_file = open(material_path, "wb")
-            vr_file.write(bytes(json.loads(objects[i]['vr'])))
-            vr_file.close()
-            images = json.loads(objects[i]['images'])
-            images_id = []
-            for j in range(len(images)):
-                image_id = [f for f in
-                            listdir(
-                                os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/photos')
-                            if isfile(
-                        join(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/photos',
-                             f))]
+        check_dir_manufacturer(request.form.get('manufacturer_id'))
+        folders = sorted(next(
+            os.walk(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models/textures/'))[
+                             1], reverse=True)  # Получаем все папки с текстурами с сортировкой по возрастанию
+        if len(folders) < 2:
+            folders.append(0)
+        os.makedirs(
+            os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models/textures/' + str(
+                int(folders[0]) + 1))
+        # Создаем новую папку с текстурами с названием на единицу больше
+        list_name_textures = []
+        list_name_textures.append(objects['file_basecolor']['name'])
 
-                if len(image_id) == 0:
-                    image_id = 1
-                else:
-                    image_id = sorted(image_id, reverse=True)
-                    image_id = str(int(image_id[0].split('.')[0]) + 1)
-
-                image_path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/photos/' + str(
-                    image_id) + '.' + images[j]['ext']
-                image_file = open(image_path, "wb")
-                image_file.write(bytes(images[j]['bytes']))
-                image_file.close()
-
-                images_id.append(image_id + '.' + images[j]['ext'])
-                print(images[j])
-            if len(', '.join(images_id)) == 0:
-                images_id = None
-            new_order_db = Furniture(name=objects[i]['name'], description=objects[i]['description'],
-                                     width=objects[i]['width'], length=objects[i]['length'],
-                                     height=objects[i]['height'], price=objects[i]['price'],
-                                     photo_furniture=images_id, articul=objects[i]['model'],
-                                     type_furniture=objects[i]['category'], model=str(model_id),
-                                     manufacturer_id=json.loads(request.form.get('manufacturer_id')))
-            db_sess.add(new_order_db)
-            db_sess.commit()
-            date = datetime.datetime.now()
-            series = db_sess.query(Series).filter(Series.name == objects[i]['name_series']).one()
-            new_post_db = Post(list_furniture=new_order_db.id, id_series=series.id, id_furniture=new_order_db.id,
-                               id_sort_furniture=objects[i]['type'], data_publication=date.strftime('%d.%m.%Y'),
-                               time_publication=date.strftime('%H:%M'),
-                               manufacturer_id=json.loads(request.form.get('manufacturer_id')))
-            db_sess.add(new_post_db)
-            db_sess.commit()
+        basecolor_file = open(
+            os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models/textures/' + str(
+                int(folders[0]) + 1) + '/' + objects['file_basecolor']['name'], "wb")
+        basecolor_file.write(bytes(objects['file_basecolor']['bytes']))
+        basecolor_file.close()
+        # Сохраняем файл bescolor
+        for i in range(1, len(json.loads(objects['textures'])) + 1):
+            list_name_textures.append(json.loads(objects['textures'])[i - 1]['name'])
+            texture_file = open(
+                os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models/textures/' + str(
+                    int(folders[0]) + 1) + '/' + json.loads(objects['textures'])[i - 1]['name'], "wb")
+            texture_file.write(bytes(json.loads(objects['textures'])[i - 1]['bytes']))
+            texture_file.close()
+        # Сохраняем файлы текстур
+        db_sess = db_session.create_session()
+        new_material_db = Material(name=objects['name'], color=objects['color'],
+                                   textures=', '.join(list_name_textures))
+        db_sess.add(new_material_db)
+        db_sess.commit()
+        # Сохраняем в бд данные о материале
+        os.rename(
+            os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models/textures/' + str(
+                int(folders[0]) + 1) + '/',
+            os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models/textures/' + str(
+                new_material_db.id) + '/')
+        # Переименовываем папку чтобы совпадал айди и название
+        manufacturer = db_sess.query(Manufacturer).filter(Manufacturer.id == request.form.get('manufacturer_id')).one()
+        if manufacturer.list_materials is None:
+            manufacturer.list_materials = new_material_db.id
+        else:
+            manufacturer.list_materials = manufacturer.list_materials + ', ' + str(new_material_db.id)
+        db_sess.commit()
         db_sess.close()
         return json.dumps({"status": 'ok'})
 
@@ -449,7 +433,7 @@ def get_info_post():  # TODO: Почистить код обработки вр�
             time_publication = post.time_publication
             db_sess.close()
             diff = datetime.datetime.today() - datetime.datetime.strptime(data_publication + ' ' + time_publication,
-                                                                          '%d.%m.%y %H:%M')  # Вычитаем даты и получаем разницу в минутах
+                                                                          '%d.%m.%Y %H:%M')  # Вычитаем даты и получаем разницу в минутах
             time = diff.seconds + (86400 * diff.days)
             if time <= 60:  # Секунды
                 seconds = morph.parse('Cекунда')[0]
@@ -691,7 +675,7 @@ def auth_manufacturer():
         # Передаем информацию обо всех товарах производителя
         list_materials = []
         if manufacturer_info.list_materials is not None:
-            for i in manufacturer_info.list_materials.split(','):
+            for i in manufacturer_info.list_materials.split(', '):
                 material = db_sess.query(Material).filter(Material.id == i).one()
                 textures = [f for f in os.listdir(
                     os.getcwd() + '/image/manufacturers/' + str(manufacturer_info.id) + '/models/textures/' + str(i))]
@@ -1034,4 +1018,4 @@ if __name__ == '__main__':
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
         traces_sample_rate=1.0
     )
-    application.run(host='0.0.0.0', port=5005, debug=True)
+    application.run(host='0.0.0.0', port=8001, debug=True)
