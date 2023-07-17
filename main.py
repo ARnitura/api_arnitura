@@ -164,7 +164,6 @@ def del_post():
 @application.route('/api/new_material', methods=['GET', 'POST'])  # Добавление новых постов в бд
 def new_material():
     if request.method == 'POST':
-        objects = json.loads(request.form.get('material'))
         check_dir_manufacturer(request.form.get('manufacturer_id'))
         folders = sorted(next(
             os.walk(os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models/textures/'))[
@@ -176,25 +175,24 @@ def new_material():
                 int(folders[0]) + 1))
         # Создаем новую папку с текстурами с названием на единицу больше
         list_name_textures = []
-        list_name_textures.append(objects['file_basecolor']['name'])
+        list_name_textures.append(request.form.get('file_name_basecolor'))
 
         basecolor_file = open(
             os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models/textures/' + str(
-                int(folders[0]) + 1) + '/' + objects['file_basecolor']['name'], "wb")
-        basecolor_file.write(bytes(objects['file_basecolor']['bytes']))
+                int(folders[0]) + 1) + '/' + request.form.get('file_name_basecolor'), "wb")
+        basecolor_file.write(bytes(json.loads(request.form.get('file_basecolor_bytes'))))
         basecolor_file.close()
-        # Сохраняем файл bescolor
-        for i in range(1, len(json.loads(objects['textures'])) + 1):
-            list_name_textures.append(json.loads(objects['textures'])[i - 1]['name'])
+        # Сохраняем файл basecolor
+        for texture_name in request.form.get('textures_name').split(', '):
             texture_file = open(
                 os.getcwd() + '/image/manufacturers/' + request.form.get('manufacturer_id') + '/models/textures/' + str(
-                    int(folders[0]) + 1) + '/' + json.loads(objects['textures'])[i - 1]['name'], "wb")
-            texture_file.write(bytes(json.loads(objects['textures'])[i - 1]['bytes']))
+                    int(folders[0]) + 1) + '/' + texture_name, "wb")
+            texture_file.write(bytes(json.loads(request.form.get(texture_name))))
             texture_file.close()
         # Сохраняем файлы текстур
         db_sess = db_session.create_session()
-        new_material_db = Material(name=objects['name'], color=objects['color'],
-                                   textures=', '.join(list_name_textures))
+        new_material_db = Material(name=request.form.get('name'), color=request.form.get('color'),
+                                   textures=request.form.get('textures_name'))
         db_sess.add(new_material_db)
         db_sess.commit()
         # Сохраняем в бд данные о материале
