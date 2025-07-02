@@ -47,6 +47,10 @@ def check_dir_manufacturer(id_manufacturer):
     return
 
 
+def sort_models(e):
+    return int(e.split('.')[0])
+
+
 @application.route('/')
 def main():
     return render_template('index.html')
@@ -82,7 +86,7 @@ def new_post():
             if len(model_id) == 0:
                 model_id = 1
             else:
-                model_id = sorted(model_id, reverse=True)
+                model_id = sorted(model_id, reverse=True, key=sort_models)
                 model_id = str(int(model_id[0].split('.')[0]) + 1)
             vr_path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/models/' + str(model_id) + '.fbx'
             vr_file = open(vr_path, "wb")
@@ -101,7 +105,7 @@ def new_post():
                 if len(image_id) == 0:
                     image_id = 1
                 else:
-                    image_id = sorted(image_id, reverse=True)
+                    image_id = sorted(image_id, reverse=True, key=sort_models)
                     image_id = str(int(image_id[0].split('.')[0]) + 1)
 
                 image_path = 'image/manufacturers/' + request.form.get('manufacturer_id') + '/photos/' + str(
@@ -111,13 +115,12 @@ def new_post():
                 image_file.close()
 
                 images_id.append(str(image_id) + '.' + images[j]['ext'])
-                print(images[j])
             if len(', '.join(images_id)) == 0:
                 images_id = None
             new_order_db = Furniture(name=objects[i]['name'], description=objects[i]['description'],
                                      width=objects[i]['width'], length=objects[i]['length'],
                                      height=objects[i]['height'], price=objects[i]['price'],
-                                     photo_furniture=images_id, articul=objects[i]['model'],
+                                     photo_furniture=', '.join(images_id), articul=objects[i]['model'],
                                      type_furniture=objects[i]['category'], model=str(model_id),
                                      id_material=objects[i]['material'],
                                      manufacturer_id=json.loads(request.form.get('manufacturer_id')))
@@ -1016,4 +1019,4 @@ if __name__ == '__main__':
         "https://54b0b37c37764ef9b81a6b1717fa4839@o402412.ingest.sentry.io/6192564",
         traces_sample_rate=1.0
     )
-    application.run(host='0.0.0.0', port=8001, debug=True)
+    application.run(host='0.0.0.0', port=5001, debug=True)
